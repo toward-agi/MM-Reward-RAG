@@ -1,0 +1,452 @@
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/1145 [00:00<?, ?it/s][A
+ 14%|█▍        | 163/1145 [00:00<00:00, 1626.94it/s][A
+ 29%|██▊       | 328/1145 [00:00<00:00, 1638.69it/s][A
+ 43%|████▎     | 497/1145 [00:00<00:00, 1658.81it/s][A
+ 58%|█████▊    | 668/1145 [00:00<00:00, 1676.96it/s][A
+ 73%|███████▎  | 837/1145 [00:00<00:00, 1679.44it/s][A
+ 88%|████████▊ | 1007/1145 [00:00<00:00, 1685.35it/s][A100%|██████████| 1145/1145 [00:00<00:00, 1664.01it/s]
+Generating descriptions for 1145 images...
+
+  0%|          | 0/1145 [00:00<?, ?it/s][A
+  7%|▋         | 84/1145 [00:00<00:01, 838.22it/s][A
+ 15%|█▍        | 170/1145 [00:00<00:01, 844.79it/s][A
+ 23%|██▎       | 258/1145 [00:00<00:01, 859.10it/s][A
+ 30%|███       | 346/1145 [00:00<00:00, 864.46it/s][A
+ 38%|███▊      | 436/1145 [00:00<00:00, 873.92it/s][A
+ 46%|████▌     | 527/1145 [00:00<00:00, 884.55it/s][A
+ 54%|█████▍    | 616/1145 [00:00<00:00, 867.61it/s][A
+ 61%|██████▏   | 704/1145 [00:00<00:00, 868.93it/s][A
+ 69%|██████▉   | 791/1145 [00:00<00:00, 866.72it/s][A
+ 77%|███████▋  | 879/1145 [00:01<00:00, 867.66it/s][A
+ 85%|████████▍ | 968/1145 [00:01<00:00, 872.91it/s][A
+ 92%|█████████▏| 1056/1145 [00:01<00:00, 868.76it/s][A
+100%|█████████▉| 1143/1145 [00:01<00:00, 865.09it/s][A100%|██████████| 1145/1145 [00:01<00:00, 866.42it/s]
+prepare done
+
+Generating responses:   0%|          | 0/1145 [00:00<?, ?it/s][A
+Generating responses:   0%|          | 1/1145 [00:12<4:02:47, 12.73s/it][A
+Generating responses:   0%|          | 2/1145 [00:12<1:42:10,  5.36s/it][A
+Generating responses:   0%|          | 4/1145 [00:13<44:11,  2.32s/it]  [A
+Generating responses:   1%|          | 7/1145 [00:14<19:25,  1.02s/it][A
+Generating responses:   1%|          | 10/1145 [00:19<24:50,  1.31s/it][A
+Generating responses:   1%|          | 11/1145 [00:19<20:46,  1.10s/it][A
+Generating responses:   2%|▏         | 23/1145 [00:19<05:51,  3.19it/s][A
+Generating responses:   3%|▎         | 29/1145 [00:21<06:04,  3.06it/s][A
+Generating responses:   3%|▎         | 32/1145 [00:26<09:47,  1.89it/s][A
+Generating responses:   3%|▎         | 34/1145 [00:26<08:40,  2.13it/s][A
+Generating responses:   3%|▎         | 37/1145 [00:27<08:12,  2.25it/s][A
+Generating responses:   3%|▎         | 38/1145 [00:27<07:43,  2.39it/s][A
+Generating responses:   3%|▎         | 40/1145 [00:27<06:29,  2.84it/s][A
+Generating responses:   4%|▍         | 43/1145 [00:30<09:47,  1.88it/s][A
+Generating responses:   4%|▍         | 46/1145 [00:30<07:05,  2.58it/s][A
+Generating responses:   4%|▍         | 48/1145 [00:31<06:23,  2.86it/s][A
+Generating responses:   4%|▍         | 49/1145 [00:31<05:54,  3.09it/s][A
+Generating responses:   4%|▍         | 51/1145 [00:31<05:17,  3.45it/s][A
+Generating responses:   5%|▍         | 52/1145 [00:32<04:55,  3.70it/s][A
+Generating responses:   5%|▍         | 54/1145 [00:38<23:40,  1.30s/it][A
+Generating responses:   5%|▌         | 60/1145 [00:38<09:58,  1.81it/s][A
+Generating responses:   5%|▌         | 62/1145 [00:39<08:36,  2.10it/s][A
+Generating responses:   6%|▌         | 65/1145 [00:40<07:13,  2.49it/s][A
+Generating responses:   6%|▌         | 67/1145 [00:40<05:48,  3.09it/s][A
+Generating responses:   6%|▌         | 69/1145 [00:40<05:21,  3.35it/s][A
+Generating responses:   6%|▌         | 70/1145 [00:44<13:45,  1.30it/s][A
+Generating responses:   6%|▋         | 73/1145 [00:44<08:41,  2.06it/s][A
+Generating responses:   7%|▋         | 76/1145 [00:49<16:40,  1.07it/s][A
+Generating responses:   7%|▋         | 77/1145 [00:49<14:42,  1.21it/s][A
+Generating responses:   7%|▋         | 78/1145 [00:56<34:17,  1.93s/it][A
+Generating responses:   7%|▋         | 80/1145 [00:57<23:50,  1.34s/it][A
+Generating responses:   7%|▋         | 82/1145 [00:58<18:43,  1.06s/it][A
+Generating responses:   7%|▋         | 85/1145 [00:58<11:36,  1.52it/s][A
+Generating responses:   8%|▊         | 86/1145 [00:58<10:05,  1.75it/s][A
+Generating responses:   8%|▊         | 88/1145 [01:03<22:24,  1.27s/it][A
+Generating responses:   8%|▊         | 90/1145 [01:04<15:56,  1.10it/s][A
+Generating responses:   8%|▊         | 94/1145 [01:04<09:44,  1.80it/s][A
+Generating responses:   8%|▊         | 96/1145 [01:05<07:42,  2.27it/s][A
+Generating responses:   9%|▊         | 99/1145 [01:05<06:03,  2.88it/s][A
+Generating responses:   9%|▉         | 101/1145 [01:05<05:27,  3.19it/s][A
+Generating responses:   9%|▉         | 104/1145 [01:06<03:49,  4.54it/s][A
+Generating responses:   9%|▉         | 108/1145 [01:06<02:53,  5.98it/s][A
+Generating responses:  10%|▉         | 112/1145 [01:08<05:22,  3.20it/s][A
+Generating responses:  10%|█         | 119/1145 [01:09<03:23,  5.05it/s][A
+Generating responses:  11%|█         | 121/1145 [01:09<03:39,  4.67it/s][A
+Generating responses:  11%|█         | 122/1145 [01:09<03:34,  4.77it/s][A
+Generating responses:  11%|█         | 123/1145 [01:10<03:51,  4.42it/s][A
+Generating responses:  11%|█         | 127/1145 [01:14<09:54,  1.71it/s][A
+Generating responses:  11%|█         | 128/1145 [01:14<09:11,  1.84it/s][A
+Generating responses:  12%|█▏        | 132/1145 [01:19<13:56,  1.21it/s][A
+Generating responses:  12%|█▏        | 137/1145 [01:19<08:03,  2.09it/s][A
+Generating responses:  12%|█▏        | 140/1145 [01:20<06:56,  2.42it/s][A
+Generating responses:  12%|█▏        | 143/1145 [01:22<07:55,  2.11it/s][A
+Generating responses:  13%|█▎        | 145/1145 [01:22<06:35,  2.53it/s][A
+Generating responses:  13%|█▎        | 146/1145 [01:22<06:30,  2.56it/s][A
+Generating responses:  13%|█▎        | 148/1145 [01:23<05:12,  3.20it/s][A
+Generating responses:  13%|█▎        | 150/1145 [01:30<19:56,  1.20s/it][A
+Generating responses:  14%|█▎        | 155/1145 [01:30<10:21,  1.59it/s][A
+Generating responses:  14%|█▎        | 157/1145 [01:30<08:38,  1.91it/s][A
+Generating responses:  14%|█▍        | 158/1145 [01:31<08:34,  1.92it/s][A
+Generating responses:  14%|█▍        | 161/1145 [01:31<06:01,  2.72it/s][A
+Generating responses:  14%|█▍        | 165/1145 [01:32<05:20,  3.06it/s][A
+Generating responses:  15%|█▍        | 167/1145 [01:33<05:11,  3.14it/s][A
+Generating responses:  15%|█▍        | 170/1145 [01:36<08:35,  1.89it/s][A
+Generating responses:  15%|█▌        | 174/1145 [01:36<05:37,  2.87it/s][A
+Generating responses:  15%|█▌        | 175/1145 [01:42<16:49,  1.04s/it][A
+Generating responses:  15%|█▌        | 177/1145 [01:42<12:55,  1.25it/s][A
+Generating responses:  16%|█▌        | 178/1145 [01:45<19:08,  1.19s/it][A
+Generating responses:  16%|█▌        | 180/1145 [01:46<13:55,  1.15it/s][A
+Generating responses:  16%|█▌        | 186/1145 [01:46<07:02,  2.27it/s][A
+Generating responses:  16%|█▋        | 187/1145 [01:47<06:33,  2.43it/s][A
+Generating responses:  17%|█▋        | 190/1145 [01:47<05:42,  2.79it/s][A
+Generating responses:  17%|█▋        | 191/1145 [01:48<05:19,  2.99it/s][A
+Generating responses:  17%|█▋        | 194/1145 [01:48<04:26,  3.57it/s][A
+Generating responses:  17%|█▋        | 196/1145 [01:51<08:49,  1.79it/s][A
+Generating responses:  17%|█▋        | 198/1145 [01:51<06:53,  2.29it/s][A
+Generating responses:  17%|█▋        | 200/1145 [01:51<05:55,  2.66it/s][A
+Generating responses:  18%|█▊        | 204/1145 [01:52<03:33,  4.41it/s][A
+Generating responses:  18%|█▊        | 206/1145 [01:52<03:59,  3.91it/s][A
+Generating responses:  19%|█▊        | 212/1145 [01:53<02:37,  5.94it/s][A
+Generating responses:  19%|█▊        | 214/1145 [01:54<03:38,  4.26it/s][A
+Generating responses:  19%|█▉        | 218/1145 [01:54<03:02,  5.08it/s][A
+Generating responses:  20%|█▉        | 224/1145 [02:06<14:19,  1.07it/s][A
+Generating responses:  20%|█▉        | 227/1145 [02:06<11:05,  1.38it/s][A
+Generating responses:  20%|██        | 229/1145 [02:10<15:02,  1.02it/s][A
+Generating responses:  20%|██        | 230/1145 [02:11<14:03,  1.08it/s][A
+Generating responses:  20%|██        | 232/1145 [02:11<11:58,  1.27it/s][A
+Generating responses:  20%|██        | 234/1145 [02:12<09:14,  1.64it/s][A
+Generating responses:  21%|██        | 236/1145 [02:14<11:46,  1.29it/s][A
+Generating responses:  21%|██        | 239/1145 [02:14<07:56,  1.90it/s][A
+Generating responses:  21%|██        | 243/1145 [02:15<05:24,  2.78it/s][A
+Generating responses:  21%|██▏       | 246/1145 [02:17<06:21,  2.36it/s][A
+Generating responses:  22%|██▏       | 247/1145 [02:17<05:51,  2.56it/s][A
+Generating responses:  22%|██▏       | 251/1145 [02:17<04:14,  3.51it/s][A
+Generating responses:  22%|██▏       | 255/1145 [02:20<06:10,  2.40it/s][A
+Generating responses:  23%|██▎       | 258/1145 [02:20<04:53,  3.02it/s][A
+Generating responses:  23%|██▎       | 259/1145 [02:20<04:40,  3.16it/s][A
+Generating responses:  23%|██▎       | 262/1145 [02:21<03:55,  3.75it/s][A
+Generating responses:  23%|██▎       | 265/1145 [02:27<12:20,  1.19it/s][A
+Generating responses:  23%|██▎       | 268/1145 [02:27<08:40,  1.68it/s][A
+Generating responses:  24%|██▍       | 275/1145 [02:28<04:35,  3.15it/s][A
+Generating responses:  24%|██▍       | 278/1145 [02:33<10:07,  1.43it/s][A
+Generating responses:  24%|██▍       | 280/1145 [02:33<08:26,  1.71it/s][A
+Generating responses:  25%|██▍       | 282/1145 [02:34<07:07,  2.02it/s][A
+Generating responses:  25%|██▍       | 283/1145 [02:35<08:28,  1.69it/s][A
+Generating responses:  25%|██▌       | 288/1145 [02:35<04:38,  3.08it/s][A
+Generating responses:  26%|██▌       | 292/1145 [02:39<07:59,  1.78it/s][A
+Generating responses:  26%|██▌       | 294/1145 [02:40<07:14,  1.96it/s][A
+Generating responses:  26%|██▌       | 295/1145 [02:44<13:17,  1.07it/s][A
+Generating responses:  26%|██▌       | 297/1145 [02:44<09:56,  1.42it/s][A
+Generating responses:  26%|██▌       | 298/1145 [02:44<09:05,  1.55it/s][A
+Generating responses:  26%|██▋       | 301/1145 [02:45<07:40,  1.83it/s][A
+Generating responses:  27%|██▋       | 308/1145 [02:45<03:24,  4.09it/s][A
+Generating responses:  27%|██▋       | 310/1145 [02:46<03:40,  3.78it/s][A
+Generating responses:  27%|██▋       | 313/1145 [02:48<05:35,  2.48it/s][A
+Generating responses:  28%|██▊       | 315/1145 [02:49<04:31,  3.06it/s][A
+Generating responses:  28%|██▊       | 318/1145 [02:49<03:43,  3.69it/s][A
+Generating responses:  28%|██▊       | 320/1145 [02:50<04:54,  2.80it/s][A
+Generating responses:  28%|██▊       | 323/1145 [02:51<04:56,  2.78it/s][A
+Generating responses:  29%|██▊       | 328/1145 [02:51<02:51,  4.75it/s][A
+Generating responses:  29%|██▉       | 330/1145 [02:52<03:07,  4.35it/s][A
+Generating responses:  29%|██▉       | 333/1145 [02:54<05:16,  2.57it/s][A
+Generating responses:  29%|██▉       | 335/1145 [02:55<04:26,  3.04it/s][A
+Generating responses:  29%|██▉       | 336/1145 [02:56<05:34,  2.42it/s][A
+Generating responses:  30%|██▉       | 339/1145 [02:56<03:42,  3.63it/s][A
+Generating responses:  30%|██▉       | 343/1145 [02:56<02:36,  5.13it/s][A
+Generating responses:  30%|███       | 346/1145 [02:58<05:03,  2.63it/s][A
+Generating responses:  30%|███       | 347/1145 [02:59<04:52,  2.73it/s][A
+Generating responses:  30%|███       | 348/1145 [02:59<05:03,  2.63it/s][A
+Generating responses:  30%|███       | 349/1145 [03:15<41:36,  3.14s/it][A
+Generating responses:  31%|███       | 351/1145 [03:15<27:46,  2.10s/it][A
+Generating responses:  31%|███       | 354/1145 [03:15<16:59,  1.29s/it][A
+Generating responses:  31%|███       | 355/1145 [03:23<29:40,  2.25s/it][A
+Generating responses:  31%|███▏      | 359/1145 [03:23<15:21,  1.17s/it][A
+Generating responses:  32%|███▏      | 362/1145 [03:23<11:06,  1.18it/s][A
+Generating responses:  32%|███▏      | 366/1145 [03:31<16:39,  1.28s/it][A
+Generating responses:  32%|███▏      | 371/1145 [03:32<10:09,  1.27it/s][A
+Generating responses:  32%|███▏      | 372/1145 [03:32<09:43,  1.32it/s][A
+Generating responses:  33%|███▎      | 374/1145 [03:32<07:45,  1.66it/s][A
+Generating responses:  33%|███▎      | 375/1145 [03:33<07:17,  1.76it/s][A
+Generating responses:  33%|███▎      | 379/1145 [03:33<04:15,  3.00it/s][A
+Generating responses:  33%|███▎      | 381/1145 [03:38<10:29,  1.21it/s][A
+Generating responses:  33%|███▎      | 383/1145 [03:38<08:22,  1.52it/s][A
+Generating responses:  34%|███▎      | 386/1145 [03:38<05:46,  2.19it/s][A
+Generating responses:  34%|███▍      | 387/1145 [03:39<05:41,  2.22it/s][A
+Generating responses:  34%|███▍      | 391/1145 [03:39<03:23,  3.70it/s][A
+Generating responses:  34%|███▍      | 393/1145 [03:40<04:17,  2.92it/s][A
+Generating responses:  34%|███▍      | 395/1145 [03:40<03:40,  3.40it/s][A
+Generating responses:  35%|███▍      | 396/1145 [03:45<11:51,  1.05it/s][A
+Generating responses:  35%|███▍      | 399/1145 [03:45<07:45,  1.60it/s][A
+Generating responses:  35%|███▌      | 401/1145 [03:50<14:10,  1.14s/it][A
+Generating responses:  35%|███▌      | 403/1145 [03:50<10:30,  1.18it/s][A
+Generating responses:  35%|███▌      | 406/1145 [03:51<07:09,  1.72it/s][A
+Generating responses:  36%|███▌      | 407/1145 [03:51<07:26,  1.65it/s][A
+Generating responses:  36%|███▌      | 412/1145 [03:52<04:14,  2.88it/s][A
+Generating responses:  36%|███▌      | 414/1145 [03:53<05:14,  2.33it/s][A
+Generating responses:  36%|███▋      | 416/1145 [03:54<04:12,  2.89it/s][A
+Generating responses:  36%|███▋      | 417/1145 [03:54<03:51,  3.15it/s][A
+Generating responses:  37%|███▋      | 421/1145 [03:56<04:58,  2.43it/s][A
+Generating responses:  37%|███▋      | 423/1145 [04:00<09:47,  1.23it/s][A
+Generating responses:  37%|███▋      | 428/1145 [04:00<05:18,  2.25it/s][A
+Generating responses:  38%|███▊      | 430/1145 [04:01<04:56,  2.41it/s][A
+Generating responses:  38%|███▊      | 432/1145 [04:01<04:10,  2.85it/s][A
+Generating responses:  38%|███▊      | 437/1145 [04:02<03:32,  3.34it/s][A
+Generating responses:  39%|███▊      | 441/1145 [04:02<02:28,  4.74it/s][A
+Generating responses:  39%|███▉      | 444/1145 [04:03<02:22,  4.91it/s][A
+Generating responses:  39%|███▉      | 446/1145 [04:04<03:43,  3.12it/s][A
+Generating responses:  39%|███▉      | 449/1145 [04:05<02:52,  4.04it/s][A
+Generating responses:  39%|███▉      | 452/1145 [04:05<02:45,  4.20it/s][A
+Generating responses:  40%|███▉      | 455/1145 [04:06<02:12,  5.20it/s][A
+Generating responses:  40%|███▉      | 456/1145 [04:06<03:12,  3.59it/s][A
+Generating responses:  40%|████      | 460/1145 [04:07<02:09,  5.29it/s][A
+Generating responses:  40%|████      | 463/1145 [04:07<01:44,  6.54it/s][A
+Generating responses:  41%|████      | 465/1145 [04:16<12:57,  1.14s/it][A
+Generating responses:  41%|████      | 468/1145 [04:16<08:54,  1.27it/s][A
+Generating responses:  41%|████      | 469/1145 [04:17<08:26,  1.33it/s][A
+Generating responses:  41%|████▏     | 473/1145 [04:24<14:06,  1.26s/it][A
+Generating responses:  42%|████▏     | 478/1145 [04:24<08:03,  1.38it/s][A
+Generating responses:  42%|████▏     | 481/1145 [04:32<13:22,  1.21s/it][A
+Generating responses:  42%|████▏     | 485/1145 [04:32<08:54,  1.24it/s][A
+Generating responses:  43%|████▎     | 487/1145 [04:33<07:54,  1.39it/s][A
+Generating responses:  43%|████▎     | 490/1145 [04:33<06:13,  1.76it/s][A
+Generating responses:  43%|████▎     | 491/1145 [04:34<05:41,  1.92it/s][A
+Generating responses:  43%|████▎     | 493/1145 [04:34<04:40,  2.33it/s][A
+Generating responses:  44%|████▎     | 499/1145 [04:35<02:54,  3.71it/s][A
+Generating responses:  44%|████▎     | 500/1145 [04:39<07:41,  1.40it/s][A
+Generating responses:  44%|████▍     | 503/1145 [04:40<05:44,  1.86it/s][A
+Generating responses:  44%|████▍     | 506/1145 [04:40<04:10,  2.55it/s][A
+Generating responses:  44%|████▍     | 509/1145 [04:40<03:14,  3.27it/s][A
+Generating responses:  45%|████▍     | 510/1145 [04:46<10:32,  1.00it/s][A
+Generating responses:  45%|████▍     | 512/1145 [04:46<07:59,  1.32it/s][A
+Generating responses:  45%|████▍     | 514/1145 [04:46<06:25,  1.64it/s][A
+Generating responses:  45%|████▌     | 516/1145 [04:51<11:10,  1.07s/it][A
+Generating responses:  45%|████▌     | 517/1145 [04:51<09:32,  1.10it/s][A
+Generating responses:  45%|████▌     | 519/1145 [04:55<12:46,  1.22s/it][A
+Generating responses:  45%|████▌     | 520/1145 [04:55<10:42,  1.03s/it][A
+Generating responses:  46%|████▌     | 523/1145 [04:58<10:28,  1.01s/it][A
+Generating responses:  46%|████▌     | 525/1145 [04:58<07:35,  1.36it/s][A
+Generating responses:  46%|████▌     | 526/1145 [04:58<06:49,  1.51it/s][A
+Generating responses:  46%|████▌     | 528/1145 [04:59<04:54,  2.10it/s][A
+Generating responses:  46%|████▌     | 529/1145 [04:59<04:37,  2.22it/s][A
+Generating responses:  46%|████▋     | 532/1145 [04:59<02:54,  3.51it/s][A
+Generating responses:  47%|████▋     | 535/1145 [05:00<02:27,  4.14it/s][A
+Generating responses:  47%|████▋     | 537/1145 [05:00<02:05,  4.83it/s][A
+Generating responses:  47%|████▋     | 541/1145 [05:01<01:46,  5.67it/s][A
+Generating responses:  47%|████▋     | 542/1145 [05:01<01:45,  5.70it/s][A
+Generating responses:  48%|████▊     | 544/1145 [05:01<01:37,  6.18it/s][A
+Generating responses:  48%|████▊     | 546/1145 [05:01<01:35,  6.26it/s][A
+Generating responses:  48%|████▊     | 548/1145 [05:02<01:45,  5.65it/s][A
+Generating responses:  48%|████▊     | 551/1145 [05:02<01:23,  7.13it/s][A
+Generating responses:  48%|████▊     | 553/1145 [05:03<02:18,  4.26it/s][A
+Generating responses:  48%|████▊     | 554/1145 [05:03<02:12,  4.45it/s][A
+Generating responses:  49%|████▉     | 559/1145 [05:10<08:07,  1.20it/s][A
+Generating responses:  49%|████▉     | 562/1145 [05:10<05:46,  1.68it/s][A
+Generating responses:  49%|████▉     | 566/1145 [05:10<03:54,  2.47it/s][A
+Generating responses:  50%|████▉     | 572/1145 [05:16<05:46,  1.66it/s][A
+Generating responses:  50%|█████     | 575/1145 [05:16<04:33,  2.08it/s][A
+Generating responses:  50%|█████     | 578/1145 [05:16<03:46,  2.50it/s][A
+Generating responses:  51%|█████     | 580/1145 [05:18<04:23,  2.14it/s][A
+Generating responses:  51%|█████     | 583/1145 [05:18<03:17,  2.85it/s][A
+Generating responses:  51%|█████     | 585/1145 [05:18<02:58,  3.14it/s][A
+Generating responses:  51%|█████▏    | 588/1145 [05:19<02:15,  4.10it/s][A
+Generating responses:  52%|█████▏    | 590/1145 [05:19<02:19,  3.98it/s][A
+Generating responses:  52%|█████▏    | 591/1145 [05:26<10:43,  1.16s/it][A
+Generating responses:  52%|█████▏    | 594/1145 [05:26<06:53,  1.33it/s][A
+Generating responses:  52%|█████▏    | 597/1145 [05:28<06:35,  1.39it/s][A
+Generating responses:  52%|█████▏    | 599/1145 [05:28<05:10,  1.76it/s][A
+Generating responses:  53%|█████▎    | 604/1145 [05:29<03:05,  2.91it/s][A
+Generating responses:  53%|█████▎    | 607/1145 [05:29<02:42,  3.31it/s][A
+Generating responses:  53%|█████▎    | 609/1145 [05:30<02:13,  4.02it/s][A
+Generating responses:  54%|█████▎    | 613/1145 [05:30<01:44,  5.07it/s][A
+Generating responses:  54%|█████▍    | 616/1145 [05:32<03:03,  2.88it/s][A
+Generating responses:  54%|█████▍    | 620/1145 [05:32<02:03,  4.24it/s][A
+Generating responses:  55%|█████▍    | 625/1145 [05:33<01:35,  5.42it/s][A
+Generating responses:  55%|█████▍    | 627/1145 [05:37<04:15,  2.02it/s][A
+Generating responses:  55%|█████▍    | 628/1145 [05:37<03:57,  2.17it/s][A
+Generating responses:  55%|█████▌    | 633/1145 [05:37<02:28,  3.46it/s][A
+Generating responses:  56%|█████▌    | 636/1145 [05:39<03:27,  2.45it/s][A
+Generating responses:  56%|█████▌    | 639/1145 [05:39<02:34,  3.28it/s][A
+Generating responses:  56%|█████▌    | 641/1145 [05:45<06:48,  1.23it/s][A
+Generating responses:  56%|█████▋    | 646/1145 [05:45<04:01,  2.07it/s][A
+Generating responses:  57%|█████▋    | 653/1145 [05:45<02:19,  3.53it/s][A
+Generating responses:  57%|█████▋    | 655/1145 [05:50<04:52,  1.68it/s][A
+Generating responses:  57%|█████▋    | 657/1145 [05:50<04:06,  1.98it/s][A
+Generating responses:  58%|█████▊    | 660/1145 [05:51<03:17,  2.45it/s][A
+Generating responses:  58%|█████▊    | 662/1145 [05:53<04:22,  1.84it/s][A
+Generating responses:  58%|█████▊    | 663/1145 [05:53<03:58,  2.02it/s][A
+Generating responses:  58%|█████▊    | 666/1145 [05:54<03:58,  2.00it/s][A
+Generating responses:  58%|█████▊    | 669/1145 [05:55<02:45,  2.88it/s][A
+Generating responses:  59%|█████▊    | 670/1145 [05:55<02:34,  3.08it/s][A
+Generating responses:  59%|█████▊    | 671/1145 [06:03<13:21,  1.69s/it][A
+Generating responses:  59%|█████▉    | 680/1145 [06:03<04:16,  1.82it/s][A
+Generating responses:  60%|██████    | 687/1145 [06:04<02:40,  2.85it/s][A
+Generating responses:  60%|██████    | 692/1145 [06:13<05:57,  1.27it/s][A
+Generating responses:  61%|██████    | 694/1145 [06:13<05:08,  1.46it/s][A
+Generating responses:  61%|██████    | 696/1145 [06:14<04:31,  1.66it/s][A
+Generating responses:  61%|██████    | 698/1145 [06:18<06:58,  1.07it/s][A
+Generating responses:  61%|██████    | 700/1145 [06:18<05:37,  1.32it/s][A
+Generating responses:  61%|██████▏   | 704/1145 [06:19<03:52,  1.90it/s][A
+Generating responses:  62%|██████▏   | 706/1145 [06:19<03:15,  2.25it/s][A
+Generating responses:  62%|██████▏   | 709/1145 [06:21<03:33,  2.04it/s][A
+Generating responses:  62%|██████▏   | 714/1145 [06:21<02:04,  3.46it/s][A
+Generating responses:  63%|██████▎   | 716/1145 [06:22<01:57,  3.65it/s][A
+Generating responses:  63%|██████▎   | 721/1145 [06:23<01:38,  4.32it/s][A
+Generating responses:  63%|██████▎   | 723/1145 [06:23<01:27,  4.81it/s][A
+Generating responses:  63%|██████▎   | 725/1145 [06:23<01:24,  4.95it/s][A
+Generating responses:  64%|██████▎   | 729/1145 [06:24<01:17,  5.34it/s][A
+Generating responses:  64%|██████▍   | 731/1145 [06:24<01:10,  5.87it/s][A
+Generating responses:  64%|██████▍   | 734/1145 [06:25<01:10,  5.87it/s][A
+Generating responses:  65%|██████▍   | 739/1145 [06:26<01:39,  4.07it/s][A
+Generating responses:  65%|██████▍   | 743/1145 [06:26<01:12,  5.53it/s][A
+Generating responses:  65%|██████▌   | 745/1145 [06:27<01:18,  5.09it/s][A
+Generating responses:  65%|██████▌   | 747/1145 [06:27<01:06,  5.97it/s][A
+Generating responses:  65%|██████▌   | 749/1145 [06:29<02:21,  2.80it/s][A
+Generating responses:  66%|██████▌   | 751/1145 [06:29<01:57,  3.37it/s][A
+Generating responses:  66%|██████▌   | 754/1145 [06:30<01:41,  3.84it/s][A
+Generating responses:  66%|██████▌   | 757/1145 [06:30<01:15,  5.11it/s][A
+Generating responses:  67%|██████▋   | 762/1145 [06:30<00:49,  7.79it/s][A
+Generating responses:  67%|██████▋   | 764/1145 [06:37<04:55,  1.29it/s][A
+Generating responses:  67%|██████▋   | 766/1145 [06:37<04:02,  1.56it/s][A
+Generating responses:  67%|██████▋   | 767/1145 [06:42<07:51,  1.25s/it][A
+Generating responses:  67%|██████▋   | 771/1145 [06:43<04:29,  1.39it/s][A
+Generating responses:  68%|██████▊   | 773/1145 [06:46<05:43,  1.08it/s][A
+Generating responses:  68%|██████▊   | 774/1145 [06:46<05:02,  1.23it/s][A
+Generating responses:  68%|██████▊   | 776/1145 [06:47<04:22,  1.41it/s][A
+Generating responses:  68%|██████▊   | 778/1145 [06:47<03:28,  1.76it/s][A
+Generating responses:  68%|██████▊   | 781/1145 [06:48<02:22,  2.55it/s][A
+Generating responses:  68%|██████▊   | 782/1145 [06:48<02:47,  2.17it/s][A
+Generating responses:  68%|██████▊   | 783/1145 [06:49<02:28,  2.44it/s][A
+Generating responses:  68%|██████▊   | 784/1145 [06:51<04:40,  1.29it/s][A
+Generating responses:  69%|██████▊   | 787/1145 [06:51<02:34,  2.32it/s][A
+Generating responses:  69%|██████▉   | 789/1145 [06:51<02:05,  2.84it/s][A
+Generating responses:  69%|██████▉   | 792/1145 [06:54<03:20,  1.76it/s][A
+Generating responses:  69%|██████▉   | 795/1145 [06:54<02:14,  2.60it/s][A
+Generating responses:  70%|██████▉   | 798/1145 [06:55<01:52,  3.10it/s][A
+Generating responses:  70%|███████   | 803/1145 [07:04<05:52,  1.03s/it][A
+Generating responses:  71%|███████   | 808/1145 [07:04<03:38,  1.55it/s][A
+Generating responses:  71%|███████   | 811/1145 [07:05<03:00,  1.85it/s][A
+Generating responses:  71%|███████   | 812/1145 [07:05<02:52,  1.93it/s][A
+Generating responses:  71%|███████▏  | 816/1145 [07:09<03:38,  1.51it/s][A
+Generating responses:  71%|███████▏  | 818/1145 [07:10<03:06,  1.75it/s][A
+Generating responses:  72%|███████▏  | 820/1145 [07:10<02:27,  2.20it/s][A
+Generating responses:  72%|███████▏  | 824/1145 [07:10<01:43,  3.10it/s][A
+Generating responses:  72%|███████▏  | 828/1145 [07:17<04:09,  1.27it/s][A
+Generating responses:  73%|███████▎  | 836/1145 [07:19<02:46,  1.85it/s][A
+Generating responses:  73%|███████▎  | 840/1145 [07:19<02:08,  2.38it/s][A
+Generating responses:  74%|███████▎  | 842/1145 [07:26<04:15,  1.18it/s][A
+Generating responses:  74%|███████▍  | 846/1145 [07:26<02:57,  1.68it/s][A
+Generating responses:  74%|███████▍  | 848/1145 [07:28<03:14,  1.53it/s][A
+Generating responses:  74%|███████▍  | 851/1145 [07:28<02:25,  2.02it/s][A
+Generating responses:  74%|███████▍  | 852/1145 [07:28<02:20,  2.08it/s][A
+Generating responses:  75%|███████▍  | 855/1145 [07:28<01:41,  2.85it/s][A
+Generating responses:  75%|███████▌  | 859/1145 [07:29<01:17,  3.71it/s][A
+Generating responses:  75%|███████▌  | 861/1145 [07:29<01:06,  4.26it/s][A
+Generating responses:  75%|███████▌  | 864/1145 [07:30<00:55,  5.06it/s][A
+Generating responses:  76%|███████▌  | 867/1145 [07:31<01:17,  3.60it/s][A
+Generating responses:  76%|███████▌  | 869/1145 [07:32<01:38,  2.79it/s][A
+Generating responses:  76%|███████▋  | 874/1145 [07:32<00:56,  4.80it/s][A
+Generating responses:  77%|███████▋  | 878/1145 [07:33<00:48,  5.54it/s][A
+Generating responses:  77%|███████▋  | 882/1145 [07:37<02:03,  2.12it/s][A
+Generating responses:  77%|███████▋  | 883/1145 [07:37<01:55,  2.28it/s][A
+Generating responses:  77%|███████▋  | 884/1145 [07:40<02:56,  1.48it/s][A
+Generating responses:  78%|███████▊  | 888/1145 [07:40<01:46,  2.40it/s][A
+Generating responses:  78%|███████▊  | 893/1145 [07:41<01:16,  3.28it/s][A
+Generating responses:  78%|███████▊  | 895/1145 [07:41<01:04,  3.87it/s][A
+Generating responses:  78%|███████▊  | 896/1145 [07:41<01:08,  3.65it/s][A
+Generating responses:  79%|███████▊  | 900/1145 [07:44<01:46,  2.30it/s][A
+Generating responses:  79%|███████▊  | 901/1145 [07:44<01:38,  2.49it/s][A
+Generating responses:  79%|███████▉  | 903/1145 [07:45<01:28,  2.72it/s][A
+Generating responses:  79%|███████▉  | 909/1145 [07:49<02:04,  1.90it/s][A
+Generating responses:  80%|███████▉  | 911/1145 [07:49<01:43,  2.26it/s][A
+Generating responses:  80%|███████▉  | 915/1145 [07:51<01:49,  2.09it/s][A
+Generating responses:  80%|████████  | 917/1145 [07:51<01:31,  2.49it/s][A
+Generating responses:  80%|████████  | 919/1145 [07:52<01:21,  2.78it/s][A
+Generating responses:  81%|████████  | 922/1145 [07:52<00:58,  3.79it/s][A
+Generating responses:  81%|████████  | 924/1145 [07:52<00:55,  4.01it/s][A
+Generating responses:  81%|████████  | 926/1145 [07:56<02:23,  1.53it/s][A
+Generating responses:  81%|████████  | 928/1145 [07:56<01:50,  1.96it/s][A
+Generating responses:  81%|████████▏ | 931/1145 [07:57<01:34,  2.26it/s][A
+Generating responses:  81%|████████▏ | 932/1145 [07:57<01:26,  2.45it/s][A
+Generating responses:  82%|████████▏ | 935/1145 [08:04<03:53,  1.11s/it][A
+Generating responses:  82%|████████▏ | 938/1145 [08:05<02:43,  1.26it/s][A
+Generating responses:  82%|████████▏ | 941/1145 [08:09<03:29,  1.03s/it][A
+Generating responses:  82%|████████▏ | 942/1145 [08:09<03:05,  1.09it/s][A
+Generating responses:  82%|████████▏ | 943/1145 [08:11<03:33,  1.06s/it][A
+Generating responses:  83%|████████▎ | 945/1145 [08:11<02:30,  1.33it/s][A
+Generating responses:  83%|████████▎ | 948/1145 [08:12<01:42,  1.92it/s][A
+Generating responses:  83%|████████▎ | 949/1145 [08:12<01:29,  2.19it/s][A
+Generating responses:  83%|████████▎ | 951/1145 [08:12<01:11,  2.71it/s][A
+Generating responses:  83%|████████▎ | 954/1145 [08:17<02:42,  1.17it/s][A
+Generating responses:  84%|████████▍ | 959/1145 [08:17<01:25,  2.18it/s][A
+Generating responses:  84%|████████▍ | 963/1145 [08:19<01:16,  2.37it/s][A
+Generating responses:  84%|████████▍ | 965/1145 [08:19<01:05,  2.74it/s][A
+Generating responses:  84%|████████▍ | 967/1145 [08:20<01:07,  2.64it/s][A
+Generating responses:  85%|████████▍ | 971/1145 [08:20<00:42,  4.05it/s][A
+Generating responses:  85%|████████▌ | 974/1145 [08:23<01:18,  2.17it/s][A
+Generating responses:  85%|████████▌ | 978/1145 [08:23<00:54,  3.07it/s][A
+Generating responses:  86%|████████▌ | 979/1145 [08:26<01:41,  1.64it/s][A
+Generating responses:  86%|████████▌ | 980/1145 [08:26<01:30,  1.82it/s][A
+Generating responses:  86%|████████▌ | 981/1145 [08:30<02:56,  1.08s/it][A
+Generating responses:  86%|████████▌ | 985/1145 [08:30<01:31,  1.74it/s][A
+Generating responses:  86%|████████▌ | 986/1145 [08:31<01:30,  1.76it/s][A
+Generating responses:  86%|████████▋ | 989/1145 [08:31<00:58,  2.65it/s][A
+Generating responses:  87%|████████▋ | 991/1145 [08:31<00:52,  2.96it/s][A
+Generating responses:  87%|████████▋ | 994/1145 [08:32<00:38,  3.91it/s][A
+Generating responses:  87%|████████▋ | 1000/1145 [08:41<02:09,  1.12it/s][A
+Generating responses:  88%|████████▊ | 1003/1145 [08:41<01:36,  1.47it/s][A
+Generating responses:  88%|████████▊ | 1006/1145 [08:43<01:38,  1.41it/s][A
+Generating responses:  88%|████████▊ | 1008/1145 [08:43<01:18,  1.74it/s][A
+Generating responses:  88%|████████▊ | 1010/1145 [08:44<01:08,  1.96it/s][A
+Generating responses:  88%|████████▊ | 1013/1145 [08:49<01:57,  1.13it/s][A
+Generating responses:  89%|████████▉ | 1017/1145 [08:49<01:13,  1.75it/s][A
+Generating responses:  89%|████████▉ | 1020/1145 [08:50<00:58,  2.14it/s][A
+Generating responses:  89%|████████▉ | 1023/1145 [08:51<00:48,  2.50it/s][A
+Generating responses:  90%|████████▉ | 1025/1145 [08:56<01:44,  1.15it/s][A
+Generating responses:  90%|████████▉ | 1026/1145 [08:56<01:32,  1.28it/s][A
+Generating responses:  90%|████████▉ | 1028/1145 [08:58<01:40,  1.16it/s][A
+Generating responses:  90%|████████▉ | 1030/1145 [08:58<01:12,  1.58it/s][A
+Generating responses:  90%|█████████ | 1035/1145 [08:59<00:40,  2.75it/s][A
+Generating responses:  91%|█████████ | 1037/1145 [09:05<01:45,  1.02it/s][A
+Generating responses:  91%|█████████ | 1038/1145 [09:05<01:33,  1.15it/s][A
+Generating responses:  91%|█████████ | 1041/1145 [09:08<01:32,  1.12it/s][A
+Generating responses:  91%|█████████▏| 1046/1145 [09:09<00:53,  1.86it/s][A
+Generating responses:  91%|█████████▏| 1047/1145 [09:09<00:48,  2.03it/s][A
+Generating responses:  92%|█████████▏| 1049/1145 [09:09<00:41,  2.29it/s][A
+Generating responses:  92%|█████████▏| 1051/1145 [09:14<01:24,  1.11it/s][A
+Generating responses:  92%|█████████▏| 1053/1145 [09:14<01:02,  1.47it/s][A
+Generating responses:  92%|█████████▏| 1059/1145 [09:14<00:31,  2.70it/s][A
+Generating responses:  93%|█████████▎| 1062/1145 [09:18<00:48,  1.71it/s][A
+Generating responses:  93%|█████████▎| 1066/1145 [09:18<00:31,  2.47it/s][A
+Generating responses:  93%|█████████▎| 1069/1145 [09:19<00:25,  2.96it/s][A
+Generating responses:  94%|█████████▎| 1072/1145 [09:19<00:19,  3.75it/s][A
+Generating responses:  94%|█████████▍| 1074/1145 [09:20<00:21,  3.34it/s][A
+Generating responses:  94%|█████████▍| 1077/1145 [09:20<00:16,  4.24it/s][A
+Generating responses:  94%|█████████▍| 1078/1145 [09:24<00:47,  1.40it/s][A
+Generating responses:  94%|█████████▍| 1081/1145 [09:24<00:30,  2.11it/s][A
+Generating responses:  95%|█████████▍| 1085/1145 [09:24<00:18,  3.25it/s][A
+Generating responses:  95%|█████████▍| 1087/1145 [09:26<00:21,  2.68it/s][A
+Generating responses:  95%|█████████▌| 1088/1145 [09:26<00:19,  2.95it/s][A
+Generating responses:  95%|█████████▌| 1092/1145 [09:28<00:22,  2.39it/s][A
+Generating responses:  96%|█████████▌| 1095/1145 [09:28<00:15,  3.28it/s][A
+Generating responses:  96%|█████████▌| 1100/1145 [09:33<00:25,  1.74it/s][A
+Generating responses:  96%|█████████▌| 1101/1145 [09:33<00:23,  1.91it/s][A
+Generating responses:  96%|█████████▋| 1104/1145 [09:33<00:15,  2.72it/s][A
+Generating responses:  97%|█████████▋| 1110/1145 [09:33<00:07,  4.43it/s][A
+Generating responses:  97%|█████████▋| 1112/1145 [09:34<00:07,  4.59it/s][A
+Generating responses:  97%|█████████▋| 1114/1145 [09:35<00:11,  2.81it/s][A
+Generating responses:  97%|█████████▋| 1116/1145 [09:36<00:09,  3.20it/s][A
+Generating responses:  98%|█████████▊| 1120/1145 [09:36<00:05,  4.98it/s][A
+Generating responses:  98%|█████████▊| 1123/1145 [09:36<00:03,  5.93it/s][A
+Generating responses:  98%|█████████▊| 1126/1145 [09:37<00:04,  4.15it/s][A
+Generating responses:  99%|█████████▊| 1128/1145 [09:38<00:03,  4.76it/s][A
+Generating responses:  99%|█████████▊| 1130/1145 [09:43<00:12,  1.22it/s][A
+Generating responses:  99%|█████████▉| 1133/1145 [09:43<00:07,  1.71it/s][A
+Generating responses:  99%|█████████▉| 1134/1145 [09:44<00:05,  1.87it/s][A
+Generating responses:  99%|█████████▉| 1135/1145 [09:44<00:04,  2.16it/s][A
+Generating responses:  99%|█████████▉| 1137/1145 [09:47<00:06,  1.27it/s][A
+Generating responses:  99%|█████████▉| 1138/1145 [10:22<00:50,  7.25s/it][A
+Generating responses: 100%|█████████▉| 1140/1145 [10:26<00:26,  5.36s/it][A
+Generating responses: 100%|█████████▉| 1141/1145 [10:26<00:17,  4.31s/it][A
+Generating responses: 100%|█████████▉| 1142/1145 [10:28<00:11,  3.81s/it][A
+Generating responses: 100%|█████████▉| 1143/1145 [10:34<00:08,  4.35s/it][A
+Generating responses: 100%|█████████▉| 1144/1145 [11:22<00:15, 15.49s/it][A
+Generating responses: 100%|██████████| 1145/1145 [11:58<00:00, 20.96s/it][AGenerating responses: 100%|██████████| 1145/1145 [11:58<00:00,  1.59it/s]
+100%|██████████| 1/1 [12:03<00:00, 723.00s/it]100%|██████████| 1/1 [12:03<00:00, 723.00s/it]

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data/track/mm-RewardRAG/experiments/encyclopedia/lvlm.py", line 5, in <module>
+    from generators.base import BaseGenerator
+  File "/data/track/mm-RewardRAG/generators/__init__.py", line 1, in <module>
+    from .description import DescriptionGenerator
+  File "/data/track/mm-RewardRAG/generators/description.py", line 1, in <module>
+    from .base import BaseGenerator
+  File "/data/track/mm-RewardRAG/generators/base.py", line 6, in <module>
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'

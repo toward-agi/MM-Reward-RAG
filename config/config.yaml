@@ -1,0 +1,324 @@
+embedders:
+  multimodal:
+    type: "clip"  # Options: clip, chinese-clip, etc.
+    models:
+      clip:
+        name: "openai/clip-vit-large-patch14-336"
+      chinese_clip:
+        name: "OFA-Sys/chinese-clip-vit-base-patch16"
+      eva:
+        name: "BAAI/EVA-CLIP-8B"
+  
+  text:
+    type: "openai"  # Options: openai, sentence-transformers, etc.
+    models:
+      openai:
+        name: "text-embedding-3-small"
+      sentence_transformers:
+        name: "all-MiniLM-L6-v2"
+
+generators:
+  description_generator:
+    type: "openai"
+    url: ""
+    api_key: ""
+    model: "gpt-4o-mini"
+    batch_size: 4
+    prompt_file: "prompts/description.yaml"
+    generation_config:
+      max_tokens: 300
+      temperature: 0.7
+      top_p: 0.9
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+    
+  query_translator:
+    type: "openai"
+    url: "http://localhost:12334/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2-VL-7B-Instruct"
+    batch_size: 32
+    prompt_file: "prompts/translator.yaml"
+    generation_config:
+      max_tokens: 500
+      temperature: 0
+      top_p: 0.95
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: null
+      stream: false
+    
+  response_generator:
+    type: "openai"
+    url: ""
+    api_key: ""
+    model: "gpt-4o-mini"
+    batch_size: 2
+    use_knowledge: true  # Whether to include knowledge in the input
+    prompt_file: "prompts/response.yaml"
+    generation_config:
+      max_tokens: 1000
+      temperature: 0.7
+      top_p: 0.9
+      presence_penalty: 0.2
+      frequency_penalty: 0.2
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  vanilla_lvlm_generator:
+    type: "openai"
+    url: "http://localhost:12334/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-3B-Instruct"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      max_tokens: 1024
+      temperature: 0.0
+      top_p: 1.0
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  vllm_reranker:
+    type: "openai"
+    url: "http://localhost:12346/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-7B-Instruct"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      max_tokens: 1024
+      temperature: 0.0
+      top_p: 1.0
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+    
+  vllm_sample_reranker:
+    type: "openai"
+    url: "http://localhost:12346/v1"
+    api_key: "EMPTY"
+    model: "m"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      n: 16
+      # max_tokens: 1024
+      temperature: 0.7
+      top_p: 0.9
+      # presence_penalty: 0.0
+      # frequency_penalty: 0.0
+      # response_format: { "type": "text" }
+      # seed: 42
+      # stream: false
+  
+  vllm_sample_reranker_3b:
+    type: "openai"
+    url: "http://localhost:12333/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-3B-Instruct"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      n: 16
+      # max_tokens: 1024
+      temperature: 0.7
+      top_p: 0.9
+      # presence_penalty: 0.0
+      # frequency_penalty: 0.0
+      # response_format: { "type": "text" }
+      # seed: 42
+      # stream: false
+
+  vllm_translator:
+    type: "openai"
+    url: "http://localhost:12346/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-7B-Instruct"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      max_tokens: 1024
+      temperature: 0.0
+      top_p: 1.0
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+  
+  vllm_sample_translator:
+    type: "openai"
+    url: "http://localhost:12346/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-7B-Instruct"
+    batch_size: 100
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      n: 16
+      # max_tokens: 1024
+      temperature: 0.7
+      top_p: 0.9
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  vllm_sample_translator_3b:
+    type: "openai"
+    url: "http://localhost:12333/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-3B-Instruct"
+    batch_size: 100
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      n: 16
+      max_tokens: 1024
+      temperature: 0.7
+      top_p: 0.9
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+  
+  vllm_answer_generator:
+    type: "openai"
+    url: "http://localhost:12346/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-VL-7B-Instruct"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      max_tokens: 1024
+      temperature: 0.0
+      top_p: 1.0
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  baseline_llm_generator:
+    type: "openai"
+    url: "http://localhost:12346/v1"
+    api_key: "EMPTY"
+    model: "llava-hf/llava-v1.6-mistral-7b-hf"
+    batch_size: 20
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      max_tokens: 300
+      temperature: 1.0
+      top_p: 1.0
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  llm_kb:
+    type: "openai"
+    url: "http://localhost:12333/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2-7B-Instruct"
+    batch_size: 128
+    prompt_file: "prompts/llm_kb.yaml"
+    generation_config:
+      max_tokens: 1024
+      temperature: 0
+      top_p: 0.9
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  
+  VQA2QA:
+    type: "openai"
+    url: "http://localhost:12334/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2-VL-7B-Instruct"
+    batch_size: 32
+    prompt_file: "prompts/vqa2qa.yaml"
+    generation_config:
+      max_tokens: 500
+      temperature: 0
+      top_p: 0.95
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: null
+      stream: false
+    
+  
+
+image_store:
+  path: "./data/images"
+  
+indexers:
+  type: "faiss"  # Options: faiss, milvus, qdrant
+  faiss:
+    index_type: "Cosine"  # L2, IP, Cosine, HNSW
+    dimension: 
+      image: 512
+      text: 1536
+      jina-clip-v2: 1024
+      bge: 1024
+      clip-large: 768
+      eva-clip: 1280
+    nprobe: 16
+    metric_type: "Cosine"
+    nlinks: 32
+    ef_construction: 256
+    ef_search: 256
+  milvus:
+    host: "localhost"
+    port: 19530
+    collection_name: "mm_rag"
+    dimension:
+      image: 512 
+      text: 1536
+    metric_type: "L2"
+  qdrant:
+    url: "http://localhost:6333"
+    collection_name: "mm_rag"
+    dimension:
+      image: 512
+      text: 1536
+    distance: "Cosine"
+
+retrieval:
+  top_k: 5
+  use_reranker: true
+  strategy: "full"  # Options: full (img+desc+knowledge), text_only (desc+knowledge), visual (img+knowledge)
+  weights:
+    multimodal: 0.4
+    textual_image: 0.3
+    knowledge: 0.3
+  reranker:
+    type: "cross-encoder"  # Options: cross-encoder, colbert, etc.
+    model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    batch_size: 32
+    threshold: 0.5
+
+critic:
+  llava_critic:
+    type: "llava"
+    model: "lmms-lab/llava-critic-7b"
+    model_name: "llava_qwen"
+    device_map: "auto"
+    batch_size: 2
+    temperature: 0
+    conv_template: "qwen_1_5"

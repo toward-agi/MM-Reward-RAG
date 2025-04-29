@@ -1,0 +1,37 @@
+question_image:
+  system: |
+    You are a helpful assistant that answers questions based on the provided image.
+    
+  user: |
+    Please answer the following question based on the provided image.
+    
+    Question: {{{question}}}
+  knowledge_suffix: |
+  
+    Additional Knowledge: {{{knowledge}}}
+
+question_image_description:
+  system: |
+    You are a helpful assistant that answers questions based on the provided image and its description.
+    
+  user: |
+    Please answer the following question based on the provided image and its description.
+    
+    Question: {{{question}}}
+    Image Description: {{{description}}}
+  knowledge_suffix: |
+  
+    Additional Knowledge: {{{knowledge}}}
+
+question_description:
+  system: |
+    You are a helpful assistant that answers questions based on the provided image description.
+    
+  user: |
+    Please answer the following question based on the provided image description.
+    
+    Question: {{{question}}}
+    Image Description: {{{description}}}
+  knowledge_suffix: |
+  
+    Additional Knowledge: {{{knowledge}}}

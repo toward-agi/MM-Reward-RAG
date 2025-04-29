@@ -1,0 +1,78 @@
+/data/huggingface/modules/transformers_modules/jinaai/jina-clip-implementation/51f02de9f2cf8afcd3bac4ce996859ba96f9f8e9/modeling_clip.py:175: UserWarning: xFormers is not installed. Check https://github.com/facebookresearch/xformers?tab=readme-ov-file#installing-xformers for installation instructions, disabling
+  warnings.warn(
+/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/flash_attn/ops/triton/layer_norm.py:984: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd
+/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/flash_attn/ops/triton/layer_norm.py:1043: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  @custom_bwd
+  0%|          | 0/12 [00:00<?, ?it/s]
+Encoding:   0%|          | 0/1 [00:00<?, ?it/s][A
+Encoding: 100%|██████████| 1/1 [00:10<00:00, 10.01s/it][AEncoding: 100%|██████████| 1/1 [00:10<00:00, 10.01s/it]
+  8%|▊         | 1/12 [00:14<02:34, 14.04s/it](512, 1024)
+
+Encoding:   0%|          | 0/1 [00:00<?, ?it/s][AEncoding:   0%|          | 0/1 [00:00<?, ?it/s]
+  8%|▊         | 1/12 [00:14<02:34, 14.07s/it]
+Traceback (most recent call last):
+  File "/data/track/mm-RewardRAG/experiments/encyclopedia/text_kb_whole.py", line 103, in <module>
+    query_vectors = embedder.embed_text(questions)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/track/mm-RewardRAG/core/embeddings/jina_clip_v2.py", line 107, in embed_text
+    embeddings = self.model.encode_text(texts, task=task, truncate_dim=self.truncate_dim, show_progress_bar=True, batch_size=self.batch_size)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/jina-clip-implementation/51f02de9f2cf8afcd3bac4ce996859ba96f9f8e9/modeling_clip.py", line 614, in encode_text
+    embeddings = self.get_text_features(input_ids=tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/jina-clip-implementation/51f02de9f2cf8afcd3bac4ce996859ba96f9f8e9/modeling_clip.py", line 352, in get_text_features
+    return self.text_projection(self.text_model(x=x))
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/jina-clip-implementation/51f02de9f2cf8afcd3bac4ce996859ba96f9f8e9/hf_model.py", line 318, in forward
+    out = self.transformer(
+          ^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/xlm-roberta-flash-implementation/2b6bc3f30750b3a9648fe9b63448c09920efe9be/modeling_lora.py", line 372, in forward
+    return self.roberta(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/xlm-roberta-flash-implementation/2b6bc3f30750b3a9648fe9b63448c09920efe9be/modeling_xlm_roberta.py", line 707, in forward
+    hidden_states = self.embeddings(
+                    ^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/xlm-roberta-flash-implementation/2b6bc3f30750b3a9648fe9b63448c09920efe9be/embedding.py", line 65, in forward
+    task_embeddings = self.word_embeddings(task_input_ids, task_id=task_id)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/xlm-roberta-flash-implementation/2b6bc3f30750b3a9648fe9b63448c09920efe9be/modeling_lora.py", line 222, in new_forward
+    weights = self.parametrizations.weight[0].lora_forward(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/huggingface/modules/transformers_modules/jinaai/xlm-roberta-flash-implementation/2b6bc3f30750b3a9648fe9b63448c09920efe9be/modeling_lora.py", line 104, in lora_forward
+    + torch.matmul(
+      ^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 490.00 MiB. GPU 0 has a total capacity of 95.10 GiB of which 196.69 MiB is free. Process 1911157 has 18.32 GiB memory in use. Process 1938256 has 64.28 GiB memory in use. Including non-PyTorch memory, this process has 12.28 GiB memory in use. Of the allocated memory 2.15 GiB is allocated by PyTorch, and 492.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

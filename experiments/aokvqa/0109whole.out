@@ -1,0 +1,759 @@
+/data/huggingface/modules/transformers_modules/jinaai/jina-clip-implementation/51f02de9f2cf8afcd3bac4ce996859ba96f9f8e9/modeling_clip.py:175: UserWarning: xFormers is not installed. Check https://github.com/facebookresearch/xformers?tab=readme-ov-file#installing-xformers for installation instructions, disabling
+  warnings.warn(
+/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/flash_attn/ops/triton/layer_norm.py:984: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd
+/data/mingyan/miniconda3/envs/base_env/lib/python3.12/site-packages/flash_attn/ops/triton/layer_norm.py:1043: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  @custom_bwd
+  0%|          | 0/3 [00:00<?, ?it/s]
+Encoding:   0%|          | 0/1 [00:00<?, ?it/s][A
+Encoding: 100%|██████████| 1/1 [00:01<00:00,  1.79s/it][AEncoding: 100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+ 33%|███▎      | 1/3 [00:32<01:05, 32.69s/it](512, 1024)
+
+Encoding:   0%|          | 0/1 [00:00<?, ?it/s][A
+Encoding: 100%|██████████| 1/1 [00:00<00:00,  8.48it/s][AEncoding: 100%|██████████| 1/1 [00:00<00:00,  8.47it/s]
+ 67%|██████▋   | 2/3 [00:38<00:17, 17.08s/it](512, 1024)
+
+Encoding:   0%|          | 0/1 [00:00<?, ?it/s][AEncoding: 100%|██████████| 1/1 [00:00<00:00, 16.70it/s]
+100%|██████████| 3/3 [00:40<00:00,  9.85s/it]100%|██████████| 3/3 [00:40<00:00, 13.37s/it]
+(121, 1024)
+0it [00:00, ?it/s]40it [00:00, 398.13it/s]82it [00:00, 406.17it/s]124it [00:00, 410.11it/s]170it [00:00, 427.09it/s]214it [00:00, 428.13it/s]259it [00:00, 434.68it/s]303it [00:00, 432.72it/s]350it [00:00, 440.97it/s]398it [00:00, 452.99it/s]448it [00:01, 465.67it/s]497it [00:01, 471.79it/s]546it [00:01, 474.71it/s]596it [00:01, 479.89it/s]644it [00:01, 477.41it/s]693it [00:01, 478.25it/s]742it [00:01, 480.03it/s]791it [00:01, 472.32it/s]839it [00:01, 469.56it/s]887it [00:01, 470.73it/s]935it [00:02, 455.13it/s]981it [00:02, 442.99it/s]1026it [00:02, 419.98it/s]1069it [00:02, 403.73it/s]1110it [00:02, 391.90it/s]1145it [00:02, 439.58it/s]
+(<PIL.Image.Image image mode=RGB size=640x569 at 0x7BA767E16120>, '22jbM6gDxdaMaunuzgrsBB', 'External knowledge: Motorcycling is the act of riding a motorcycle. For some people, motorcycling may be the only affordable form of individual motorized transportation, and small-displacement motorcycles are the most common motor vehicle in the most populous countries, including India, China and Indonesia.\nIn developing countries, motorcycles are overwhelmingly utilitarian due to lower prices and greater fuel economy. Of all motorcycles, 58% are in the Asia Pacific and Southern and Eastern Asia regions, excluding car-centric Japan.\nMotorcycles are mainly a luxury good in developed nations, where they are used mostly for recreation, as a lifestyle accessory or a symbol of personal identity. Beyond being a mode of motor transportation or sport, motorcycling has become a subculture and lifestyle. Although mainly a solo activity, motorcycling can be social and motorcyclists  tend to have a sense of community with each other. For most riders, a motorcycle is a cheaper and more convenient form of transportation which causes less commuter congestion within cities and has less environmental impact than automobile ownership. Others ride as a way to relieve stress and to "clear their minds" as described in Robert M. Pirsig\'s book Zen and the Art of Motorcycle Maintenance. Pirsig contrasted the sense of connection experienced by motorcyclists with the isolation of drivers who are "always in a compartment", passively observing the passing landscape. Pirsig portrayed motorcycling as being in "completely in contact with it all... in the scene."\nThe connection to one\'s motorcycle is sensed further, as Pirsig explained, by the frequent need to maintain its mechanical operation. Pirsig felt that connection deepen when faced with a difficult mechanical problem that required walking away from it until the solution became clear. Similarly, motorcyclists experience pleasure at the feeling of being far more connected to their motor vehicles than in a motorcar, as being part of it rather than in it. Speed draws many people to motorcycling because the power-to-weight ratio of even a low-power motorcycle is in league with that of an expensive sports car. The power-to-weight ratio of many modestly priced sport bikes is well beyond any mass-market automobile and rivals that of supercars for a fraction of the price. The fastest accelerating production cars, capable of 0 to 60\xa0mph (0 to 97\xa0km/h) in under 3.5 seconds, or 0 to 1⁄4 mile (0.0 to 0.4\xa0km) in under 12 seconds is a relatively select club of exotic names like Porsche and Lamborghini, with a few extreme sub-models of popular sports cars, like the Shelby Mustang, and mostly made since the 1990s. Conversely, the fastest accelerating motorcycles meeting the same criteria is a much longer list and includes many non-sportbikes, such as the Triumph Tiger Explorer or Yamaha XT1200Z Super Ténéré, and includes many motorcycles dating back to the 1970s.\nHunter S. Thompson\'s book Hell\'s Angels includes an ode to the joys of pushing a motorcycle to its limits, "with the throttle screwed on there is only the barest margin, and no room at all for mistakes ... that\'s when the strange music starts ... fear becomes exhilaration [and the] only sounds are the wind and a dull roar floating back from the mufflers" and T. E. Lawrence wrote of the "lustfulness of moving swiftly" and the "pleasure of speeding on the road". A sensation he compared to feeling "the earth moulding herself under me ... coming alive ... and heaving and tossing on each side like a sea." While people choose to ride motorcycles for various reasons, those reasons are increasingly practical, with riders opting for a powered two-wheeler as a cost-efficient alternative to infrequent and expensive public transport systems, or as a means of avoiding or reducing the effects of urban congestion.\nWhere permitted, lane splitting, which is also known as filtering, allows motorcycles to move between vehicles in slow or stationary traffic.\nIn the UK, motorcycles are exempt from the £11.50 per day London congestion charge that other vehicles must pay to enter the city during the day. Motorcycles are also exempt from toll charges at such river crossings as the Dartford Crossing, and Mersey Tunnels. Such cities as Bristol provide dedicated free parking and allow motorcycles to use bus lanes. In the United States, motorcycles may use high-occupancy vehicle lanes in accordance with federal law  and pay a lesser fee on some toll roads and toll bridges. Other countries have similar policies.\nIn New Zealand, motorcycle riders need not pay for parking that is controlled by a barrier arm;\nthe arm occupies less than the entire width of the lane, and the motorcyclist simply rides around it.\nMany car parks that are thus controlled so supply special areas for motorcycles to park as to save space.\nIn many cities that have serious parking challenges for cars, such as Melbourne, Australia, motorcycles are generally permitted to park on the sidewalk, rather than occupy a space on the street which might otherwise be used by a car. Melbourne presents an example for the rest of the world with its free motorcycle footpath parking which is enshrined in their Future Melbourne Committee Road Safety Plan\nOn Washington State Ferries, the most-used vehicle ferry system in the United States, motorcycle riders get priority boarding, skip automobile waiting lines, and are charged a lower fare than automobiles. BC Ferries users obtain many of the same benefits. Statistically, there is a large difference between the car-dominated developed nations, and the more populous developing countries where cars are less common than motorcycles. In developed nations, motorcycles are frequently owned in addition to a car, and thus used primarily for recreation or when traffic density means a motorcycle confers travel time or parking advantages as a mode of transport.\nIn the developing world a motorcycle is more likely to be the primary mode of transport for its owner, and often the owner\'s family as well. It is not uncommon for riders to transport multiple passengers or large goods aboard small motorcycles and scooters simply because there is no better alternative. Cost of ownership considerations regarding maintenance and parts, especially in remote areas, often place cars out of reach of families who consider motorbikes relatively affordable. The simplicity demanded of motorcycles used in the developing world, coupled with the high volume of sales possible makes them a profitable and appealing product for major manufacturers, who go to substantial lengths to attract and retain market share. Motorbikes are one of the most affordable forms of motorised transport and, for most of the world\'s population, they are the most familiar type of motor vehicle. While North America, Europe and Japan are car-centric cultures where motorcycles are uncommon, the non-car-centric cultures of India, China and Southeast Asia account for more than half of the world\'s population, and in those places two-wheelers outnumber four wheeled vehicles.\nAbout 600 million motorcycles, including mopeds, motor scooters, motorised bicycles, and other powered two and three-wheelers, are in use worldwide, or about 33 motorcycles per 1000 people. By comparison, there are about 1 billion  cars in the world, or about 141 per 1000 people, with about one third in service in Japan and the United States.\nThe four largest motorcycle markets in the world are all in Asia: China, India, Indonesia, and Vietnam. India, with an estimated 37 million motorcycles/mopeds, was home to the largest number of motorised two wheelers in the world. China came a close second with 34 million motorcycles/mopeds in 2002. As the middle class in India, China, and other developing countries grows, they are repeating the transition from motorcycles to cars that took place in the US in the years after World War I, and in Europe following World War II, and the role of motorcycling is changing from a transport necessity to a leisure activity, and the motorcycle is changing from a family\'s primary motor vehicle to a second or third vehicle. The motorcycle is also popular in Brazil\'s frontier towns.\nIn numerous cultures, motorcycles are the primary means of motorised transport. According to the Taiwanese government, for example, "the number of automobiles per ten thousand population is around 2,500, and the number of motorcycles is about 5,000." In places such as Vietnam, motorised traffic consist of mostly motorbikes due to a lack of public transport and low income levels that put automobiles out of reach for many. Recent years have seen an increase in the popularity of motorcycles elsewhere. In the USA, registrations increased by 51% between 2000 and 2005. This is mainly attributed to increasing fuel prices and urban congestion.\nAmid the global economic downturn of 2008, the motorcycle market grew by 6.5%.\nIn China, the number of motorcycles in use increased from 34 million in 2002 to 54 million in 2006, with annual production of 22 million units. A Consumer Reports subscribers\' survey of mainly United States motorcycle and scooter owners reported that they rode an average of only 1,000 miles (1,600\xa0km) per year, 82% for recreation and 38% for commuting, adding to more than 100% because some riders rode for both recreation and commuting. Americans put 10,000–12,000 miles (16,000–19,000\xa0km) per year on their cars and light trucks.\nAs motorcyclists in mainly Western countries age, there is a tendency for riders to choose touring bikes over sports bikes. The relative risk of a motorcycle rider being killed or seriously injured per kilometre travelled was around 54 times higher in Great Britain in 2006 than for car drivers. United States Department of Transportation data for 2005 from the Fatality Analysis Reporting System show that for passenger cars, 18.62 fatal crashes occur per 100,000 registered vehicles. For motorcycles this figure is 75.19 per 100,000 registered vehicles — four times higher than for cars. The same data shows that 1.56 fatalities occur per 100 million vehicle miles travelled for passenger cars, whereas for motorcycles the figure is 43.47, which was 37 times higher than for cars in 2007. The increased risk over other road users comes from the motorcyclist being relatively unprotected on the motorcycle.\nThere are also some statistics comparing the risk of hospital admissions for different leisure activities. A study shows that the probability for the activity leading to hospital admission was 4.9/10,000 hours of horseback riding, while the same number for motorcycling was 1.4/10,000 hours.\nTo address motorcycle safety issues, motorcycle-specific training and personal protective equipment is important for motorcyclists\' survival on the road, and mandated in many countries and several U.S. states and counties. A Norwegian study has looked at the reasons behind motorcycle death accidents. The study has looked at all fatal accidents in Norway (a total of 153) in the time frame 2005 to 2009. In 66% of these accidents, the motorcyclist was to blame for the accident occurring, while others were to blame in 20% of the cases. Technical problems with the motorcycle itself are rarely the cause of crashes, as this was shown to be a prominent factor in only 4% of the investigated accidents.\nRacing and supersport motorcycles, even while having the best handling capabilities, are overrepresented in fatal accidents. Adventurous people are drawn to these bikes, and this group are more prone to be involved in crashes. More fatal accidents on racing motorcycles are caused by extreme behaviour than on touring motorcycles. In Europe, head injuries lead to death in about 75% of fatal motorcycle accidents. The same number for low- and middle-income countries is 88%. Helmet usage reduces the chance for death in an accident by 40% and the risk of serious injury by 70%.\nWhile helmet usage generally is increasing worldwide and 77% of the world\'s population is covered by extensive helmet laws, many countries still lack sufficient enforcement. Pakistan has  both laws requiring driver and passenger to wear a helmet and regulations on helmet standards. Still, only 10% of all riders in Pakistan wear a helmet. Motorcycling lifestyles have been adopted by many different groups spanning nations and cultures. They include commuters, mainstream motorcycle clubs such as long-distance riding clubs, adventure touring, trail riding and those involved with motorcycle sports, such as motocross riding, drag racing, circuit racing and trick or stunt enthusiasts; and those involved in customizing their vehicles in various different styles.  Organized rides are a key element of many groups.\nAround the world, motorcycles have historically been associated with highly visible subcultures. Some of these subcultures have been loose-knit social groups, such as the scooter riders and cafe racer riders of the 1950s and 60s in Great Britain, and they often are seen as inhabiting the fringes of society. Numerous books about motorcycle subcultures have been written, including Hunter S. Thompson\'s Hells Angels, Lee Gutkind\'s Bike Fever, and Daniel R. Wolf\'s The Rebels.  Social motorcyclist organisations are popular and are sometimes organised geographically, focus on individual makes, or even specific models. Example motorcycle clubs include American Motorcyclist Association, Harley Owners Group and BMW MOA. Some organisations hold large international motorcycle rallies in different parts of the world that are attended by many thousands of riders. Many social motorcycle organisations raise money for charities as a secondary activity, through organised events and rides, and others exist primarily as social benefit organisations, such as Bikers Against Child Abuse. In the UK, advanced riding clubs exist in the Institute of Advanced Motorists and RoSPA Advanced Drivers and Riders. They provide a network of clubs around the United Kingdom that provides advanced skills training, preparation for taking an advanced driving test and social activities. Since the late 20th century, motorcyclists have formed political lobbying organisations in order to influence legislators to introduce motorcycle-friendly legislation and to contribute more broadly to public discourse where motorcycles are concerned.\nOne of the oldest such organisations, the British Motorcycle Action Group, was founded in 1973 specifically in response to helmet compulsion, introduced without public consultation. In addition, the British Motorcyclists Federation (BMF), founded in 1960 as a reaction to the public perception of motorcyclists as leather-jacketed hooligans, has itself moved into political lobbying. Likewise, the U.S. has ABATE, which, like most such organisations, also works to improve motorcycle safety, as well as running the usual charity fund-raising events and rallies, often for motorcycle-related political interests. At the other end of the spectrum from the charitable organisations and the motorcycle rights activists are the "outlaw motorcycle gangs."  One definition, by the Provincial Court of Manitoba, is: "Any group of motorcycle enthusiasts who have voluntarily made a commitment to band together and abide by their organisations\' rigorous rules enforced by violence, who engage in activities that bring them and their club into serious conflict with society and the law." The Federal Bureau of Investigation (FBI) and Criminal Intelligence Service Canada have designated four MCs as Outlaw Motorcycle Gangs (OMGs), which are the Pagans, Hells Angels, Outlaws MC, and Bandidos, known as the "Big Four."\nThe motorcycle manufacturing industry and many government entities around the world have taken actions to clean up the reputation and activities of motorcyclists. Motorcyclists will refer to maintenance or repair of a motorcycle as wrenching in the US and "spannering" in the UK. A do it yourself self-sufficiency is said to be part of motorcycles\' allure in an "increasingly monolithic, unfixable world" and being able to maintain one\'s own motorcycle is seen as part of the competency of being a motorcyclist.\nHistorically, motorcycle maintenance was a necessary skill for riders, since the materials and technology used in motorcycles often meant that repairs had to be done on the road-side miles from home. Modern motorcycles are as reliable as automobiles but many riders feel that their motorcycle is more than just a means of transportation which leads them to want to do maintenance on the motorcycles themselves. Nakata, Hiroko (8 October 2008). "Motorcycle makers battle it out in Vietnam". Japan Times. Retrieved 11 March 2009.\nMcCracken, Patti (1 October 2008). "Vietnam eats, sleeps, and dreams on motorbikes". The Christian Science Monitor. Retrieved 11 March 2009.\nBarrionuevo, Alexei (3 November 2008). "That Roar in the Jungle Is 15,000 Motorbikes". The New York Times. Retrieved 11 March 2009.\nSharma, Sopan (11 November 2010), "Bike Review: Honda CBR250R", The Economic Times, OCLC\xa061311680, retrieved 2011-03-19\nBroughton, Paul; Walker, Linda (May 6, 2009), Motorcycling and Leisure; Understanding the Recreational PTW Rider, Ashgate Publishing, ISBN\xa09780754675013\nMelissa Holbrook Pierson, The Perfect Vehicle: What It is about Motorcycles, 1997, W.W. Norton & Company, New York\nRobert M. Pirsig, Zen and the Art of Motorcycle Maintenance, 1974, HarperCollins Publishers, New York\nMcDonald-Walker, Suzanne (2000). Bikers: Culture, Politics and Power. Berg. OCLC\xa0490695406.\nFord, Dexter (October 12, 2010), "Nice Supercar. Now Eat My Dust", The New York Times, p.\xa0F13, ISSN\xa00362-4331, retrieved 2011-03-01\nHunter S. Thompson, Hell\'s Angels, 1967, Random House, New York\nT. E. Lawrence, T. E. Lawrence to his Biographers Robert Graves and Liddell Hart, (edited by Robert Graves and B. H. Liddell Hart), 1963, Casell, London\nTomlins, Bob (September 1997). "Rider training in Europe The Views and the Needs of the Rider" (PDF). The Federation of European Motorcyclists. Archived from the original (PDF) on 24 February 2009. Retrieved 30 June 2007.\n"All the info you need on lanesharing (lanesplitting)". www.WhyBike.com. Retrieved 28 June 2007.\n"Discounts & exemptions". Transport for London. Retrieved 6 December 2014.\n"Federal-Aid Highway Program Guidance on High Occupancy Vehicle (HOV) Lanes". US Department of Transportation. Retrieved 9 May 2013.\n"Drivers guide to Auckland City parking". City of Auckland. 2007. Archived from the original on 1 July 2008. Retrieved 8 August 2008.\n"Motorcycle parking in Wellington CBD". Kiwibiker.co.nz. Retrieved 28 January 2010.\n"Is Melbourne footpath parking under threat? - Motorbike Writer". Motorbike Writer. 2017-03-31. Retrieved 2017-07-23.\nPatrick Thomas (Summer 2004). "In The Land of Ferries". Sound Rider!.\nTravis Baker (August 13, 2015). "Motorcycle loading rules on ferries no different on holidays". Kitsap Sun. Bremerton, Washington.\n"Frequently asked questions". BC Ferries.\n"The Motorcycle Usage Characteristics in Developing Countries: The Operation Cost and Ownership of Motorcycles in Makassar - Indonesia" (PDF). Proceedings of the Eastern Asia Society for Transportation Studies. Retrieved 4 October 2014.\n"Yamaha Motor Philippines GP 5". Yamaha Motor Philippines. Archived from the original on 6 October 2014. Retrieved 4 October 2014.\n"Passenger Cars; Map No. 31". Worldmapper: The world as you\'ve never seen it before. 2002. Archived from the original on 2017-11-12. Retrieved 2014-08-17. See Technical notes for this data \n"Mopeds And Motorcycles Map No. 32". Worldmapper: The world as you\'ve never seen it before. 2002. Archived from the original on 2018-03-20. Retrieved 2014-08-17. See data files for the statistics \n"How many motorcycles are the in the world?". www.riders-share.com. Retrieved 2022-07-23.\nSousanis, John (15 August 2011). "World Vehicle Population Tops 1 Billion Units". Wards Auto. Retrieved 17 July 2012.\nHoang Dinh Nam (2011-07-25). "Honda Vietnam to build third motorbike plant". Yahoo News Singapore. Retrieved 2016-03-16.\nChung-Li. "Sustainable Development Indicators for Taiwan". Workshop on Sustainable Development Indicators. Archived from the original on 17 January 2008. Retrieved 14 August 2006.\n"Popularity of high-performance motorcycles helps push rider deaths to near-record high". Insurance Institute for Highway Safety. 11 September 2007. Retrieved 22 October 2008.\nPRNewswire (19 May 2008). "Soaring Gas Prices Shine Money-Saving Spotlight on Motorcycles". Reuters. Archived from the original on 9 March 2014. Retrieved 28 January 2010.\nKitamura, Makiko; Komatsu, Tetsuya (3 March 2009). "Honda\'s $140-a-Month Motorbikes Ease Pain of \'Grim\' Car Market". Bloomberg. Retrieved 11 March 2009.\n"2008 Motorcycle Statistics", Web Bike World, October 2008, archived from the original on August 7, 2011, retrieved 8 March 2014\n"China Motorcycle production decrease10.93% in October 2010". Caam.org.cn. 2010-11-18. Retrieved 2016-03-16.\nTravers, Jim (1 June 2010). "Survey: Motorcycle and scooter owners are very satisfied with their bikes". Consumer Reports. Archived from the original on 8 June 2010. Retrieved 2 August 2010.\n"Emission Facts: Greenhouse Gas Emissions from a Typical Passenger Vehicle" (PDF). U.S. Environmental Protection Agency, Office of Transportation and Air Quality. February 2005. Retrieved 2 August 2010. \nBroughton, Paul; Walker, Linda (6 May 2009). Motorcycling and Leisure: Understanding the Recreational Ptw Rider. Farnham, UK: Ashgate Publishing. p.\xa074. ISBN\xa0978-0754675013.\n"Transport Statistics Bulletin: Compendium of Motorcycling Statistics" (PDF). United Kingdom Department for Transport. Retrieved 2009-01-12.\n"Vehicles Involved in Fatal Crashes, 1994–2011". Fatality Analysis Reporting System. United States Department of Transportation. Retrieved 18 May 2014.\n"Traffic safety facts, 2008. Report no. DOT HS-811-159" (PDF). NHTSA\'s National Center for Statistics and Analysis. 2008. Retrieved 15 September 2010.\nSorli, Janet M. (2000). "Equestrian injuries: a five year review of hospital admissions in British Columbia, Canada" (PDF). Injury Prevention. 6 (1): 59–61. doi:10.1136/ip.6.1.59. PMC\xa01730586. PMID\xa010728545.\nRydland, Haslie & Hansen 2011, p.\xa02.\nRydland, Haslie & Hansen 2011, p.\xa09.\nRydland, Haslie & Hansen 2011, p.\xa04.\nRydland, Haslie & Hansen 2011, p.\xa05.\nVoldseth et al. 2004, p.\xa05.\nRydland, Haslie & Hansen 2011, p.\xa06.\nToroyan 2013, p.\xa018.\nToroyan 2013, p.\xa0174.\nThe Science and Art of Branding. Giep Franzen, Sandra Moriarty. M.E. Sharpe, 1 Oct 2008\n"About BACA". Bikers Against Child Abuse. Retrieved 10 October 2007.\n"About MAG". MAG UK. Retrieved 10 October 2007.\n"About\xa0» British Motorcyclists Federation". British Motorcyclists Federation. Retrieved 16 December 2020.\nSome other lobbying organisations are listed in Category:Motorcyclists organizations.\nOrganized Crime Fact Sheet Archived 2008-10-18 at the Wayback Machine\xa0–  Public Safety Canada\nFBI Safe Street Violent Crime Initiative\xa0–  Report Fiscal Year 2000\xa0–  FBI.org\n2004 Annual Report Archived 2009-12-22 at the Wayback Machine\xa0–  Criminal Intelligence Service Canada, cisc.gc.ca\nMotorcycle Gangs\xa0–  Connecticut Gang Investigators Association\nThe Corporate Cyclists.  Emile Milne, Black Enterprise Aug 1981\nThe Government\'s motorcycling strategy: fifth report of session 2006-07. House of Commons: Transport Committee, UK Voldseth, Svein; Wanvik, Per Ole; Hansen, Morten; Johansen, Bård Morten; Larsstuen, Finn (2004). Motorcycle Safety/MC-sikkerhet (PDF). Norwegian Public Roads Administration.\nRydland, Gunnar; Haslie, Lars-Inge; Hansen, Morten (2011). Death Accidents on Motorcycle 2005-2009/Dødsulykker på motorsykkel 2005-2009 (PDF). Norwegian Public Roads Administration. ISSN\xa01892-3844.\nToroyan, Tami (2013). Global status report on road safety 2013 (PDF). World Health Organization. ISBN\xa09789241564564. Season of the Bike "The difference between driving a car and climbing onto a motorcycle is the difference between watching TV and actually living your life."\nIHIE Guidelines for Motorcycling - these authoritative Guidelines are the first in the UK, setting out comprehensive, practical guidance for highway engineers, traffic engineers, road safety officers and transport planners on providing a safer transport environment for motorcycles, mopeds and scooters. The mouthpiece is the part of a horse\'s bit that goes into the mouth of a horse, resting on the bars of the mouth in the sensitive interdental space where there are no teeth.  The mouthpiece is possibly the most important determinant in the severity and action of the bit. Some mouthpieces are not allowed in dressage competition.\nThe other parts of the bit are the bit rings on a snaffle bit, and the shanks on a curb bit.  These pieces do not go inside the mouth, but rather are the parts of a bit that are outside the mouth, where the bridle and reins attach. Particular mouthpieces do not define the type of bit. Often, bits with mouthpieces, such as single or double-jointed bits, are incorrectly referred to as snaffles, which in actuality refers to a direct action bit, rather than a leverage bit, and not the mouthpiece. Though some mouthpieces are marked as "severe" and others as "mild", this is all relative. A heavy-handed rider can make even the mildest bit uncomfortable, and a skilled, light rider can ride in a much harsher mouthpiece without damaging the mouth or causing any distress in the horse. Additionally, the type of bit has a great impact on the action of the mouthpiece. Snaffles are generally considered the mildest, curbs and gags the harshest. It is difficult, therefore, to compare a harsher-type bit with a mild mouthpiece (such as a pelham with a rubber mullen mouth), and a milder-type bit with a harsher mouthpiece (like a snaffle with a slow twist). In general, however, the mouthpiece can have a marked difference on the severity. Snaffles with twisted wires are never considered mild, while a pelham with a low port may. In short, many factors in the bitting equation must be considered to evaluate the action and severity of a bit.\nVarious types of metal or synthetic substances are used for bit mouthpieces, which may determine how much a horse salivates or otherwise tolerates a bit; a horse having a moist mouth is considered more relaxed and responsive. Commonly used metals include stainless steel and nickel alloys, which generally do not rust and have a neutral effect on salivation; sweet iron, aurigan and copper, which generally tend to encourage salivation; and aluminum, which is considered drying and is discouraged as a mouthpiece metal.  Synthetic mouthpieces may be made with or without internal metal cable or bar reinforcement. Rubber bits are generally thicker than metal bits, but other types of plastics are also used, often the same size and some flavored.  Types of Bits: All types.\nWhat it is: The mouthpiece is a straight bar of material, without any joints or ports. In the mullen mouth, the bar has a slight bow to it, curving gently to allow some room for the tongue.\nAction: The mullen mouth and straight bar are fairly similar in action, placing pressure on the tongue, lips, and bars. The mullen provides extra space for the tongue, instead of constantly pushing into it, resulting in more tongue relief, and making it more comfortable, but the mullen does not have as high of a port as a curb, thus does not offer full tongue relief. This bit is generally considered a very mild mouthpiece, although this varies according to the type of bit leverage (snaffle, pelham or curb), and improper use may make it harsh, since the majority of the bit pressure is applied on the sensitive tongue.\nMaterials: Rubber is very common, as are other synthetic materials. Stainless steel is also a favorite, but copper and sweet iron are not as popular.\nUses: Seen in all equestrian activities, although less commonly in dressage. Usually not as popular for snaffles or gags as for bits that use leverage (pelham, Kimblewick, and curb). The straight bar is common in stallion in-hand bits.\nVariants: A variant that is somewhat between the mullen and a low port, seen primarily in western riding is called a "sweetwater" bit and is a very wide, low port slightly more arched than a mullen that offers full tongue relief, puts pressure only on the bars, and is primarily used as a curb mouthpiece.  Spade and "half-breed bits also have a straight bar mouthpiece, but with the addition of a port, spoon, or other accoutrements, and thus are not truly classified as a mullen or straight bar mouthpiece." Types of Bits: All types, including driving bits.\nWhat it is: The middle of the mouthpiece has a "port," or curve, which may vary in size from "low" to "high." The port is different from the mullen mouth in that the curved portion does not extend the width of the mouthpiece, but is only an inch or two in the center of the bar.\nAction: Ported bits act on the lips, tongue, and roof of the mouth, and may apply extra pressure to the bars. The action of the port is directly related to its size. Low ports provide some tongue relief, similar to the mullen mouth, as they provide more space. Larger ports press on the hard palate (roof of the mouth) when the reins are pulled, act as a fulcrum, and transfer that pressure onto the bars. Recent research has shown that the port must be 2-2.5" (5–6\xa0cm) or more in height before it touches the hard palate. Thus the mildest port height is not necessarily the lowest ported bit, as commonly believed; it can also be the highest port possible that does not contact the hard palate.\nMaterials: Always metal, often stainless steel but also may be sweet iron or copper.\nUses: Very uncommon in snaffles and gags (although it can be found). One of the most common mouthpieces in pelhams, Kimblewick, and curbs. Very popular in the Western disciplines. Type of Bits: Very common on snaffle bits, but seen on all bit families including Kimblewicks, pelhams, gags, and curbs.\nWhat it is: The mouthpiece has one joint in its center.  It "breaks" upward toward the top of the mouth with direct pressure, and outward toward the front of the mouth when used with leverage pressure from a bit shank.\nAction: The single-jointed mouthpiece applies pressure to the tongue, lips, and bars. Due to the V-shape of the bit when the mouthpiece is contracted, it causes a "nutcracker" action, which has a pinching effect on the bars. It also causes the joint of the bit to push into the sensitive roof of the mouth if used harshly. A single-jointed bit with a curved mouthpiece has a more "U" shape which tends to decrease the pressure on the roof of the mouth.\nMaterials: often stainless steel, but may be made of any bit metal (copper and sweet iron are both popular), happy mouth material (polyurethane), or have a rubber covering on each joint.\nUses: This is one of the most common mouthpieces found on a snaffle, and is popular for all equestrian sports.\nCautions: Curb bits with a single joint are often called cowboy snaffle, Argentine snaffle, or Tom Thumb snaffle.  However, these bits all are actually curb bits because they have shanks and operate with leverage.  Thus, when the reins are pulled, the horse is subjected both to the nutcracker action of the jointed mouthpiece and the leverage of the curb, which also causes the jointed bit to rotate and press into the tongue.  Therefore, such bits can be very harsh, particularly in the hands of an inexperienced rider.  Adding a solid "slobber bar" at the end of the shanks may reduce, but does not eliminate, this problem. Double-jointed bits reduce the nutcracker effect because they conform better to the horse\'s "U" shaped mouth, instead of the "V" created by a single joint. In this respect they are milder, and many horses prefer a double-joint over a single joint.\nMany of the double-jointed bits (especially the French link and Dr. Bristol) are occasionally "added to" by twisting the cannons of the mouthpiece. This increases the severity of the bit, as these cannons act directly on the tongue and bars in addition to the regular action of the bit. A relatively "kind" French mouth can therefore be turned into a severe bit when the cannons are twisted or if the mouthpiece is put onto a gag bit. All references below are based on the cannons being smooth, not twisted. Types of Bits: snaffle, gag, pelham, curb (including driving bits)\nWhat it is: The mouthpiece has two joints due to a central link. This link is usually flat, short and has bone-shaped, rounded corners. Some French link snaffles are not flat, but are rounded in the same manner as the rest of the mouthpiece.  The flat link is mild when it lays flat across the tongue, but the edge can put pressure on the tongue if a full-cheek version with keepers places the link at an angle.  A rounded link does not have this action\nAction: One of the mildest mouthpieces, because the two joints reduce the nutcracker effect found in single-jointed bits, and encourage relaxation—applies pressure to the lips, tongue, and bars of the mouth\nMaterials: Usually stainless steel, also copper (either just the link or the whole bit)\nUse: Commonly seen on snaffles, rare in gags, pelhams, or curbs. This is one of the most popular mouthpieces for dressage work. However, it is used in many English-styled disciplines. It is rarely used in the Western-styled disciplines. Types of Bits: snaffle, gag\nWhat it is: The mouthpiece has two joints due to a central link. This link is flat, but longer and more rectangular in shape than a French link.  It is also usually set at a slight angle to the plane of the bit.   Its inventor, J.S. Bristol, was purported to have been a dentist.\nAction: The double joint reduces the nutcracker effect found in single-jointed snaffles. However, the middle link is angled relative to the side pieces of the bit.  As a result, the thin edge of the center link can press into the tongue, creating a very small bearing surface. When a full-cheek Dr. Bristol is used, the bit can be rotated so that the angled middle joint lies flat with its broad side against the tongue; when used this way the bit is relatively mild. This latter method is only possible because bit keepers ensure the bit stays in a fixed position in the horse\'s mouth, and thus bits that do not use bit keepers (e.g., a D-ring or eggbutt) do not have this milder option.\nThis bit can put pressure on the tongue, although it also adds pressure to the bars and lips of the mouth. It contains a double jointed mouthpiece similar to the French link, with the center section a flat plate. In its original form, the plate was intended to lie across the whole width of the horse\'s tongue. Bristol insisted that this bit was intended to be comfortable for the horse because the central plate would lie flat onto the tongue thus lowering the pressure.\nThe action has been a topic of controversy with many popular texts describing it as having a harsh action due to the plate\'s edge orientation to the tongue. Academic research has clarified these claims, showing that harsh action occurs when the bit is placed into the mouth such that the feature angle, as defined from a left hand side view, is +45 °. In this sense the bit might be used in two different ways, one such that the plate lies flat to the tongue and is \'mild\' (FA = -45 °) and the other such that the plate lies edge-on to the tongue (FA = +45 °) and is \'harsh\'.r.\nMaterials: Usually stainless steel, also copper.\nUse: Commonly seen on snaffles, very rare in gags. This bit is seen in many of the English disciplines, but is not used in Western disciplines. Rare in dressage due to its potential severity.  Legal for use in the United States, but often not allowed in sanctioned Dressage competition in other nations. Seen in many jumping disciplines. Types of Bits: snaffle\nWhat it is: Similar to the French-link, except there is a round "ball" on the middle link.\nAction: double joint reduces the nutcracker effect. The ball tends to concentrate pressure on the tongue. More severe than the French link, less than the Dr. Bristol. Also applies pressure to the lips and bars of the mouth.\nMaterials: Usually stainless steel\nUse: Rather rare type of mouthpiece, seen in the English disciplines. Permitted in dressage. Types of bits: snaffles\nWhat it is: Double jointed bit similar to a French link, except the middle link has a slight upward (toward the roof of the mouth) curve, like a port.\nAction: Similar action as French link, but possibly provides more room for the tongue. Types of Bits: snaffles, usually with a Dee-ring\nWhat it is: Similar to the ported link, except the middle link is much higher and makes a clear upside-down "U".\nAction: Supposed to encourage the horse to soften and stay light in the bridle. The bottom of the "U" can be quite sharp, however, and can dig into the tongue to the point of cutting it. Therefore, they are best left to skilled riders with a very light contact. Bits with more than two joints tend to wrap around the lower jaw of the horse. In general, they are considered more severe than double-jointed bits. These bits are not permitted in dressage. Type of Bits: snaffle, pelham, gag, curb\nWhat it is: The mouthpiece is made of 5-9 joints and is very flexible.\nAction: Due to the many joints, the waterford has many bumps, which can act as pressure points. The idea is that the great flexibility discourages the horse from leaning on it.\nMaterials: Stainless steel.\nUses: Most common in the English disciplines, especially show jumping and eventing. Used mainly on strong horses. Not permitted in dressage, not commonly used in hunt seat riding. Rather rare in a pelham, very rare in a curb bit. Types of bits: gag, curb\nWhat it is: As its name suggests, this mouthpiece is several links of chain.\nUses: Seen in the Western disciplines.\nNote: There are some chain bits made of bicycle chain rather than link chain. These bits are considered by most horsemen to be too severe for use and many categorize them as cruel. These bits are not allowed in competition. All twisted mouthpieces are considered more severe than smooth mouthpieces. In general, they are not appropriate for novice riders or those with harsh or unskilled hands. Neither these nor any bits should be used to the point where they cause bleeding of the horse\'s mouth.\nIf a rider believes such a bit would benefit his horse, he should first look at the animal\'s training and his own skills. Many problems can be resolved through proper training, rather than harsher bitting. Usually, it is the less-skilled riders who find the need to use harsher bits, because they can\'t control their horses in anything else.\nNonetheless, in some cases, skilled riders can use such bits to their advantage and improve the horse\'s training. These bits are not permitted in dressage competition, and are generally not used for schooling dressage horses. Types of Bits: Snaffle, pelham, gag\nWhat it is: A mouthpiece (usually single-jointed) with a slight twist in the cannons. Thicker and with fewer twists than a wire bit, has fewer edges than a corkscrew.\nAction: The twist causes edges that result as pressure points in the horse\'s mouth. Increases pressure on the tongue and bars, also acts on the lips. Generally considered strong and fairly severe.\nMaterials: Usually stainless steel\nUses: Most commonly found on snaffles, quite rare on pelhams and gags. Usually seen in English disciplines. Not permitted in dressage competition.\nNote: The slow twist is often incorrectly used to refer to the corkscrew or a wire bit. These bits are not the same. Types of Bits: Snaffle, driving bits (curbs)\nWhat it is: The mouthpiece (usually single-jointed) has many rounded edges. However, it is not actually "corkscrew" in shape, but more has a more "screw-like" mouthpiece with blunt edges. Thicker than a wire bit, thinner than a slow twist.\nAction: The edges amplify pressure on the mouth, especially the bars and tongue. Considered severe.\nUses: Mostly seen in English-type disciplines, and in driving. Not permitted in dressage.\nNote: The name is often incorrectly used to refer to the slow twist or wire bit. These bits are not the same. Types of Bits: snaffle, gag, curb\nWhat it is: Mouthpiece is a single-jointed bit made of a thin twisted piece of wire for each joint.\nAction: The wire bit is extremely severe. It is not only very thin, but it has twists in it that cause pressure points.\nMaterials: Stainless steel preferred for English disciplines, sweet iron and copper seen in Western disciplines.\nUses: The twisted wire is extremely severe. It is not permitted for dressage. It is more commonly seen in the Western disciplines than the English, although the jumping disciplines occasionally feature wire bits. These bits are for strong horses that pull or take off, and those with "hard" mouths. It should only be used by skilled riders with soft hands. Some people do not use these bits because they believe them to be cruel, although many trainers agree they are appropriate in certain circumstances with particular horses.\nNote: The wire bit is often incorrectly referred to as the slow twist or corkscrew. These bits are not the same. Types of Bits: snaffle, gag, curb\nWhat it is: Bit has 2 mouthpieces, each one single jointed and made of twisted wire.\nAction: The two joints amplify the nutcracker action. The wire makes the mouthpieces thin and sharp. The two mouthpieces cause extreme pressure on the bars. This bit is very severe, and should only be used by skilled riders with soft hands. Some people do not use these bits because they believe them to be cruel.\nMaterials: Metals, usually stainless steel but also sweet iron and copper\nUses: Not permitted for dressage. Very severe, used on horses that are very strong. Types of bits: snaffle\nWhat it is: As the name suggests, the mouthpiece is made out of a piece of chainsaw.\nUses: Extremely severe, and quite uncommon. Most trainers will not use such a bit. Note: due to the extreme severity, most equestrian organizations do not permit this bit in competition. Types of Bits: snaffle, gag, curb\nWhat it is: Bit has two mouthpieces, each one single jointed.\nAction: The two joints amplify the nutcracker action. They also cause extreme pressure on the bars. This bit is very severe, and should only be used by skilled riders with soft hands. Some people do not use these bits because they believe them to be cruel.\nMaterials: Metals, usually stainless steel but also sweet iron and copper.\nUses: Not permitted for dressage. Very severe, used on horses that are very strong. Types of bits: snaffle, pelham, gag\nWhat it is: A mouthpiece (usually single jointed, but not always) that is hollow in the middle, making it very light. The mouthpiece is usually thicker than average.\nAction: The thick, hollow mouthpiece spreads out pressure, thought to make it less severe. However, this effect varies with the mouth structure of the individual horse.  Some horses prefer a smaller diameter bit in their mouth because their mouths do not have room for the thick mouthpieces, and in such cases a hollow mouth bit may cause discomfort.  Types of bits: snaffle, curb, gag, pelham\nWhat it is: A cricket is a single roller placed within the port of a curb bit. usually containing copper, often producing a rattling or "cricket-like" sound when the horse moves it around.\nThe cherry roller bit has multiple rollers along its mouthpiece and may be of steel, copper, or alternate between the two. The mouthpiece may be jointed or straight.\nAction: Rollers are supposed to help a horse relax its jaw and accept the bit.  They encourage salivation and may also calm nervous horses or provide an outlet for nervous tongue movements. Rollers do not affect the severity of the bit.\nUses: Crickets are very commonly seen on western curb bridles, particularly certain Spanish and California styles such as the spade, half breed, or salinas mouthpieces and are legal for western pleasure competition. Cherry rollers are mainly an English-style bit, but are not permitted in dressage. Types of bits: snaffle\nTypes of Bit rings: Usually eggbutt or loose ring.\nWhat it is: The Magenis is a single-jointed bit with "rollers," or bead-like structures that may spin around, in its mouthpiece. The mouthpiece is squared off.\nAction: The rollers are supposed to activate the horse\'s tongue and help the horse relax and accept the bit. Rollers may also help distract a nervous horse. The edges of the square mouthpiece create pressure points, making the bit severe.\nUses: Seen in the English disciplines, not permitted in dressage. A fairly uncommon bit. Types of Bits: snaffle\nWhat it is: The center of the mouthpiece has short "keys" extending from it, which are movable on the bit. The keys rest on the tongue, below the bit.\nAction: The keys are supposed to encourage the horse to relax, as the horse plays with them in his mouth.  Mostly used for breaking in young horses. Types of bits: usually snaffle, sometimes pelham\nWhat it is: A flat piece of rubber that slides on a mullen mouth, or a metal bit that already has a flat piece in the center of the mouthpiece. The flat piece is wide and goes backwards in the mouth.\nUses: the purpose of this bit is to prevent a horse from getting his tongue over it. It can be useful in retraining, and for horses for whom this is a habit. This therefore gives the rider more control. Not permitted in dressage. A standard mouthpiece is 3/8\xa0inch in diameter, measured one inch out from the bit rings (the area that usually come in contact with the bars). The common belief is that a thinner mouthpiece increases the severity of the bit, because it decreases the bearing surface and makes the bit "sharper." However, up to a point, some horses perform better with a thinner mouthpiece to a thicker one because there is less metal in their mouth and therefore more room for the tongue. This is mostly true if the rider has soft hands. Thinner mouthpieces are also preferable when using a double bridle, as the horse has even less room for its tongue with two bits in his mouth.\nOn the other hand, very thin bits (such as the twisted wire bits) have a marked severity over thicker bits. Some wire bits may come in a thickness as low as 1/16\xa0inch, making them extremely severe to the point where it is easy for any rider to cut and ruin the horse\'s mouth, especially the lips. Many horsemen, even the most skilled riders, will not put such a harsh bit in their horse\'s mouths. Many equestrian organizations do not allow a bit to be 1/4\xa0inch or thinner in diameter.\nIf the rider gives crude aids, it is generally best to pick a bit mouthpiece that is thicker. This may also be true with some horses with relatively thin bars. Stainless steel: The most popular material for bits. It is strong, easy to clean, and doesn\'t rust. It is considered to be a neutral metal that does not encourage or discourage salivation.  However, the chrome and nickel used in most stainless steel may be drying.\nCopper: Warms up quickly, but does not last as long as stainless steel. It is supposed to encourage the horse to salivate and accept the bit. There are some people who refuse to use copper bits because they believe them to be distasteful, and that to be the reason why some horses chew them so readily. Because these bits wear out fairly quickly, they should be checked regularly to make sure they are maintaining their integrity.\nCopper alloy:  by combining copper with a harder metal, the bit lasts longer.  In horse equipment, the most common copper alloys are:\nBrass alloy: The most common copper alloy used in bits is brass, created by combining copper with zinc.  Two common brass alloys used in bits are Aurigan, a patented alloy of copper, zinc and silicon.  Another, less expensive version, is an alloy of copper, zinc, and silicon with nickel or aluminum.\nNickel silver or German silver:  An alloy of copper with nickel and sometimes zinc. More common on a bit shank or as a substitute for silver in decorative elements on a saddle or bridle.\nSweet iron: actually cold-rolled carbon steel:  easily rusts, which encourages salivation from the horse and acceptance of the bit. This metal is used in many Western riding disciplines, and is not as popular in English riding.\nNickel alloy:  Actually an  Alloy steel, is less expensive than stainless steel, but durable.   May be drying, but less so than aluminum.\nAluminum: Considered a poor choice for a mouthpiece as it tends to dry out the mouth and may be toxic.   Occasionally seen in cheap western-style bits and is generally avoided.  However, can be durable if made correctly, and is inexpensive.\nRubber: softens the action of the bit.  All rubber bits are very gentle, but are easily chewed and destroyed. Bits that add rubber to an underlying metal mouthpiece last longer, but the rubber must be periodically replaced.  A waterproof self-sticking latex bandaging product called Sealtex is often used to add rubber to a metal bit.\nSynthetics:  Any number of tough plastics are used for bit designs, combining the softness of rubber with more durability.  The best are not easily destroyed by chewing. Bridle\nBit (horse)\nBit ring\nBit shank The Bit Gallery\nUS Patent Number 895 419 (J.S. Bristol, 1907)\ne.g. Vernon, H. The Allen Illustrated Guide to Bits and Bitting, J.A.Allen & Co Ltd (1 Oct. 1999); Tuke D. Bit by Bit a guide to Equine Bits, Sydney R. Smith (1980)\nClayton HM A fluoroscopic study of the position and action of different bits in the horse\'s mouth, J. Equine. Vet. Sci. 5, 68–72, 75–77 (1985)\nRule DR 121\nExample: Equine Canada Rules Section E Dressage Article 4.3\nHill, Cherry.  "Sweet Iron Bits."  Horsekeeping.com 2006.  Accessed 17 January 2010 Motorcycle riding gear, or kit  (UK English), is specialized clothing and equipment worn by motorcyclists. It usually serves multiple purpose at once, including crash injury protection, deflecting sun, precipitation or debris, keeping the rider warm, cool or hydrated, increasing visibility, expressing the rider\'s style or social identity, stowing cargo, and as a platform for wearable or embedded devices like wireless intercoms, GPS navigation devices, cell phones, or helmet-mounted displays. For crash protection, helmets are often the first piece of gear a rider chooses, and in many jurisdictions, the only one required by law. Beyond that, crash protection comes in the form of motorcycle boots, jackets, leathers, gloves and - most recently - airbags. Research by de Rome et al found that abrasion resistance, impact protection and seam burst strength are required for garments to offer effective protection. Most protective garments double as protection from the wind blast while riding, and from every kind of weather, keeping the rider warm, cool, and dry, either with passive insulation and ventilation, or active heating or cooling devices. Some motorcycle armor is minimalist in design, serving only to protect from crash impacts and abrasion, and so is intended to be combined with other clothing. If a motorcycle helmet does not feature a clear face shield, goggles or Riding Glasses are used to protect the rider\'s eyes from road debris and insects, as well as protection from wind and rain. Motorcycling gear is also designed with appearance in mind, often to make drivers more likely to see the rider, increasing conspicuity, by combining elements of high-visibility clothing with the weather and crash protection functions of rider clothing, helmets and other items. Selling these items to riders, comprising at least $1.15 billion (clothing) plus $1.2 billion (accessories including helmets and other equipment) of the $21.5 billion (2004) US motorcycle industry, depends on both practical and aesthetic appeal. Fashion and style drive these sales as much as utility, and an entirely separate category of motorcycle-inspired fashion exists in addition to the motorcycle-specific clothing industry, of motorcycle-inspired jackets and other items sold in general retail outlets, intended for non-riders. Helmets, jackets and other clothing may also display designs, text and images to identify the rider or his group, such as club insignia, police, fire and other utility riders, or as adverting space for the logos of motorcycle sport sponsors. Rider clothing may also be made with storage in mind, providing a variety of pockets including those for holding and displaying maps, smartphones, GPS navigation devices, and other wearables, or accommodating Bluetooths or CB radio two-way communication devices, often built into helmets with wiring routed through specialized clothing. Helmet-mounted displays may be included as well, along with visors that protect the face from wind or debris, and filter sunlight with permanent, movable, or variable visors. de Rome L, Ivers R, Fitzharris M, Du W, Haworth N, Heritier S, Richardson D. Motorcycle protective clothing: protection from injury or just the weather? Accid Anal Prev. 2011 Nov;43(6):1893-1900. doi: 10.1016/j.aap.2011.04.027. Epub 2011 May 28.\nHough, David (2000), Proficient Motorcycling: The Ultimate Guide to Riding Well, BowTie Press, pp.\xa011, 13, 37ff., 282, ISBN\xa01-889540-53-6 (2008 2nd ed. ISBN\xa0978-1-933958-35-4)\nHough, David (2012), More Proficient Motorcycling: Mastering the Ride (2\xa0ed.), BowTie Press, pp.\xa024, 64, 82–101, 91, 92, 112–113, 189, 201, ISBN\xa0978-1-935484-86-8\n"Motorcycle – U.S. Motorcycle Market is a $21.5 Billion Business", PowerSports Business, October 19, 2004, ISSN\xa01097-850X\nLindemann, Mark (2013), The Total Motorcycling Manual (Cycle World): 291 Skills You Need, Weldon Owen, pp.\xa033–49, ISBN\xa09781616286071 Question: What is in the motorcyclist\'s mouth?')
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/1145 [00:00<?, ?it/s][A
+  7%|▋         | 81/1145 [00:00<00:01, 806.87it/s][A
+ 14%|█▍        | 162/1145 [00:00<00:01, 804.61it/s][A
+ 22%|██▏       | 250/1145 [00:00<00:01, 835.39it/s][A
+ 29%|██▉       | 335/1145 [00:00<00:00, 837.12it/s][A
+ 37%|███▋      | 423/1145 [00:00<00:00, 849.81it/s][A
+ 45%|████▍     | 510/1145 [00:00<00:00, 855.56it/s][A
+ 52%|█████▏    | 596/1145 [00:00<00:00, 847.37it/s][A
+ 59%|█████▉    | 681/1145 [00:00<00:00, 839.19it/s][A
+ 67%|██████▋   | 765/1145 [00:00<00:00, 839.00it/s][A
+ 74%|███████▍  | 849/1145 [00:01<00:00, 834.66it/s][A
+ 81%|████████▏ | 933/1145 [00:01<00:00, 830.89it/s][A
+ 89%|████████▉ | 1019/1145 [00:01<00:00, 837.25it/s][A
+ 96%|█████████▋| 1103/1145 [00:01<00:00, 829.79it/s][A100%|██████████| 1145/1145 [00:01<00:00, 832.40it/s]
+prepare done
+
+Generating responses:   0%|          | 0/1145 [00:00<?, ?it/s][A
+Generating responses:   0%|          | 1/1145 [01:06<21:15:01, 66.87s/it][A
+Generating responses:   0%|          | 3/1145 [01:10<5:53:49, 18.59s/it] [A
+Generating responses:   0%|          | 4/1145 [01:10<3:52:16, 12.21s/it][AError generating response for request 5SgmGLJtR47rB539V4Jwt6: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 51200 tokens (50176 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request 5SgmGLJtR47rB539V4Jwt6: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 51200 tokens (50176 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:   1%|          | 8/1145 [01:10<1:18:20,  4.13s/it][A
+Generating responses:   1%|          | 10/1145 [01:10<53:22,  2.82s/it] [A
+Generating responses:   1%|          | 13/1145 [01:21<58:59,  3.13s/it][A
+Generating responses:   1%|▏         | 15/1145 [01:21<42:44,  2.27s/it][A
+Generating responses:   2%|▏         | 19/1145 [01:21<24:09,  1.29s/it][AError generating response for request 6LfBvcynQvD7BaU3CCvfNG: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 36988 tokens (35964 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request 6LfBvcynQvD7BaU3CCvfNG: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 36988 tokens (35964 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:   2%|▏         | 27/1145 [01:22<10:54,  1.71it/s][A
+Generating responses:   3%|▎         | 30/1145 [01:36<28:21,  1.53s/it][A
+Generating responses:   3%|▎         | 31/1145 [01:37<29:00,  1.56s/it][A
+Generating responses:   3%|▎         | 36/1145 [01:38<17:18,  1.07it/s][A
+Generating responses:   3%|▎         | 38/1145 [01:41<19:38,  1.06s/it][A
+Generating responses:   4%|▎         | 41/1145 [01:45<21:13,  1.15s/it][A
+Generating responses:   4%|▍         | 43/1145 [01:45<16:49,  1.09it/s][A
+Generating responses:   4%|▍         | 46/1145 [01:45<11:47,  1.55it/s][A
+Generating responses:   4%|▍         | 48/1145 [01:53<25:04,  1.37s/it][AError generating response for request 7CWwGUgRqbPEiGcZEzFVEF: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 34434 tokens (33410 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request 7CWwGUgRqbPEiGcZEzFVEF: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 34434 tokens (33410 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:   4%|▍         | 51/1145 [01:53<17:16,  1.06it/s][A
+Generating responses:   5%|▍         | 54/1145 [02:01<26:05,  1.43s/it][A
+Generating responses:   5%|▍         | 55/1145 [02:01<22:52,  1.26s/it][A
+Generating responses:   5%|▌         | 59/1145 [02:01<13:30,  1.34it/s][A
+Generating responses:   5%|▌         | 61/1145 [02:13<36:13,  2.01s/it][A
+Generating responses:   5%|▌         | 62/1145 [02:13<31:25,  1.74s/it][A
+Generating responses:   6%|▌         | 65/1145 [02:14<19:53,  1.10s/it][A
+Generating responses:   6%|▌         | 66/1145 [02:25<47:22,  2.63s/it][A
+Generating responses:   6%|▌         | 67/1145 [02:25<39:14,  2.18s/it][A
+Generating responses:   6%|▌         | 69/1145 [02:28<35:52,  2.00s/it][AError generating response for request 7xotSD89TZKNHK4rMZLzfo: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 41233 tokens (40209 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request 7xotSD89TZKNHK4rMZLzfo: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 41233 tokens (40209 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:   6%|▌         | 70/1145 [02:28<29:24,  1.64s/it][A
+Generating responses:   6%|▌         | 71/1145 [02:28<24:14,  1.35s/it][A
+Generating responses:   6%|▋         | 72/1145 [02:32<31:58,  1.79s/it][A
+Generating responses:   6%|▋         | 74/1145 [02:32<19:54,  1.12s/it][AError generating response for request 8HQ9sy9TdK4XZffkkhmtRW: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 33612 tokens (32588 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request 8HQ9sy9TdK4XZffkkhmtRW: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 33612 tokens (32588 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:   7%|▋         | 76/1145 [02:32<13:01,  1.37it/s][A
+Generating responses:   7%|▋         | 77/1145 [02:38<33:05,  1.86s/it][A
+Generating responses:   7%|▋         | 78/1145 [02:38<26:08,  1.47s/it][A
+Generating responses:   7%|▋         | 80/1145 [02:41<25:55,  1.46s/it][A
+Generating responses:   7%|▋         | 81/1145 [02:41<21:07,  1.19s/it][A
+Generating responses:   7%|▋         | 83/1145 [02:43<19:19,  1.09s/it][A
+Generating responses:   7%|▋         | 85/1145 [02:44<13:22,  1.32it/s][A
+Generating responses:   8%|▊         | 87/1145 [02:50<28:44,  1.63s/it][A
+Generating responses:   8%|▊         | 89/1145 [02:51<19:55,  1.13s/it][A
+Generating responses:   8%|▊         | 94/1145 [02:51<09:40,  1.81it/s][A
+Generating responses:   8%|▊         | 95/1145 [03:00<29:45,  1.70s/it][A
+Generating responses:   8%|▊         | 97/1145 [03:00<22:05,  1.26s/it][A
+Generating responses:   9%|▊         | 98/1145 [03:06<35:47,  2.05s/it][A
+Generating responses:   9%|▊         | 99/1145 [03:06<29:25,  1.69s/it][A
+Generating responses:   9%|▉         | 101/1145 [03:10<29:42,  1.71s/it][A
+Generating responses:   9%|▉         | 105/1145 [03:12<20:02,  1.16s/it][A
+Generating responses:  10%|▉         | 109/1145 [03:15<17:09,  1.01it/s][A
+Generating responses:  10%|▉         | 110/1145 [03:16<15:26,  1.12it/s][A
+Generating responses:  10%|▉         | 111/1145 [03:18<18:26,  1.07s/it][A
+Generating responses:  10%|▉         | 114/1145 [03:18<11:31,  1.49it/s][A
+Generating responses:  10%|█         | 116/1145 [03:18<09:04,  1.89it/s][A
+Generating responses:  10%|█         | 117/1145 [03:26<28:40,  1.67s/it][A
+Generating responses:  10%|█         | 118/1145 [03:27<26:26,  1.54s/it][A
+Generating responses:  11%|█         | 121/1145 [03:29<20:55,  1.23s/it][A
+Generating responses:  11%|█         | 122/1145 [03:30<20:14,  1.19s/it][A
+Generating responses:  11%|█         | 124/1145 [03:30<13:50,  1.23it/s][A
+Generating responses:  11%|█         | 125/1145 [03:31<11:58,  1.42it/s][A
+Generating responses:  11%|█         | 127/1145 [03:34<19:33,  1.15s/it][A
+Generating responses:  11%|█▏        | 130/1145 [03:35<11:39,  1.45it/s][A
+Generating responses:  12%|█▏        | 132/1145 [03:42<26:27,  1.57s/it][A
+Generating responses:  12%|█▏        | 135/1145 [03:42<16:29,  1.02it/s][A
+Generating responses:  12%|█▏        | 138/1145 [03:43<11:14,  1.49it/s][A
+Generating responses:  12%|█▏        | 138/1145 [03:57<11:14,  1.49it/s][A
+Generating responses:  12%|█▏        | 139/1145 [03:57<44:45,  2.67s/it][A
+Generating responses:  12%|█▏        | 140/1145 [03:57<37:42,  2.25s/it][A
+Generating responses:  12%|█▏        | 141/1145 [03:59<34:43,  2.08s/it][A
+Generating responses:  12%|█▏        | 143/1145 [03:59<22:43,  1.36s/it][A
+Generating responses:  13%|█▎        | 145/1145 [04:04<30:49,  1.85s/it][A
+Generating responses:  13%|█▎        | 146/1145 [04:05<25:06,  1.51s/it][A
+Generating responses:  13%|█▎        | 148/1145 [04:05<16:40,  1.00s/it][A
+Generating responses:  13%|█▎        | 150/1145 [04:10<25:56,  1.56s/it][A
+Generating responses:  13%|█▎        | 153/1145 [04:10<15:37,  1.06it/s][A
+Generating responses:  14%|█▎        | 156/1145 [04:11<10:08,  1.62it/s][A
+Generating responses:  14%|█▎        | 157/1145 [04:22<36:39,  2.23s/it][A
+Generating responses:  14%|█▍        | 158/1145 [04:23<33:44,  2.05s/it][A
+Generating responses:  14%|█▍        | 159/1145 [04:23<27:22,  1.67s/it][A
+Generating responses:  14%|█▍        | 162/1145 [04:26<21:47,  1.33s/it][A
+Generating responses:  14%|█▍        | 164/1145 [04:26<15:27,  1.06it/s][A
+Generating responses:  14%|█▍        | 165/1145 [04:26<13:24,  1.22it/s][A
+Generating responses:  15%|█▍        | 167/1145 [04:32<25:01,  1.53s/it][A
+Generating responses:  15%|█▍        | 171/1145 [04:33<13:09,  1.23it/s][A
+Generating responses:  15%|█▌        | 172/1145 [04:37<21:35,  1.33s/it][A
+Generating responses:  15%|█▌        | 174/1145 [04:37<15:26,  1.05it/s][A
+Generating responses:  15%|█▌        | 176/1145 [04:41<21:26,  1.33s/it][A
+Generating responses:  16%|█▌        | 178/1145 [04:44<20:22,  1.26s/it][A
+Generating responses:  16%|█▌        | 180/1145 [04:46<20:50,  1.30s/it][A
+Generating responses:  16%|█▌        | 181/1145 [04:47<20:00,  1.25s/it][A
+Generating responses:  16%|█▌        | 182/1145 [04:48<19:05,  1.19s/it][A
+Generating responses:  16%|█▌        | 185/1145 [04:49<10:43,  1.49it/s][A
+Generating responses:  16%|█▌        | 186/1145 [04:50<14:10,  1.13it/s][A
+Generating responses:  16%|█▋        | 187/1145 [04:50<11:41,  1.37it/s][A
+Generating responses:  17%|█▋        | 190/1145 [04:54<15:58,  1.00s/it][A
+Generating responses:  17%|█▋        | 193/1145 [04:55<10:01,  1.58it/s][A
+Generating responses:  17%|█▋        | 195/1145 [04:58<13:33,  1.17it/s][A
+Generating responses:  17%|█▋        | 196/1145 [04:59<13:53,  1.14it/s][A
+Generating responses:  17%|█▋        | 197/1145 [05:00<15:24,  1.03it/s][A
+Generating responses:  18%|█▊        | 201/1145 [05:00<07:43,  2.04it/s][A
+Generating responses:  18%|█▊        | 204/1145 [05:05<14:57,  1.05it/s][AError generating response for request DPtUMrxDbLP2nQ9yUdmvkT: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 40206 tokens (39182 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request DPtUMrxDbLP2nQ9yUdmvkT: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 40206 tokens (39182 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  18%|█▊        | 205/1145 [05:06<13:11,  1.19it/s][A
+Generating responses:  18%|█▊        | 206/1145 [05:07<14:12,  1.10it/s][A
+Generating responses:  18%|█▊        | 210/1145 [05:07<07:37,  2.04it/s][A
+Generating responses:  19%|█▊        | 213/1145 [05:17<23:25,  1.51s/it][A
+Generating responses:  19%|█▉        | 215/1145 [05:18<17:59,  1.16s/it][A
+Generating responses:  19%|█▉        | 216/1145 [05:21<23:03,  1.49s/it][A
+Generating responses:  19%|█▉        | 217/1145 [05:21<19:39,  1.27s/it][A
+Generating responses:  19%|█▉        | 218/1145 [05:23<20:26,  1.32s/it][A
+Generating responses:  19%|█▉        | 219/1145 [05:23<16:27,  1.07s/it][AError generating response for request E2Vuut5upXHFFVxEk8kHvM: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 33417 tokens (32393 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request E2Vuut5upXHFFVxEk8kHvM: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 33417 tokens (32393 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  19%|█▉        | 221/1145 [05:23<10:38,  1.45it/s][A
+Generating responses:  20%|█▉        | 225/1145 [05:32<22:07,  1.44s/it][A
+Generating responses:  20%|█▉        | 227/1145 [05:32<16:33,  1.08s/it][A
+Generating responses:  20%|██        | 229/1145 [05:37<23:44,  1.56s/it][A
+Generating responses:  20%|██        | 233/1145 [05:38<13:27,  1.13it/s][A
+Generating responses:  20%|██        | 234/1145 [05:41<19:20,  1.27s/it][A
+Generating responses:  21%|██        | 235/1145 [05:41<16:30,  1.09s/it][A
+Generating responses:  21%|██        | 236/1145 [05:45<22:34,  1.49s/it][A
+Generating responses:  21%|██        | 237/1145 [05:45<18:56,  1.25s/it][A
+Generating responses:  21%|██        | 239/1145 [05:45<12:08,  1.24it/s][A
+Generating responses:  21%|██        | 241/1145 [05:45<08:15,  1.83it/s][A
+Generating responses:  21%|██        | 243/1145 [05:50<18:04,  1.20s/it][A
+Generating responses:  21%|██▏       | 245/1145 [05:51<13:00,  1.15it/s][A
+Generating responses:  22%|██▏       | 248/1145 [05:54<14:50,  1.01it/s][A
+Generating responses:  22%|██▏       | 251/1145 [05:54<09:48,  1.52it/s][A
+Generating responses:  22%|██▏       | 253/1145 [06:03<23:07,  1.56s/it][A
+Generating responses:  22%|██▏       | 257/1145 [06:03<13:39,  1.08it/s][A
+Generating responses:  23%|██▎       | 262/1145 [06:11<18:11,  1.24s/it][A
+Generating responses:  23%|██▎       | 263/1145 [06:11<16:36,  1.13s/it][A
+Generating responses:  23%|██▎       | 266/1145 [06:17<19:20,  1.32s/it][A
+Generating responses:  23%|██▎       | 268/1145 [06:17<15:08,  1.04s/it][A
+Generating responses:  24%|██▎       | 270/1145 [06:20<16:29,  1.13s/it][A
+Generating responses:  24%|██▍       | 272/1145 [06:20<12:22,  1.18it/s][A
+Generating responses:  24%|██▍       | 274/1145 [06:20<09:27,  1.53it/s][A
+Generating responses:  24%|██▍       | 275/1145 [06:25<20:09,  1.39s/it][A
+Generating responses:  24%|██▍       | 277/1145 [06:25<14:00,  1.03it/s][A
+Generating responses:  24%|██▍       | 278/1145 [06:28<18:41,  1.29s/it][A
+Generating responses:  24%|██▍       | 280/1145 [06:28<12:49,  1.12it/s][A
+Generating responses:  25%|██▍       | 281/1145 [06:30<13:55,  1.03it/s][A
+Generating responses:  25%|██▍       | 284/1145 [06:30<07:55,  1.81it/s][A
+Generating responses:  25%|██▌       | 287/1145 [06:35<14:50,  1.04s/it][A
+Generating responses:  25%|██▌       | 289/1145 [06:35<11:06,  1.28it/s][A
+Generating responses:  25%|██▌       | 291/1145 [06:40<17:23,  1.22s/it][A
+Generating responses:  26%|██▌       | 293/1145 [06:40<13:15,  1.07it/s][AError generating response for request Gr2guph9meudkWEM6Gbpwr: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 38184 tokens (37160 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request Gr2guph9meudkWEM6Gbpwr: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 38184 tokens (37160 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  26%|██▌       | 296/1145 [06:41<08:41,  1.63it/s][A
+Generating responses:  26%|██▌       | 297/1145 [06:48<22:56,  1.62s/it][AError generating response for request GzEbcQExF4cHmrhk7rdnce: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 34600 tokens (33576 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  26%|██▌       | 299/1145 [06:48<16:19,  1.16s/it][AError in batch generation for request GzEbcQExF4cHmrhk7rdnce: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 34600 tokens (33576 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  26%|██▋       | 302/1145 [06:54<21:36,  1.54s/it][A
+Generating responses:  27%|██▋       | 304/1145 [06:55<16:07,  1.15s/it][A
+Generating responses:  27%|██▋       | 305/1145 [06:58<20:58,  1.50s/it][A
+Generating responses:  27%|██▋       | 307/1145 [07:00<18:55,  1.36s/it][AError generating response for request H8bbnrXJwvzCPyGsK48h8c: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 52028 tokens (51004 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request H8bbnrXJwvzCPyGsK48h8c: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 52028 tokens (51004 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  27%|██▋       | 310/1145 [07:00<11:44,  1.19it/s][A
+Generating responses:  27%|██▋       | 311/1145 [07:05<20:10,  1.45s/it][A
+Generating responses:  27%|██▋       | 313/1145 [07:06<16:04,  1.16s/it][A
+Generating responses:  27%|██▋       | 314/1145 [07:06<13:29,  1.03it/s][A
+Generating responses:  28%|██▊       | 315/1145 [07:07<13:40,  1.01it/s][AError generating response for request HM4obw9fQyb3aPheZjgtqq: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 47159 tokens (46135 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request HM4obw9fQyb3aPheZjgtqq: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 47159 tokens (46135 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  28%|██▊       | 319/1145 [07:07<06:29,  2.12it/s][A
+Generating responses:  28%|██▊       | 323/1145 [07:08<04:00,  3.41it/s][A
+Generating responses:  28%|██▊       | 325/1145 [07:17<17:40,  1.29s/it][A
+Generating responses:  28%|██▊       | 326/1145 [07:17<15:33,  1.14s/it][A
+Generating responses:  29%|██▊       | 328/1145 [07:20<16:14,  1.19s/it][A
+Generating responses:  29%|██▉       | 330/1145 [07:20<11:43,  1.16it/s][A
+Generating responses:  29%|██▉       | 331/1145 [07:20<09:59,  1.36it/s][A
+Generating responses:  29%|██▉       | 332/1145 [07:25<22:52,  1.69s/it][A
+Generating responses:  29%|██▉       | 334/1145 [07:27<18:15,  1.35s/it][A
+Generating responses:  29%|██▉       | 335/1145 [07:27<15:30,  1.15s/it][A
+Generating responses:  29%|██▉       | 336/1145 [07:30<20:13,  1.50s/it][A
+Generating responses:  30%|██▉       | 338/1145 [07:30<12:45,  1.05it/s][A
+Generating responses:  30%|██▉       | 340/1145 [07:37<24:19,  1.81s/it][A
+Generating responses:  30%|██▉       | 342/1145 [07:37<16:23,  1.22s/it][A
+Generating responses:  30%|██▉       | 343/1145 [07:41<24:30,  1.83s/it][A
+Generating responses:  30%|███       | 346/1145 [07:42<13:52,  1.04s/it][AError generating response for request JzruB6ybwPgmhZ5euNweVS: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 54591 tokens (53567 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request JzruB6ybwPgmhZ5euNweVS: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 54591 tokens (53567 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  30%|███       | 348/1145 [07:42<10:13,  1.30it/s][A
+Generating responses:  30%|███       | 349/1145 [07:49<24:06,  1.82s/it][A
+Generating responses:  31%|███       | 350/1145 [07:49<19:53,  1.50s/it][A
+Generating responses:  31%|███       | 352/1145 [07:53<22:01,  1.67s/it][A
+Generating responses:  31%|███       | 353/1145 [07:53<17:49,  1.35s/it][A
+Generating responses:  31%|███       | 354/1145 [07:56<23:51,  1.81s/it][A
+Generating responses:  31%|███       | 356/1145 [07:56<14:47,  1.12s/it][A
+Generating responses:  31%|███       | 357/1145 [08:02<28:58,  2.21s/it][A
+Generating responses:  31%|███▏      | 359/1145 [08:03<18:03,  1.38s/it][A
+Generating responses:  32%|███▏      | 362/1145 [08:03<10:13,  1.28it/s][A
+Generating responses:  32%|███▏      | 364/1145 [08:09<18:58,  1.46s/it][A
+Generating responses:  32%|███▏      | 365/1145 [08:09<15:52,  1.22s/it][A
+Generating responses:  32%|███▏      | 366/1145 [08:09<13:01,  1.00s/it][A
+Generating responses:  32%|███▏      | 367/1145 [08:14<24:32,  1.89s/it][A
+Generating responses:  32%|███▏      | 369/1145 [08:14<15:14,  1.18s/it][A
+Generating responses:  32%|███▏      | 370/1145 [08:14<12:50,  1.01it/s][A
+Generating responses:  32%|███▏      | 372/1145 [08:18<16:20,  1.27s/it][A
+Generating responses:  33%|███▎      | 374/1145 [08:19<13:38,  1.06s/it][A
+Generating responses:  33%|███▎      | 375/1145 [08:19<11:10,  1.15it/s][A
+Generating responses:  33%|███▎      | 376/1145 [08:23<19:24,  1.51s/it][A
+Generating responses:  33%|███▎      | 377/1145 [08:23<15:48,  1.23s/it][A
+Generating responses:  33%|███▎      | 380/1145 [08:26<12:33,  1.02it/s][A
+Generating responses:  33%|███▎      | 383/1145 [08:26<07:40,  1.66it/s][A
+Generating responses:  34%|███▎      | 385/1145 [08:28<09:13,  1.37it/s][A
+Generating responses:  34%|███▎      | 386/1145 [08:30<11:20,  1.12it/s][AError generating response for request LnBiYuXmqeyEHsquVemheo: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 56508 tokens (55484 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request LnBiYuXmqeyEHsquVemheo: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 56508 tokens (55484 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  34%|███▍      | 389/1145 [08:30<06:58,  1.81it/s][A
+Generating responses:  34%|███▍      | 392/1145 [08:36<13:49,  1.10s/it][A
+Generating responses:  34%|███▍      | 393/1145 [08:36<12:00,  1.04it/s][A
+Generating responses:  35%|███▍      | 397/1145 [08:45<18:45,  1.50s/it][A
+Generating responses:  35%|███▍      | 398/1145 [08:46<18:17,  1.47s/it][A
+Generating responses:  35%|███▍      | 400/1145 [08:46<13:24,  1.08s/it][A
+Generating responses:  35%|███▌      | 402/1145 [08:52<20:27,  1.65s/it][A
+Generating responses:  35%|███▌      | 403/1145 [08:52<17:08,  1.39s/it][A
+Generating responses:  35%|███▌      | 405/1145 [08:55<17:25,  1.41s/it][A
+Generating responses:  35%|███▌      | 406/1145 [08:55<14:26,  1.17s/it][A
+Generating responses:  36%|███▌      | 407/1145 [08:56<12:02,  1.02it/s][A
+Generating responses:  36%|███▌      | 408/1145 [09:00<20:51,  1.70s/it][A
+Generating responses:  36%|███▌      | 409/1145 [09:00<15:55,  1.30s/it][A
+Generating responses:  36%|███▌      | 410/1145 [09:04<25:04,  2.05s/it][A
+Generating responses:  36%|███▌      | 412/1145 [09:06<18:33,  1.52s/it][A
+Generating responses:  36%|███▌      | 414/1145 [09:06<11:50,  1.03it/s][A
+Generating responses:  36%|███▌      | 415/1145 [09:09<17:58,  1.48s/it][A
+Generating responses:  36%|███▋      | 416/1145 [09:09<14:05,  1.16s/it][A
+Generating responses:  37%|███▋      | 418/1145 [09:09<08:52,  1.37it/s][A
+Generating responses:  37%|███▋      | 420/1145 [09:15<17:51,  1.48s/it][A
+Generating responses:  37%|███▋      | 421/1145 [09:15<14:24,  1.19s/it][A
+Generating responses:  37%|███▋      | 422/1145 [09:17<17:09,  1.42s/it][A
+Generating responses:  37%|███▋      | 426/1145 [09:18<07:45,  1.54it/s][A
+Generating responses:  37%|███▋      | 428/1145 [09:26<20:07,  1.68s/it][A
+Generating responses:  38%|███▊      | 430/1145 [09:27<15:31,  1.30s/it][A
+Generating responses:  38%|███▊      | 433/1145 [09:27<10:12,  1.16it/s][A
+Generating responses:  38%|███▊      | 434/1145 [09:34<21:32,  1.82s/it][A
+Generating responses:  38%|███▊      | 435/1145 [09:34<17:50,  1.51s/it][A
+Generating responses:  38%|███▊      | 436/1145 [09:36<19:05,  1.62s/it][A
+Generating responses:  38%|███▊      | 437/1145 [09:37<15:24,  1.31s/it][A
+Generating responses:  38%|███▊      | 438/1145 [09:39<19:37,  1.67s/it][A
+Generating responses:  38%|███▊      | 440/1145 [09:41<14:02,  1.19s/it][A
+Generating responses:  39%|███▊      | 443/1145 [09:41<07:52,  1.49it/s][A
+Generating responses:  39%|███▉      | 445/1145 [09:46<15:29,  1.33s/it][A
+Generating responses:  39%|███▉      | 447/1145 [09:46<10:59,  1.06it/s][A
+Generating responses:  39%|███▉      | 448/1145 [09:50<15:28,  1.33s/it][A
+Generating responses:  39%|███▉      | 450/1145 [09:50<10:39,  1.09it/s][A
+Generating responses:  39%|███▉      | 452/1145 [09:52<10:57,  1.05it/s][A
+Generating responses:  40%|███▉      | 455/1145 [09:54<09:48,  1.17it/s][A
+Generating responses:  40%|███▉      | 457/1145 [09:54<07:19,  1.57it/s][A
+Generating responses:  40%|████      | 461/1145 [10:05<17:34,  1.54s/it][A
+Generating responses:  40%|████      | 462/1145 [10:05<15:30,  1.36s/it][A
+Generating responses:  41%|████      | 464/1145 [10:08<15:36,  1.38s/it][AError generating response for request Px66AnBiMseHFPF94hYP93: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 36890 tokens (35866 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  41%|████      | 465/1145 [10:08<13:19,  1.18s/it][AError in batch generation for request Px66AnBiMseHFPF94hYP93: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 36890 tokens (35866 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  41%|████      | 468/1145 [10:08<07:57,  1.42it/s][A
+Generating responses:  41%|████      | 469/1145 [10:12<14:05,  1.25s/it][A
+Generating responses:  41%|████      | 471/1145 [10:13<10:06,  1.11it/s][A
+Generating responses:  41%|████      | 472/1145 [10:15<13:22,  1.19s/it][A
+Generating responses:  41%|████▏     | 473/1145 [10:15<11:02,  1.01it/s][A
+Generating responses:  41%|████▏     | 474/1145 [10:17<12:23,  1.11s/it][A
+Generating responses:  41%|████▏     | 475/1145 [10:17<09:57,  1.12it/s][A
+Generating responses:  42%|████▏     | 476/1145 [10:19<12:48,  1.15s/it][A
+Generating responses:  42%|████▏     | 478/1145 [10:19<07:47,  1.43it/s][A
+Generating responses:  42%|████▏     | 480/1145 [10:21<09:22,  1.18it/s][A
+Generating responses:  42%|████▏     | 481/1145 [10:21<07:57,  1.39it/s][A
+Generating responses:  42%|████▏     | 483/1145 [10:26<14:08,  1.28s/it][A
+Generating responses:  42%|████▏     | 486/1145 [10:26<08:09,  1.34it/s][A
+Generating responses:  43%|████▎     | 489/1145 [10:32<13:42,  1.25s/it][A
+Generating responses:  43%|████▎     | 491/1145 [10:32<10:07,  1.08it/s][A
+Generating responses:  43%|████▎     | 493/1145 [10:33<07:30,  1.45it/s][A
+Generating responses:  43%|████▎     | 494/1145 [10:35<11:27,  1.06s/it][A
+Generating responses:  43%|████▎     | 495/1145 [10:36<09:36,  1.13it/s][A
+Generating responses:  43%|████▎     | 498/1145 [10:36<05:45,  1.87it/s][A
+Generating responses:  44%|████▎     | 500/1145 [10:46<20:35,  1.92s/it][A
+Generating responses:  44%|████▍     | 501/1145 [10:46<17:20,  1.62s/it][A
+Generating responses:  44%|████▍     | 502/1145 [10:48<17:10,  1.60s/it][A
+Generating responses:  44%|████▍     | 505/1145 [10:48<09:34,  1.11it/s][A
+Generating responses:  44%|████▍     | 506/1145 [10:54<19:19,  1.81s/it][A
+Generating responses:  44%|████▍     | 509/1145 [10:54<11:03,  1.04s/it][A
+Generating responses:  45%|████▍     | 510/1145 [10:54<09:31,  1.11it/s][A
+Generating responses:  45%|████▍     | 511/1145 [10:59<16:20,  1.55s/it][A
+Generating responses:  45%|████▍     | 514/1145 [11:01<12:39,  1.20s/it][AError generating response for request SdAdWFmnnNenYAp5iLkkSM: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 35700 tokens (34676 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  45%|████▍     | 515/1145 [11:01<10:40,  1.02s/it][AError in batch generation for request SdAdWFmnnNenYAp5iLkkSM: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 35700 tokens (34676 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  45%|████▌     | 518/1145 [11:01<06:11,  1.69it/s][A
+Generating responses:  46%|████▌     | 522/1145 [11:10<13:39,  1.32s/it][A
+Generating responses:  46%|████▌     | 524/1145 [11:10<10:34,  1.02s/it][A
+Generating responses:  46%|████▌     | 528/1145 [11:11<06:27,  1.59it/s][A
+Generating responses:  46%|████▋     | 530/1145 [11:19<14:18,  1.40s/it][A
+Generating responses:  46%|████▋     | 532/1145 [11:24<17:13,  1.69s/it][A
+Generating responses:  47%|████▋     | 534/1145 [11:24<12:51,  1.26s/it][A
+Generating responses:  47%|████▋     | 535/1145 [11:24<11:12,  1.10s/it][A
+Generating responses:  47%|████▋     | 536/1145 [11:32<24:13,  2.39s/it][A
+Generating responses:  47%|████▋     | 538/1145 [11:32<16:09,  1.60s/it][A
+Generating responses:  47%|████▋     | 542/1145 [11:39<16:33,  1.65s/it][A
+Generating responses:  47%|████▋     | 543/1145 [11:39<14:12,  1.42s/it][A
+Generating responses:  48%|████▊     | 546/1145 [11:45<15:35,  1.56s/it][A
+Generating responses:  48%|████▊     | 549/1145 [11:45<10:08,  1.02s/it][A
+Generating responses:  48%|████▊     | 552/1145 [11:45<06:51,  1.44it/s][A
+Generating responses:  48%|████▊     | 554/1145 [11:54<16:10,  1.64s/it][A
+Generating responses:  48%|████▊     | 555/1145 [11:54<13:59,  1.42s/it][A
+Generating responses:  49%|████▊     | 556/1145 [11:58<18:01,  1.84s/it][A
+Generating responses:  49%|████▊     | 557/1145 [11:58<14:55,  1.52s/it][AError generating response for request UYMVq2rDCFNVv8gsP6dhdH: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 43170 tokens (42146 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request UYMVq2rDCFNVv8gsP6dhdH: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 43170 tokens (42146 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  49%|████▉     | 562/1145 [11:59<06:25,  1.51it/s][A
+Generating responses:  49%|████▉     | 563/1145 [12:06<15:05,  1.56s/it][A
+Generating responses:  49%|████▉     | 564/1145 [12:06<12:40,  1.31s/it][A
+Generating responses:  49%|████▉     | 565/1145 [12:06<10:33,  1.09s/it][A
+Generating responses:  49%|████▉     | 566/1145 [12:09<13:54,  1.44s/it][A
+Generating responses:  50%|████▉     | 567/1145 [12:09<11:06,  1.15s/it][A
+Generating responses:  50%|████▉     | 568/1145 [12:11<13:59,  1.46s/it][A
+Generating responses:  50%|████▉     | 569/1145 [12:11<10:40,  1.11s/it][A
+Generating responses:  50%|████▉     | 571/1145 [12:19<21:22,  2.23s/it][A
+Generating responses:  50%|█████     | 575/1145 [12:19<09:48,  1.03s/it][A
+Generating responses:  50%|█████     | 576/1145 [12:23<14:48,  1.56s/it][A
+Generating responses:  51%|█████     | 579/1145 [12:24<09:02,  1.04it/s][A
+Generating responses:  51%|█████     | 581/1145 [12:26<10:13,  1.09s/it][A
+Generating responses:  51%|█████     | 583/1145 [12:28<09:29,  1.01s/it][A
+Generating responses:  51%|█████     | 585/1145 [12:32<12:26,  1.33s/it][A
+Generating responses:  51%|█████     | 586/1145 [12:33<10:44,  1.15s/it][A
+Generating responses:  51%|█████▏    | 587/1145 [12:36<14:14,  1.53s/it][A
+Generating responses:  52%|█████▏    | 590/1145 [12:36<07:49,  1.18it/s][A
+Generating responses:  52%|█████▏    | 591/1145 [12:39<11:13,  1.22s/it][A
+Generating responses:  52%|█████▏    | 593/1145 [12:39<07:49,  1.18it/s][A
+Generating responses:  52%|█████▏    | 594/1145 [12:40<08:59,  1.02it/s][A
+Generating responses:  52%|█████▏    | 595/1145 [12:41<07:27,  1.23it/s][A
+Generating responses:  52%|█████▏    | 596/1145 [12:44<13:45,  1.50s/it][A
+Generating responses:  52%|█████▏    | 600/1145 [12:45<06:12,  1.46it/s][A
+Generating responses:  53%|█████▎    | 602/1145 [12:51<12:17,  1.36s/it][A
+Generating responses:  53%|█████▎    | 604/1145 [12:51<09:04,  1.01s/it][A
+Generating responses:  53%|█████▎    | 606/1145 [12:55<11:56,  1.33s/it][A
+Generating responses:  53%|█████▎    | 608/1145 [12:55<08:43,  1.03it/s][A
+Generating responses:  53%|█████▎    | 609/1145 [12:57<09:53,  1.11s/it][A
+Generating responses:  53%|█████▎    | 610/1145 [12:57<08:21,  1.07it/s][A
+Generating responses:  53%|█████▎    | 611/1145 [13:00<12:15,  1.38s/it][A
+Generating responses:  54%|█████▎    | 613/1145 [13:01<07:55,  1.12it/s][A
+Generating responses:  54%|█████▎    | 614/1145 [13:10<24:09,  2.73s/it][A
+Generating responses:  54%|█████▍    | 616/1145 [13:12<17:50,  2.02s/it][A
+Generating responses:  54%|█████▍    | 617/1145 [13:14<17:29,  1.99s/it][A
+Generating responses:  54%|█████▍    | 619/1145 [13:14<11:02,  1.26s/it][A
+Generating responses:  54%|█████▍    | 620/1145 [13:17<14:14,  1.63s/it][A
+Generating responses:  54%|█████▍    | 623/1145 [13:17<07:43,  1.13it/s][A
+Generating responses:  55%|█████▍    | 625/1145 [13:24<14:16,  1.65s/it][A
+Generating responses:  55%|█████▍    | 626/1145 [13:24<11:50,  1.37s/it][A
+Generating responses:  55%|█████▍    | 628/1145 [13:24<07:58,  1.08it/s][A
+Generating responses:  55%|█████▍    | 629/1145 [13:29<14:16,  1.66s/it][AError generating response for request XR7dA6TKQiFc4QHMYwLDqP: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32883 tokens (31859 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request XR7dA6TKQiFc4QHMYwLDqP: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 32883 tokens (31859 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  55%|█████▌    | 632/1145 [13:29<08:04,  1.06it/s][A
+Generating responses:  55%|█████▌    | 633/1145 [13:33<12:47,  1.50s/it][A
+Generating responses:  55%|█████▌    | 634/1145 [13:34<12:04,  1.42s/it][A
+Generating responses:  56%|█████▌    | 636/1145 [13:34<07:49,  1.08it/s][A
+Generating responses:  56%|█████▌    | 637/1145 [13:34<06:36,  1.28it/s][A
+Generating responses:  56%|█████▌    | 638/1145 [13:38<11:22,  1.35s/it][A
+Generating responses:  56%|█████▌    | 639/1145 [13:38<08:48,  1.04s/it][A
+Generating responses:  56%|█████▌    | 641/1145 [13:38<05:28,  1.54it/s][A
+Generating responses:  56%|█████▌    | 642/1145 [13:44<15:37,  1.86s/it][A
+Generating responses:  56%|█████▌    | 644/1145 [13:44<09:45,  1.17s/it][A
+Generating responses:  56%|█████▋    | 645/1145 [13:46<10:31,  1.26s/it][A
+Generating responses:  57%|█████▋    | 647/1145 [13:47<08:35,  1.04s/it][A
+Generating responses:  57%|█████▋    | 648/1145 [13:47<06:54,  1.20it/s][A
+Generating responses:  57%|█████▋    | 649/1145 [13:47<05:31,  1.50it/s][A
+Generating responses:  57%|█████▋    | 650/1145 [13:52<13:51,  1.68s/it][A
+Generating responses:  57%|█████▋    | 653/1145 [13:52<07:00,  1.17it/s][A
+Generating responses:  57%|█████▋    | 654/1145 [13:57<13:32,  1.65s/it][A
+Generating responses:  57%|█████▋    | 658/1145 [14:02<11:38,  1.43s/it][A
+Generating responses:  58%|█████▊    | 660/1145 [14:02<08:31,  1.05s/it][A
+Generating responses:  58%|█████▊    | 661/1145 [14:04<09:44,  1.21s/it][A
+Generating responses:  58%|█████▊    | 663/1145 [14:04<06:56,  1.16it/s][A
+Generating responses:  58%|█████▊    | 664/1145 [14:08<11:06,  1.38s/it][A
+Generating responses:  58%|█████▊    | 665/1145 [14:08<09:00,  1.13s/it][A
+Generating responses:  58%|█████▊    | 667/1145 [14:10<08:31,  1.07s/it][A
+Generating responses:  58%|█████▊    | 668/1145 [14:11<08:26,  1.06s/it][A
+Generating responses:  59%|█████▊    | 672/1145 [14:14<07:03,  1.12it/s][A
+Generating responses:  59%|█████▉    | 673/1145 [14:14<06:00,  1.31it/s][A
+Generating responses:  59%|█████▉    | 675/1145 [14:17<07:14,  1.08it/s][A
+Generating responses:  59%|█████▉    | 679/1145 [14:17<03:57,  1.96it/s][AError generating response for request Zpnu9g7eUGf6yYwwFN2Hk5: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 34532 tokens (33508 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request Zpnu9g7eUGf6yYwwFN2Hk5: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 34532 tokens (33508 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  60%|█████▉    | 682/1145 [14:17<02:45,  2.80it/s][A
+Generating responses:  60%|█████▉    | 684/1145 [14:22<06:46,  1.13it/s][A
+Generating responses:  60%|█████▉    | 685/1145 [14:22<05:57,  1.29it/s][A
+Generating responses:  60%|██████    | 688/1145 [14:29<10:10,  1.34s/it][A
+Generating responses:  60%|██████    | 691/1145 [14:29<06:36,  1.14it/s][AError generating response for request aJHeEgCPQ2LCEwtsZWbd9Q: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 35007 tokens (33983 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  61%|██████    | 693/1145 [14:29<05:06,  1.47it/s][AError in batch generation for request aJHeEgCPQ2LCEwtsZWbd9Q: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 35007 tokens (33983 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  61%|██████    | 695/1145 [14:36<09:49,  1.31s/it][A
+Generating responses:  61%|██████    | 696/1145 [14:36<08:25,  1.13s/it][A
+Generating responses:  61%|██████    | 697/1145 [14:36<07:13,  1.03it/s][A
+Generating responses:  61%|██████    | 698/1145 [14:41<13:07,  1.76s/it][A
+Generating responses:  61%|██████    | 701/1145 [14:41<07:08,  1.03it/s][AError generating response for request admjQXJJsLpbcEdRVyvVsf: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 35382 tokens (34358 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request admjQXJJsLpbcEdRVyvVsf: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 35382 tokens (34358 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  61%|██████▏   | 703/1145 [14:41<05:04,  1.45it/s][A
+Generating responses:  61%|██████▏   | 704/1145 [14:47<11:40,  1.59s/it][A
+Generating responses:  62%|██████▏   | 705/1145 [14:48<10:24,  1.42s/it][A
+Generating responses:  62%|██████▏   | 707/1145 [14:48<06:46,  1.08it/s][A
+Generating responses:  62%|██████▏   | 708/1145 [14:48<05:48,  1.25it/s][A
+Generating responses:  62%|██████▏   | 709/1145 [14:54<13:44,  1.89s/it][A
+Generating responses:  62%|██████▏   | 711/1145 [14:54<08:32,  1.18s/it][A
+Generating responses:  62%|██████▏   | 712/1145 [14:58<13:10,  1.83s/it][A
+Generating responses:  62%|██████▏   | 715/1145 [15:01<10:45,  1.50s/it][A
+Generating responses:  63%|██████▎   | 716/1145 [15:02<09:01,  1.26s/it][A
+Generating responses:  63%|██████▎   | 717/1145 [15:03<08:42,  1.22s/it][A
+Generating responses:  63%|██████▎   | 718/1145 [15:03<06:54,  1.03it/s][A
+Generating responses:  63%|██████▎   | 719/1145 [15:04<07:36,  1.07s/it][A
+Generating responses:  63%|██████▎   | 721/1145 [15:06<07:33,  1.07s/it][A
+Generating responses:  63%|██████▎   | 722/1145 [15:06<06:02,  1.17it/s][A
+Generating responses:  63%|██████▎   | 723/1145 [15:08<06:35,  1.07it/s][A
+Generating responses:  63%|██████▎   | 724/1145 [15:08<05:15,  1.33it/s][A
+Generating responses:  64%|██████▎   | 728/1145 [15:08<02:20,  2.97it/s][A
+Generating responses:  64%|██████▎   | 729/1145 [15:21<18:18,  2.64s/it][A
+Generating responses:  64%|██████▍   | 730/1145 [15:22<14:48,  2.14s/it][A
+Generating responses:  64%|██████▍   | 731/1145 [15:22<12:29,  1.81s/it][A
+Generating responses:  64%|██████▍   | 732/1145 [15:23<09:51,  1.43s/it][A
+Generating responses:  64%|██████▍   | 733/1145 [15:24<09:07,  1.33s/it][A
+Generating responses:  64%|██████▍   | 735/1145 [15:24<05:25,  1.26it/s][A
+Generating responses:  64%|██████▍   | 736/1145 [15:24<04:26,  1.54it/s][A
+Generating responses:  64%|██████▍   | 737/1145 [15:27<08:36,  1.27s/it][A
+Generating responses:  65%|██████▍   | 741/1145 [15:27<03:45,  1.79it/s][A
+Generating responses:  65%|██████▍   | 743/1145 [15:27<02:47,  2.40it/s][AError generating response for request cHj9fNtX8oN4JATDhDUC4T: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 37503 tokens (36479 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request cHj9fNtX8oN4JATDhDUC4T: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 37503 tokens (36479 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error generating response for request cRGhffFZWNyQviWrJPmRCg: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 51419 tokens (50395 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request cRGhffFZWNyQviWrJPmRCg: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 51419 tokens (50395 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  65%|██████▌   | 747/1145 [15:28<01:38,  4.02it/s][A
+Generating responses:  65%|██████▌   | 749/1145 [15:36<07:51,  1.19s/it][A
+Generating responses:  66%|██████▌   | 751/1145 [15:36<05:55,  1.11it/s][A
+Generating responses:  66%|██████▌   | 753/1145 [15:41<08:43,  1.34s/it][A
+Generating responses:  66%|██████▌   | 754/1145 [15:41<07:28,  1.15s/it][A
+Generating responses:  66%|██████▌   | 756/1145 [15:41<05:22,  1.21it/s][A
+Generating responses:  66%|██████▌   | 758/1145 [15:53<15:22,  2.38s/it][A
+Generating responses:  66%|██████▋   | 759/1145 [15:53<12:42,  1.98s/it][A
+Generating responses:  66%|██████▋   | 760/1145 [15:56<13:40,  2.13s/it][A
+Generating responses:  66%|██████▋   | 761/1145 [15:58<13:14,  2.07s/it][A
+Generating responses:  67%|██████▋   | 762/1145 [15:58<10:13,  1.60s/it][A
+Generating responses:  67%|██████▋   | 763/1145 [16:04<17:29,  2.75s/it][A
+Generating responses:  67%|██████▋   | 766/1145 [16:04<08:21,  1.32s/it][A
+Generating responses:  67%|██████▋   | 768/1145 [16:04<05:43,  1.10it/s][A
+Generating responses:  67%|██████▋   | 769/1145 [16:11<12:54,  2.06s/it][A
+Generating responses:  67%|██████▋   | 770/1145 [16:11<10:27,  1.67s/it][A
+Generating responses:  67%|██████▋   | 771/1145 [16:14<11:41,  1.88s/it][AError generating response for request dohJioF4j23dw6b8AgCxqx: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 46981 tokens (45957 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request dohJioF4j23dw6b8AgCxqx: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 46981 tokens (45957 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  68%|██████▊   | 773/1145 [16:14<07:13,  1.17s/it][A
+Generating responses:  68%|██████▊   | 775/1145 [16:14<04:52,  1.26it/s][A
+Generating responses:  68%|██████▊   | 776/1145 [16:17<07:16,  1.18s/it][A
+Generating responses:  68%|██████▊   | 777/1145 [16:17<05:48,  1.06it/s][A
+Generating responses:  68%|██████▊   | 780/1145 [16:18<03:09,  1.92it/s][A
+Generating responses:  68%|██████▊   | 781/1145 [16:26<11:47,  1.94s/it][A
+Generating responses:  68%|██████▊   | 782/1145 [16:26<10:26,  1.72s/it][A
+Generating responses:  68%|██████▊   | 783/1145 [16:27<08:11,  1.36s/it][A
+Generating responses:  68%|██████▊   | 784/1145 [16:28<08:24,  1.40s/it][A
+Generating responses:  69%|██████▊   | 785/1145 [16:30<08:39,  1.44s/it][A
+Generating responses:  69%|██████▊   | 786/1145 [16:30<06:30,  1.09s/it][A
+Generating responses:  69%|██████▉   | 788/1145 [16:32<06:53,  1.16s/it][A
+Generating responses:  69%|██████▉   | 789/1145 [16:33<06:18,  1.06s/it][A
+Generating responses:  69%|██████▉   | 790/1145 [16:37<10:30,  1.78s/it][AError generating response for request eQRQC4E5pZanwwyme6kTJA: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 40637 tokens (39613 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request eQRQC4E5pZanwwyme6kTJA: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 40637 tokens (39613 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  69%|██████▉   | 791/1145 [16:37<07:55,  1.34s/it][A
+Generating responses:  69%|██████▉   | 794/1145 [16:37<03:47,  1.54it/s][A
+Generating responses:  70%|██████▉   | 796/1145 [16:40<05:07,  1.13it/s][A
+Generating responses:  70%|██████▉   | 798/1145 [16:42<05:41,  1.02it/s][A
+Generating responses:  70%|██████▉   | 800/1145 [16:42<04:03,  1.42it/s][A
+Generating responses:  70%|██████▉   | 801/1145 [16:45<06:28,  1.13s/it][A
+Generating responses:  70%|███████   | 803/1145 [16:46<04:28,  1.27it/s][A
+Generating responses:  70%|███████   | 804/1145 [16:48<05:46,  1.02s/it][AError generating response for request et6akpyxHvFPfKyPNtNzSi: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 42402 tokens (41378 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request et6akpyxHvFPfKyPNtNzSi: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 42402 tokens (41378 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  70%|███████   | 805/1145 [16:48<04:44,  1.20it/s][A
+Generating responses:  71%|███████   | 808/1145 [16:48<02:30,  2.23it/s][A
+Generating responses:  71%|███████   | 810/1145 [16:52<05:05,  1.10it/s][A
+Generating responses:  71%|███████   | 813/1145 [16:54<04:29,  1.23it/s][A
+Generating responses:  71%|███████   | 815/1145 [16:54<03:19,  1.65it/s][A
+Generating responses:  71%|███████▏  | 816/1145 [16:58<06:47,  1.24s/it][A
+Generating responses:  71%|███████▏  | 818/1145 [16:59<04:51,  1.12it/s][A
+Generating responses:  72%|███████▏  | 819/1145 [17:01<06:27,  1.19s/it][A
+Generating responses:  72%|███████▏  | 820/1145 [17:01<05:21,  1.01it/s][AError generating response for request fVBJLwGMCV6Dq9cEaGyrq3: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 62666 tokens (61642 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request fVBJLwGMCV6Dq9cEaGyrq3: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 62666 tokens (61642 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  72%|███████▏  | 822/1145 [17:02<03:36,  1.49it/s][A
+Generating responses:  72%|███████▏  | 823/1145 [17:06<07:09,  1.33s/it][A
+Generating responses:  72%|███████▏  | 825/1145 [17:07<05:55,  1.11s/it][A
+Generating responses:  72%|███████▏  | 826/1145 [17:07<04:46,  1.11it/s][A
+Generating responses:  72%|███████▏  | 829/1145 [17:07<02:39,  1.98it/s][A
+Generating responses:  73%|███████▎  | 831/1145 [17:19<11:21,  2.17s/it][A
+Generating responses:  73%|███████▎  | 832/1145 [17:20<09:48,  1.88s/it][A
+Generating responses:  73%|███████▎  | 834/1145 [17:20<06:37,  1.28s/it][A
+Generating responses:  73%|███████▎  | 836/1145 [17:25<09:00,  1.75s/it][A
+Generating responses:  73%|███████▎  | 838/1145 [17:25<06:12,  1.21s/it][A
+Generating responses:  73%|███████▎  | 840/1145 [17:26<04:29,  1.13it/s][A
+Generating responses:  73%|███████▎  | 841/1145 [17:31<08:56,  1.76s/it][A
+Generating responses:  74%|███████▎  | 843/1145 [17:32<06:03,  1.20s/it][A
+Generating responses:  74%|███████▎  | 844/1145 [17:38<10:49,  2.16s/it][A
+Generating responses:  74%|███████▍  | 845/1145 [17:38<08:35,  1.72s/it][A
+Generating responses:  74%|███████▍  | 847/1145 [17:40<07:37,  1.54s/it][A
+Generating responses:  74%|███████▍  | 848/1145 [17:41<06:07,  1.24s/it][A
+Generating responses:  74%|███████▍  | 849/1145 [17:42<06:08,  1.24s/it][A
+Generating responses:  74%|███████▍  | 852/1145 [17:42<03:18,  1.47it/s][A
+Generating responses:  74%|███████▍  | 853/1145 [17:45<05:16,  1.08s/it][A
+Generating responses:  75%|███████▍  | 854/1145 [17:45<04:14,  1.15it/s][A
+Generating responses:  75%|███████▍  | 855/1145 [17:45<03:24,  1.42it/s][A
+Generating responses:  75%|███████▍  | 858/1145 [17:52<06:48,  1.42s/it][A
+Generating responses:  75%|███████▌  | 860/1145 [17:52<04:50,  1.02s/it][AError generating response for request hGPYsdTTBmP2uYYGodPkkt: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 38543 tokens (37519 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request hGPYsdTTBmP2uYYGodPkkt: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 38543 tokens (37519 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  75%|███████▌  | 861/1145 [17:52<04:03,  1.17it/s][A
+Generating responses:  75%|███████▌  | 862/1145 [17:54<05:16,  1.12s/it][A
+Generating responses:  76%|███████▌  | 867/1145 [17:54<02:12,  2.10it/s][A
+Generating responses:  76%|███████▌  | 868/1145 [17:57<03:27,  1.34it/s][A
+Generating responses:  76%|███████▌  | 871/1145 [17:57<02:10,  2.10it/s][A
+Generating responses:  76%|███████▌  | 873/1145 [18:00<03:24,  1.33it/s][A
+Generating responses:  76%|███████▋  | 875/1145 [18:05<05:45,  1.28s/it][A
+Generating responses:  77%|███████▋  | 879/1145 [18:05<03:15,  1.36it/s][A
+Generating responses:  77%|███████▋  | 881/1145 [18:06<02:37,  1.68it/s][A
+Generating responses:  77%|███████▋  | 882/1145 [18:12<06:25,  1.47s/it][A
+Generating responses:  77%|███████▋  | 884/1145 [18:14<05:42,  1.31s/it][A
+Generating responses:  77%|███████▋  | 885/1145 [18:14<04:47,  1.11s/it][A
+Generating responses:  77%|███████▋  | 886/1145 [18:15<04:26,  1.03s/it][A
+Generating responses:  78%|███████▊  | 889/1145 [18:15<02:31,  1.68it/s][A
+Generating responses:  78%|███████▊  | 890/1145 [18:20<06:03,  1.42s/it][A
+Generating responses:  78%|███████▊  | 891/1145 [18:21<04:54,  1.16s/it][A
+Generating responses:  78%|███████▊  | 893/1145 [18:21<03:11,  1.31it/s][A
+Generating responses:  78%|███████▊  | 894/1145 [18:28<08:28,  2.03s/it][A
+Generating responses:  78%|███████▊  | 897/1145 [18:34<08:25,  2.04s/it][A
+Generating responses:  79%|███████▊  | 899/1145 [18:38<08:21,  2.04s/it][A
+Generating responses:  79%|███████▉  | 902/1145 [18:39<05:45,  1.42s/it][A
+Generating responses:  79%|███████▉  | 904/1145 [18:40<04:14,  1.06s/it][A
+Generating responses:  79%|███████▉  | 905/1145 [18:44<06:32,  1.63s/it][A
+Generating responses:  79%|███████▉  | 906/1145 [18:44<05:31,  1.39s/it][A
+Generating responses:  79%|███████▉  | 907/1145 [18:50<09:05,  2.29s/it][A
+Generating responses:  79%|███████▉  | 909/1145 [18:50<05:52,  1.49s/it][A
+Generating responses:  80%|███████▉  | 912/1145 [18:58<07:46,  2.00s/it][A
+Generating responses:  80%|███████▉  | 914/1145 [18:59<05:33,  1.44s/it][A
+Generating responses:  80%|███████▉  | 915/1145 [19:01<05:59,  1.56s/it][A
+Generating responses:  80%|████████  | 916/1145 [19:01<04:54,  1.29s/it][A
+Generating responses:  80%|████████  | 918/1145 [19:03<04:31,  1.20s/it][A
+Generating responses:  80%|████████  | 919/1145 [19:03<03:43,  1.01it/s][A
+Generating responses:  80%|████████  | 921/1145 [19:06<04:23,  1.18s/it][A
+Generating responses:  81%|████████  | 923/1145 [19:09<04:32,  1.23s/it][A
+Generating responses:  81%|████████  | 925/1145 [19:09<03:09,  1.16it/s][A
+Generating responses:  81%|████████  | 928/1145 [19:14<04:15,  1.18s/it][A
+Generating responses:  81%|████████  | 930/1145 [19:14<03:06,  1.16it/s][A
+Generating responses:  81%|████████▏ | 931/1145 [19:18<04:40,  1.31s/it][A
+Generating responses:  81%|████████▏ | 933/1145 [19:18<03:12,  1.10it/s][A
+Generating responses:  82%|████████▏ | 936/1145 [19:23<04:12,  1.21s/it][A
+Generating responses:  82%|████████▏ | 937/1145 [19:23<03:35,  1.04s/it][A
+Generating responses:  82%|████████▏ | 938/1145 [19:23<03:16,  1.05it/s][A
+Generating responses:  82%|████████▏ | 939/1145 [19:23<02:39,  1.29it/s][A
+Generating responses:  82%|████████▏ | 940/1145 [19:24<02:15,  1.51it/s][A
+Generating responses:  82%|████████▏ | 941/1145 [19:30<06:39,  1.96s/it][A
+Generating responses:  82%|████████▏ | 943/1145 [19:30<04:00,  1.19s/it][A
+Generating responses:  82%|████████▏ | 944/1145 [19:35<07:19,  2.19s/it][A
+Generating responses:  83%|████████▎ | 947/1145 [19:36<03:43,  1.13s/it][A
+Generating responses:  83%|████████▎ | 949/1145 [19:36<02:33,  1.27it/s][AError generating response for request mAt78gqtxnGgcVGrA4tHN5: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 50935 tokens (49911 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request mAt78gqtxnGgcVGrA4tHN5: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 50935 tokens (49911 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  83%|████████▎ | 951/1145 [19:36<01:53,  1.71it/s][A
+Generating responses:  83%|████████▎ | 952/1145 [19:45<06:37,  2.06s/it][A
+Generating responses:  83%|████████▎ | 953/1145 [19:45<05:18,  1.66s/it][A
+Generating responses:  83%|████████▎ | 955/1145 [19:51<06:51,  2.17s/it][A
+Generating responses:  84%|████████▎ | 958/1145 [19:51<03:52,  1.24s/it][A
+Generating responses:  84%|████████▍ | 961/1145 [19:51<02:25,  1.26it/s][A
+Generating responses:  84%|████████▍ | 962/1145 [19:58<05:23,  1.77s/it][A
+Generating responses:  84%|████████▍ | 963/1145 [19:59<04:44,  1.56s/it][AError generating response for request mhLhbPavrBpfdknacMN7GL: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 43087 tokens (42063 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  84%|████████▍ | 966/1145 [19:59<02:46,  1.08it/s][AError in batch generation for request mhLhbPavrBpfdknacMN7GL: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 43087 tokens (42063 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error generating response for request minwD4A8mxqhLxMHjfniKy: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 40137 tokens (39113 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request minwD4A8mxqhLxMHjfniKy: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 40137 tokens (39113 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  85%|████████▍ | 968/1145 [20:00<02:01,  1.46it/s][A
+Generating responses:  85%|████████▍ | 969/1145 [20:05<04:40,  1.59s/it][A
+Generating responses:  85%|████████▍ | 970/1145 [20:08<05:08,  1.76s/it][A
+Generating responses:  85%|████████▍ | 971/1145 [20:08<04:05,  1.41s/it][A
+Generating responses:  85%|████████▍ | 973/1145 [20:13<05:08,  1.79s/it][A
+Generating responses:  85%|████████▌ | 976/1145 [20:13<02:48,  1.01it/s][A
+Generating responses:  85%|████████▌ | 978/1145 [20:13<02:03,  1.35it/s][A
+Generating responses:  86%|████████▌ | 979/1145 [20:18<03:50,  1.39s/it][A
+Generating responses:  86%|████████▌ | 982/1145 [20:18<02:17,  1.19it/s][A
+Generating responses:  86%|████████▌ | 983/1145 [20:24<04:33,  1.69s/it][AError generating response for request nWKHkqWrAhfXG7eRWGX8B5: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 36789 tokens (35765 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  86%|████████▌ | 987/1145 [20:24<02:20,  1.12it/s][AError in batch generation for request nWKHkqWrAhfXG7eRWGX8B5: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 36789 tokens (35765 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  86%|████████▋ | 989/1145 [20:27<02:39,  1.02s/it][A
+Generating responses:  87%|████████▋ | 991/1145 [20:27<01:57,  1.31it/s][A
+Generating responses:  87%|████████▋ | 992/1145 [20:32<03:38,  1.43s/it][A
+Generating responses:  87%|████████▋ | 994/1145 [20:32<02:34,  1.02s/it][A
+Generating responses:  87%|████████▋ | 996/1145 [20:43<06:02,  2.43s/it][A
+Generating responses:  87%|████████▋ | 997/1145 [20:44<05:02,  2.05s/it][AError generating response for request nz5BRooQteeNkQ2by7nGyU: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 42611 tokens (41587 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request nz5BRooQteeNkQ2by7nGyU: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 42611 tokens (41587 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  87%|████████▋ | 1001/1145 [20:44<02:28,  1.03s/it][A
+Generating responses:  88%|████████▊ | 1002/1145 [20:48<03:35,  1.50s/it][A
+Generating responses:  88%|████████▊ | 1003/1145 [20:48<03:03,  1.29s/it][A
+Generating responses:  88%|████████▊ | 1004/1145 [20:51<03:37,  1.54s/it][A
+Generating responses:  88%|████████▊ | 1005/1145 [20:51<02:52,  1.23s/it][A
+Generating responses:  88%|████████▊ | 1006/1145 [20:52<02:46,  1.20s/it][A
+Generating responses:  88%|████████▊ | 1008/1145 [20:54<02:28,  1.08s/it][A
+Generating responses:  88%|████████▊ | 1009/1145 [20:56<03:07,  1.38s/it][A
+Generating responses:  88%|████████▊ | 1010/1145 [20:58<03:04,  1.37s/it][A
+Generating responses:  88%|████████▊ | 1011/1145 [20:58<02:22,  1.06s/it][A
+Generating responses:  88%|████████▊ | 1013/1145 [21:03<03:49,  1.74s/it][A
+Generating responses:  89%|████████▊ | 1014/1145 [21:04<03:18,  1.51s/it][A
+Generating responses:  89%|████████▉ | 1018/1145 [21:04<01:30,  1.41it/s][A
+Generating responses:  89%|████████▉ | 1019/1145 [21:09<03:03,  1.45s/it][A
+Generating responses:  89%|████████▉ | 1021/1145 [21:12<03:02,  1.47s/it][A
+Generating responses:  89%|████████▉ | 1024/1145 [21:13<01:47,  1.12it/s][A
+Generating responses:  90%|████████▉ | 1026/1145 [21:19<03:02,  1.53s/it][A
+Generating responses:  90%|████████▉ | 1028/1145 [21:19<02:12,  1.13s/it][A
+Generating responses:  90%|████████▉ | 1029/1145 [21:24<03:32,  1.83s/it][A
+Generating responses:  90%|████████▉ | 1030/1145 [21:26<03:17,  1.72s/it][A
+Generating responses:  90%|█████████ | 1031/1145 [21:26<02:41,  1.41s/it][A
+Generating responses:  90%|█████████ | 1034/1145 [21:32<03:09,  1.71s/it][A
+Generating responses:  90%|█████████ | 1035/1145 [21:35<03:36,  1.97s/it][A
+Generating responses:  91%|█████████ | 1037/1145 [21:39<03:34,  1.98s/it][A
+Generating responses:  91%|█████████ | 1038/1145 [21:39<02:53,  1.62s/it][A
+Generating responses:  91%|█████████ | 1040/1145 [21:43<02:58,  1.70s/it][A
+Generating responses:  91%|█████████ | 1041/1145 [21:44<02:34,  1.48s/it][A
+Generating responses:  91%|█████████ | 1042/1145 [21:47<03:09,  1.84s/it][A
+Generating responses:  91%|█████████▏| 1045/1145 [21:47<01:36,  1.04it/s][A
+Generating responses:  91%|█████████▏| 1046/1145 [21:54<03:31,  2.13s/it][A
+Generating responses:  92%|█████████▏| 1048/1145 [21:55<02:38,  1.63s/it][A
+Generating responses:  92%|█████████▏| 1051/1145 [22:03<03:05,  1.97s/it][A
+Generating responses:  92%|█████████▏| 1052/1145 [22:03<02:35,  1.67s/it][A
+Generating responses:  92%|█████████▏| 1054/1145 [22:05<02:10,  1.44s/it][A
+Generating responses:  92%|█████████▏| 1055/1145 [22:06<02:08,  1.43s/it][A
+Generating responses:  92%|█████████▏| 1056/1145 [22:07<01:46,  1.19s/it][A
+Generating responses:  92%|█████████▏| 1058/1145 [22:11<02:13,  1.53s/it][A
+Generating responses:  92%|█████████▏| 1059/1145 [22:14<02:48,  1.96s/it][A
+Generating responses:  93%|█████████▎| 1060/1145 [22:15<02:31,  1.78s/it][A
+Generating responses:  93%|█████████▎| 1061/1145 [22:17<02:15,  1.62s/it][A
+Generating responses:  93%|█████████▎| 1062/1145 [22:17<01:49,  1.32s/it][A
+Generating responses:  93%|█████████▎| 1064/1145 [22:17<01:08,  1.19it/s][A
+Generating responses:  93%|█████████▎| 1065/1145 [22:22<02:19,  1.74s/it][A
+Generating responses:  93%|█████████▎| 1068/1145 [22:22<01:09,  1.11it/s][A
+Generating responses:  93%|█████████▎| 1069/1145 [22:26<01:48,  1.43s/it][A
+Generating responses:  93%|█████████▎| 1070/1145 [22:26<01:25,  1.15s/it][A
+Generating responses:  94%|█████████▎| 1071/1145 [22:26<01:08,  1.08it/s][A
+Generating responses:  94%|█████████▎| 1072/1145 [22:33<02:45,  2.27s/it][A
+Generating responses:  94%|█████████▍| 1074/1145 [22:45<04:40,  3.95s/it][AError generating response for request gurW28uKknkS6kmv6aPa6X: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 37703 tokens (36679 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+Error in batch generation for request gurW28uKknkS6kmv6aPa6X: Error code: 400 - {'object': 'error', 'message': "This model's maximum context length is 32768 tokens. However, you requested 37703 tokens (36679 in the messages, 1024 in the completion). Please reduce the length of the messages or completion.", 'type': 'BadRequestError', 'param': None, 'code': 400}
+
+Generating responses:  94%|█████████▍| 1077/1145 [22:45<02:23,  2.11s/it][A
+Generating responses:  94%|█████████▍| 1080/1145 [22:51<02:07,  1.97s/it][A
+Generating responses:  94%|█████████▍| 1081/1145 [22:52<01:59,  1.86s/it][A
+Generating responses:  94%|█████████▍| 1082/1145 [22:52<01:37,  1.55s/it][A
+Generating responses:  95%|█████████▍| 1084/1145 [22:54<01:20,  1.31s/it][A
+Generating responses:  95%|█████████▍| 1085/1145 [22:55<01:21,  1.36s/it][A
+Generating responses:  95%|█████████▍| 1086/1145 [22:57<01:21,  1.39s/it][A
+Generating responses:  95%|█████████▍| 1087/1145 [22:58<01:10,  1.22s/it][A
+Generating responses:  95%|█████████▌| 1088/1145 [22:58<00:59,  1.04s/it][A
+Generating responses:  95%|█████████▌| 1089/1145 [22:58<00:44,  1.24it/s][A
+Generating responses:  95%|█████████▌| 1090/1145 [22:59<00:36,  1.49it/s][A
+Generating responses:  95%|█████████▌| 1091/1145 [22:59<00:39,  1.38it/s][A
+Generating responses:  95%|█████████▌| 1092/1145 [23:02<01:05,  1.24s/it][A
+Generating responses:  95%|█████████▌| 1093/1145 [23:03<00:59,  1.14s/it][A
+Generating responses:  96%|█████████▌| 1094/1145 [23:05<01:10,  1.38s/it][A
+Generating responses:  96%|█████████▌| 1095/1145 [23:05<00:52,  1.06s/it][A
+Generating responses:  96%|█████████▌| 1096/1145 [23:07<01:04,  1.31s/it][A
+Generating responses:  96%|█████████▌| 1098/1145 [23:07<00:36,  1.27it/s][A
+Generating responses:  96%|█████████▌| 1099/1145 [23:10<01:02,  1.35s/it][A
+Generating responses:  96%|█████████▌| 1100/1145 [23:11<00:46,  1.04s/it][A
+Generating responses:  96%|█████████▌| 1101/1145 [23:11<00:36,  1.19it/s][A
+Generating responses:  96%|█████████▌| 1102/1145 [23:12<00:34,  1.25it/s][A
+Generating responses:  96%|█████████▋| 1103/1145 [23:15<01:00,  1.45s/it][A
+Generating responses:  96%|█████████▋| 1104/1145 [23:15<00:52,  1.28s/it][A
+Generating responses:  97%|█████████▋| 1105/1145 [23:17<00:56,  1.41s/it][A
+Generating responses:  97%|█████████▋| 1106/1145 [23:18<00:44,  1.15s/it][A
+Generating responses:  97%|█████████▋| 1107/1145 [23:21<01:02,  1.63s/it][A
+Generating responses:  97%|█████████▋| 1108/1145 [23:21<00:46,  1.27s/it][A
+Generating responses:  97%|█████████▋| 1109/1145 [23:22<00:38,  1.07s/it][A
+Generating responses:  97%|█████████▋| 1110/1145 [23:26<01:09,  1.98s/it][A
+Generating responses:  97%|█████████▋| 1112/1145 [23:26<00:37,  1.13s/it][A
+Generating responses:  97%|█████████▋| 1113/1145 [23:27<00:37,  1.16s/it][A
+Generating responses:  97%|█████████▋| 1114/1145 [23:28<00:30,  1.02it/s][A
+Generating responses:  97%|█████████▋| 1115/1145 [23:28<00:23,  1.29it/s][A
+Generating responses:  97%|█████████▋| 1116/1145 [23:38<01:37,  3.37s/it][A
+Generating responses:  98%|█████████▊| 1117/1145 [23:39<01:15,  2.71s/it][A
+Generating responses:  98%|█████████▊| 1119/1145 [23:40<00:43,  1.68s/it][A
+Generating responses:  98%|█████████▊| 1120/1145 [23:41<00:36,  1.46s/it][A
+Generating responses:  98%|█████████▊| 1121/1145 [23:45<00:54,  2.27s/it][A
+Generating responses:  98%|█████████▊| 1122/1145 [23:47<00:49,  2.15s/it][A
+Generating responses:  98%|█████████▊| 1123/1145 [23:51<00:58,  2.66s/it][A
+Generating responses:  98%|█████████▊| 1124/1145 [23:52<00:45,  2.16s/it][A
+Generating responses:  98%|█████████▊| 1125/1145 [23:55<00:48,  2.44s/it][A
+Generating responses:  98%|█████████▊| 1126/1145 [23:56<00:35,  1.89s/it][A
+Generating responses:  98%|█████████▊| 1127/1145 [24:09<01:36,  5.37s/it][A
+Generating responses:  99%|█████████▊| 1129/1145 [25:49<06:50, 25.64s/it][A
+Generating responses:  99%|█████████▊| 1130/1145 [25:49<04:52, 19.50s/it][A
+Generating responses:  99%|█████████▉| 1131/1145 [25:51<03:26, 14.75s/it][A
+Generating responses:  99%|█████████▉| 1132/1145 [25:51<02:21, 10.86s/it][A
+Generating responses:  99%|█████████▉| 1134/1145 [25:53<01:11,  6.46s/it][A
+Generating responses:  99%|█████████▉| 1135/1145 [25:54<00:52,  5.21s/it][A
+Generating responses:  99%|█████████▉| 1136/1145 [25:54<00:35,  3.95s/it][A
+Generating responses:  99%|█████████▉| 1137/1145 [25:55<00:24,  3.03s/it][A
+Generating responses:  99%|█████████▉| 1138/1145 [25:55<00:15,  2.26s/it][A
+Generating responses:  99%|█████████▉| 1139/1145 [25:56<00:10,  1.83s/it][A
+Generating responses: 100%|█████████▉| 1140/1145 [25:56<00:07,  1.54s/it][A
+Generating responses: 100%|█████████▉| 1141/1145 [25:57<00:04,  1.23s/it][A
+Generating responses: 100%|█████████▉| 1142/1145 [26:07<00:11,  3.80s/it][A
+Generating responses: 100%|█████████▉| 1143/1145 [26:20<00:13,  6.68s/it][A
+Generating responses: 100%|█████████▉| 1144/1145 [26:22<00:05,  5.09s/it][A
+Generating responses: 100%|██████████| 1145/1145 [26:33<00:00,  6.98s/it][AGenerating responses: 100%|██████████| 1145/1145 [26:33<00:00,  1.39s/it]
+100%|██████████| 1/1 [26:35<00:00, 1595.44s/it]100%|██████████| 1/1 [26:35<00:00, 1595.44s/it]
