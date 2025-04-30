@@ -457,6 +457,7 @@ def parallel_evaluate(results, desc="Evaluating Results", max_workers=4):
     return scores
 
 
+# 这里也挺好做的，针对preFLMR再重新稍微修改一下就好了；
 def evqa_eval(file_path):
     data = [json.loads(line) for line in open(file_path, "r")]
     question_id_to_answer = {
@@ -490,7 +491,7 @@ def evqa_eval(file_path):
     print(f"Average Score: {avg_score}")
 
 def test():
-    evqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/wo_knowledge/results/evqa/answers.jsonl")
+    evqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/evqa_part/answers.jsonl")
 
 if __name__ == "__main__":
     test()

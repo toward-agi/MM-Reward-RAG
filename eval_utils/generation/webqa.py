@@ -21,7 +21,7 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 import traceback
-from transformers import BartTokenizer, BartForConditionalGeneration
+from transformers import BartTokenizer, BartForConditionalGeneration, AutoTokenizer
 from typing import List
 import numpy as np
 
@@ -32,6 +32,7 @@ class BARTScorer:
         self.device = device
         self.max_length = max_length
         self.tokenizer = BartTokenizer.from_pretrained(checkpoint)
+        # self.tokenizer = AutoTokenizer.from_pretrained(checkpoint)
         self.model = BartForConditionalGeneration.from_pretrained(checkpoint)
         self.model.eval()
         self.model.to(device)
@@ -154,7 +155,7 @@ sys.path.append("/home/longfei/BARTScore")
 # from bart_score import BARTScorer
 
 print("Loading BART scorer...")
-bart_scorer_ParaBank = BARTScorer(device='cuda:0', checkpoint='facebook/bart-large-cnn')
+bart_scorer_ParaBank = BARTScorer(device='cuda:0', checkpoint='/data/zhiyuan/mdoels/bart-large-cnn')
 bart_scorer_ParaBank.load(path='/data/longfei/bart.pth') # Please change the path to bart.pth
 
 
@@ -483,7 +484,7 @@ def eval_webqa(results_file_path, experimental_name):
     os.remove(random_path)
 
 def test():
-    eval_webqa("/data/track/mm-RewardRAG/experiments/5-answer/wo_knowledge/results/webqa/answers.jsonl","qwen25_wo_knowledge")
+    eval_webqa("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/webqa/answers.jsonl","qwen25_w_gt")
 
 if __name__ == "__main__":
     test()

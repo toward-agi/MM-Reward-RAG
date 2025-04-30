@@ -10,6 +10,7 @@ from concurrent.futures import ProcessPoolExecutor
 import logging
 from pathlib import Path
 from tqdm import tqdm
+import time
 
 logger = logging.getLogger(__name__)
 
@@ -45,16 +46,42 @@ class BaseGenerator(ABC):
     def _generate_single(self, messages: List[Dict[str, Any]], request_id: Optional[str] = None) -> Tuple[str, Optional[str]]:
         """Generate a single response with optional request ID for tracking."""
 
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                **self.generation_config
-            )
-            return response.choices[0].message.content, request_id
-        except Exception as e:
-            logger.error(f"Error generating response for request {request_id}: {str(e)}")
-            raise
+        # try:
+        #     response = self.client.chat.completions.create(
+        #         model=self.model,
+        #         messages=messages,
+        #         **self.generation_config
+        #     )
+        #     return response.choices[0].message.content, request_id
+        # except Exception as e:
+        #     logger.error(f"Error generating response for request {request_id}: {str(e)}")
+        #     raise
+        max_retries = 5
+        retry_count = 0
+        backoff_factor = 1  # seconds
+        
+        while retry_count < max_retries:
+            try:
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=messages,
+                    **self.generation_config
+                )
+                return response.choices[0].message.content, request_id
+                
+            except Exception as e:
+                retry_count += 1
+                wait_time = backoff_factor * (2 ** (retry_count - 1))  # Exponential backoff: 1, 2, 4, 8, 16 seconds
+                
+                if retry_count < max_retries:
+                    logger.warning(f"Attempt {retry_count}/{max_retries} failed for request {request_id}: {str(e)}. Retrying in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                else:
+                    logger.error(f"All {max_retries} attempts failed for request {request_id}: {str(e)}")
+                    raise
+        
+        # This should not be reached due to the raise in the else clause above, but added for completeness
+        raise Exception(f"Failed after {max_retries} attempts for request {request_id}")
     
     def generate_batch(self, message_list: List[Tuple[List[Dict[str, Any]], Optional[str]]]) -> List[Tuple[str, Optional[str]]]:
         """Generate responses for a batch of messages using ThreadPoolExecutor with context manager."""
