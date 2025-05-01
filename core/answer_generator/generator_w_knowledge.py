@@ -54,6 +54,9 @@ end_block = [
 
 # 然后，根据输入的image和text，按照这个去选择block，加到messages里面就好了；
 
+vqa_only_prompt = "Given a Visual Question Answering (VQA) question, please generate the answer to the question."
+qa_only_prompt = "Given a question, please generate the answer to the question."
+
 prompt_templates = {
     "ti":[
         # query first:
@@ -77,6 +80,10 @@ prompt_templates = {
             "type": "text",
             "text": "Question: {query} \n\n"
         },
+        {
+            "type": "text",
+            "text": "Supporting contents:\n\n"
+        } #之前怎么没加这一行？好奇怪啊？
 
     ],
     "t":[
@@ -97,6 +104,8 @@ prompt_templates = {
         }
     ]
 }
+
+# 我这里在想，如果没有supporting的话，是不是就要使用另一个prompt template；
 
 # 如果有image的话，先添加image然后再添加text；
 
@@ -137,9 +146,15 @@ class VLLMAnswerGenerator_w_Knowledge(BaseGenerator):
             prompt = copy.deepcopy(self.prompts["ti"]) 
             prompt[2]["image_url"]["url"] = f"data:image/jpeg;base64,{self._encode_image(query['image'])}" #这里就是把这里的符号换成是转换之后的base64 string就可以；
             prompt[3]["text"] = prompt[3]["text"].format(query=query["text"]) # 这里是把query的question放进去；
-            for document in query["text_documents"]: # only have text documents
-                prompt.append(single_text_block[0].copy())
-                prompt[-1]["text"] = prompt[-1]["text"].format(text_document=document)
+            if query["text_documents"] != []:
+                for document in query["text_documents"]: # only have text documents
+                    prompt.append(single_text_block[0].copy())
+                    prompt[-1]["text"] = prompt[-1]["text"].format(text_document=document)
+            else:
+                # 修改sys prompt;
+                prompt[0]["text"] = vqa_only_prompt
+                # 删掉最后那个supporting contents的block；
+                prompt.pop(-1)
             prompt.append(end_block[0].copy())
             
         elif query["type"] == "t": # 这里就是需要把supported image或者text放进去；然后去请求就可以了；
@@ -155,6 +170,10 @@ class VLLMAnswerGenerator_w_Knowledge(BaseGenerator):
                 for text_document in query["text_documents"]:
                     prompt.append(single_text_block[0].copy())
                     prompt[-1]["text"] = prompt[-1]["text"].format(text_document=text_document)
+            if query["image_documents"] == [] and query["text_documents"] == []:
+                prompt[0]["text"] = qa_only_prompt
+                # 删掉最后那个supporting contents的block；
+                prompt.pop(-1)
             prompt.append(end_block[0].copy())
             
         else:

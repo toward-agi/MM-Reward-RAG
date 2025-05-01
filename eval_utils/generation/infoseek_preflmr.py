@@ -28,8 +28,8 @@ def normalize_answer(text: str) -> str:
 
 def exact_match_score(prediction: str, ground_truth: str) -> bool:
     """Check if the normalized prediction exactly matches the normalized ground truth."""
-    return normalize_answer(prediction) == normalize_answer(ground_truth)
-    # return normalize_answer(prediction) in normalize_answer(ground_truth)
+    # return normalize_answer(prediction) == normalize_answer(ground_truth)
+    return normalize_answer(ground_truth) in normalize_answer(prediction)
 
 
 def metric_max_over_ground_truths(

@@ -26,7 +26,7 @@ import sys
 sys.path.append("/data/track/mm-RewardRAG")
 from core.answer_generator.generator_w_knowledge import VLLMAnswerGenerator_w_Knowledge
 
-answer_generator = VLLMAnswerGenerator_w_Knowledge()
+answer_generator = VLLMAnswerGenerator_w_Knowledge(generator_name="vllm_answer_generator_3b")
 batch_size = 2048
 
 from PIL import Image
@@ -37,7 +37,7 @@ top_ks = [1, 3, 5, 10, 20, 50, 100]
 for top_k in top_ks:
     # top_k = 1
     output_dir = (
-        f"/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/okvqa/{top_k}"
+        f"/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/okvqa/{top_k}"
     )
     import os
 

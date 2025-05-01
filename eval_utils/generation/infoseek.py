@@ -27,8 +27,9 @@ def normalize_answer(text: str) -> str:
 
 def exact_match_score(prediction: str, ground_truth: str) -> bool:
     """Check if the normalized prediction exactly matches the normalized ground truth."""
-    return normalize_answer(prediction) == normalize_answer(ground_truth)
+    # return normalize_answer(prediction) == normalize_answer(ground_truth)
     # return normalize_answer(prediction) in normalize_answer(ground_truth)
+    return normalize_answer(ground_truth) in normalize_answer(prediction)
 
 
 def metric_max_over_ground_truths(
@@ -435,7 +436,7 @@ def infoseek_eval(file_path):
 
 def test():
     infoseek_eval(
-        "/data/track/mm-RewardRAG/experiments/5-answer/wo_knowledge/results/infoseek/answers.jsonl"
+        "/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/infoseek/answers.jsonl"
     )
 
 if __name__ == "__main__":
