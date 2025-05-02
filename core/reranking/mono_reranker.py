@@ -24,7 +24,7 @@ class MonoQwenVLReranker(Reranker):
         model_name: str = "lightonai/MonoQwen2-VL-v0.1", 
         processor_name: str = "Qwen/Qwen2-VL-2B-Instruct",
         device_map: str = "auto",
-        use_flash_attention: bool = False,
+        use_flash_attention: bool = False, # this model does not support flash attention
         dtype: Optional[torch.dtype] = None,
         **kwargs
     ):

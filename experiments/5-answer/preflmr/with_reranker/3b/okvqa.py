@@ -84,28 +84,64 @@ for top_k in top_ks:
         # logger.info(f"Reranked file not found, reranking from scratch...")
         print(f"Reranked file not found, reranking from scratch...")
 
-        query_doc_list = [
-            {
-                "question_id": item["question_id"],
-                "question": {
-                    "type": "ti",
-                    "text": item["question"],
-                    "image": Image.open(os.path.join(img_dir, item["img_path"]))
-                    .resize((512, 512))
-                    .convert("RGB"),
-                },
-                # 这里最好按照单个document来处理，就是一个question_id会有多个doc pair;
-                "document": {
-                    "type": "t",
-                    "text": id_to_knowledge[id["passage_id"]],
-                },
-            }
-            for item in okvqa_question
-            for id in retrieved_data[item["question_id"]]["retrieved_passage"][:top_k]
-        ]
+        buffer_question_nums = 200
 
-        results = reranker.generate(query_doc_list)
+        results = []
+
+        for i in tqdm(
+            range(0, len(okvqa_question), buffer_question_nums),
+            desc="Reranking",
+            total=len(okvqa_question) // buffer_question_nums,
+        ):
+            batch_questions = okvqa_question[i : i + buffer_question_nums]
+            query_doc_list = [
+                {
+                    "question_id": item["question_id"],
+                    "question": {
+                        "type": "ti",
+                        "text": item["question"],
+                        "image": Image.open(os.path.join(img_dir, item["img_path"]))
+                        .resize((512, 512))
+                        .convert("RGB"),
+                    },
+                    # 这里最好按照单个document来处理，就是一个question_id会有多个doc pair;
+                    "document": {
+                        "type": "t",
+                        "text": id_to_knowledge[id["passage_id"]],
+                        "document_id": id["passage_id"],
+                        # 这里其实是可以添加一个document的id的，就是保存的时候，只保存这个document id就好了；
+                    }, #直接添加在这个里面算了，这样子的话，就是代码也不用改，到时候直接用rerank之后的结果去分析就好了；
+                }
+                for item in batch_questions
+                for id in retrieved_data[item["question_id"]]["retrieved_passage"][:top_k]
+            ]
+
+            results += reranker.generate(query_doc_list)
+        
         results = reranker.organize_by_question_id(results)
+
+        # query_doc_list = [
+        #     {
+        #         "question_id": item["question_id"],
+        #         "question": {
+        #             "type": "ti",
+        #             "text": item["question"],
+        #             "image": Image.open(os.path.join(img_dir, item["img_path"]))
+        #             .resize((512, 512))
+        #             .convert("RGB"),
+        #         },
+        #         # 这里最好按照单个document来处理，就是一个question_id会有多个doc pair;
+        #         "document": {
+        #             "type": "t",
+        #             "text": id_to_knowledge[id["passage_id"]],
+        #         },
+        #     }
+        #     for item in okvqa_question
+        #     for id in retrieved_data[item["question_id"]]["retrieved_passage"][:top_k]
+        # ]
+
+        # results = reranker.generate(query_doc_list)
+        # results = reranker.organize_by_question_id(results)
         # 这里保存一下中间结果做为备份，就直接存成pickle文件；
         with open(reranked_file, "wb") as f:
             pickle.dump(results, f)
@@ -114,6 +150,10 @@ for top_k in top_ks:
 
     # logger.info(f"Processing top_k: {top_k} answer generation...")
     print(f"Processing top_k: {top_k} answer generation...")
+
+    if os.path.exists(output_file):
+        print(f"Output file already exists, skipping answer generation...")
+        continue
 
     for i in tqdm(range(0, len(okvqa_question), batch_size)):
         batch_questions = okvqa_question[i : i + batch_size]

@@ -33,7 +33,7 @@ from core.reranking.inference_reranker import InferenceReranker
 reranker = InferenceReranker(generator_name="vllm_reranker_3b")  # 这里先用3b的模型看看吧；
 
 answer_generator = VLLMAnswerGenerator_w_Knowledge(
-    generator_name="vllm_answer_generator_3b"
+    generator_name="vllm_answer_generator"
 )
 batch_size = 2048
 
@@ -45,13 +45,15 @@ top_ks = [3, 5, 10, 20, 50, 100]  # 这里之后修改一下，只要把1去掉�
 
 for top_k in top_ks:
 
-    output_dir = f"/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/okvqa/{top_k}" # 这里的generator也是3b的；
+    output_dir = f"/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/okvqa/{top_k}" # 这里的generator也是3b的；
     import os
 
     os.makedirs(output_dir, exist_ok=True)
 
     output_file = os.path.join(output_dir, "answers.jsonl")
-    reranked_file = os.path.join(output_dir, "reranked.pkl")
+    # reranked_file = os.path.join(output_dir, "reranked.pkl")
+    reranked_file = f"/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/okvqa/{top_k}/reranked.pkl"
+    # use the reranked file from the previous run / 3b
 
     img_dir = "/data/dataset/M2KR_IMG/image/OKVQA"
 
@@ -115,6 +117,10 @@ for top_k in top_ks:
 
     # logger.info(f"Processing top_k: {top_k} answer generation...")
     print(f"Processing top_k: {top_k} answer generation...")
+
+    if os.path.exists(output_file):
+        print(f"topk = {top_k} Output file already exists, skipping answer generation.")
+        continue
 
     for i in tqdm(range(0, len(okvqa_question), batch_size)):
         batch_questions = okvqa_question[i : i + batch_size]

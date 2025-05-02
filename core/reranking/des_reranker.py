@@ -124,6 +124,7 @@ class DseReranker(Reranker):
             videos=query_video_inputs,
             padding=True, 
             max_length=2048,
+            truncation=True,
             return_tensors='pt'
         ).to(self.device)
         
@@ -180,6 +181,7 @@ class DseReranker(Reranker):
             videos=doc_video_inputs,
             padding=True, 
             max_length=2048,
+            truncation=True,
             return_tensors='pt'
         ).to(self.device)
         
@@ -299,7 +301,7 @@ class DseReranker(Reranker):
         # Compute similarities
         query_embedding = query_embeddings[0].unsqueeze(0)
         similarities = cosine_similarity(query_embedding, doc_embeddings)
-        print(f"Similarities: {similarities}")
+        # print(f"Similarities: {similarities}")
         
         # Create list of (document_index, similarity) tuples
         scored_docs = [(i, float(similarity)) for i, similarity in enumerate(similarities)]

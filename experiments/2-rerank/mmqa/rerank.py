@@ -1,11 +1,11 @@
-file_path = "/data/track/mm-RewardRAG/experiments/1-hard-negatives/results/mmqa_train_1k_hard_negatives.json"
+file_path = "/data/track/mm-RewardRAG/experiments/1-hard-negatives/results/mmqa_train_1k_w_hard_negatives.json"
 import json
 import os
 from PIL import Image
 from tqdm import tqdm
 
 select_n = 10
-test_reranker = "openai" # option: jina, des, mono, openai
+test_reranker = "mono" # option: jina, des, mono, openai
 # test_reranker = "jina" # option: jina, des, mono, openai
 
 dataset = json.load(open(file_path, "r"))
@@ -72,7 +72,7 @@ q2img_responses = []
 
 
 query2text = []
-for item in tqdm(dataset[:10], desc="Reranking"):
+for item in tqdm(dataset, desc="Reranking"):
     sub_supporting_text_ids = []
     sub_supporting_image_ids = []
     for context in item["supporting_context"]:
@@ -122,13 +122,19 @@ for item in tqdm(dataset[:10], desc="Reranking"):
             q2text_reranked_entites.append([total_text_ids[i] for i in q2text_reranked_indices])
 
         if len(sub_supporting_image_ids) != 0:
-            q2img_reranked_indices = reranker.compute_relevance(
-                query=question,
-                docs=[id_to_image[i]["image_path"] for i in total_image_ids],
-                query_type="text",
-                doc_type="image"
-            )
-            q2img_reranked_entites.append([total_image_ids[i] for i in q2img_reranked_indices])
+            try:
+                q2img_reranked_indices = reranker.compute_relevance(
+                    query=question,
+                    docs=[id_to_image[i]["image_path"] for i in total_image_ids],
+                    query_type="text",
+                    doc_type="image"
+                )
+
+                q2img_reranked_entites.append([total_image_ids[i] for i in q2img_reranked_indices])
+            except Exception as e:
+                q2img_reranked_entites.append(total_image_ids[::-1])
+                print(f"Error in reranking image: {e}") # if error, just append the reverse order of image ids
+            
 
     elif test_reranker in ["openai"]:
 
@@ -172,6 +178,38 @@ for item in tqdm(dataset[:10], desc="Reranking"):
             q2img_reranked_entites.append([total_image_ids[i] for i in ranked_results["ranked_indices"]])
             q2img_responses.append(ranked_results["responses"])
 
+        
+    elif test_reranker in ["des"]: # des的话，是支持text -> image和text-> text的，所以这里直接去做就好了；
+        if len(sub_supporting_text_ids) != 0:
+        
+            q2text_reranked_indices = reranker.compute_relevance(
+                query=question,
+                docs=total_text_corpus,
+                doc_type="text" 
+            )
+
+            q2text_reranked_entites.append([total_text_ids[i] for i in q2text_reranked_indices])
+
+        if len(sub_supporting_image_ids) != 0:
+            q2img_reranked_indices = reranker.compute_relevance(
+                query=question,
+                docs=[Image.open(id_to_image[i]["image_path"]).convert("RGB").resize((512, 512)) for i in total_image_ids],
+                doc_type="image"
+            )
+            q2img_reranked_entites.append([total_image_ids[i] for i in q2img_reranked_indices])
+
+    elif test_reranker in ["mono"]:
+        """
+        mono only support text to image, so here we just do text to image reranking;
+        """
+        if len(sub_supporting_image_ids) != 0:
+            q2img_reranked_indices = reranker.compute_relevance(
+                query=question,
+                docs=[Image.open(id_to_image[i]["image_path"]).convert("RGB").resize((512, 512)) for i in total_image_ids],
+                doc_type="image"
+            )
+            q2img_reranked_entites.append([total_image_ids[i] for i in q2img_reranked_indices])
+
 
 output_dir = f"/data/track/mm-RewardRAG/experiments/2-rerank/results/mmqa/{test_reranker}"
 os.makedirs(output_dir, exist_ok=True)
@@ -187,12 +225,12 @@ with open(os.path.join(output_dir, "ids.json"), "w") as f:
     }, f, indent=4)
             
 
-q2text_results = evaluate_reranker_dataset(
-    all_ground_truth_ids=supporting_text_ids,
-    all_reranked_ids=q2text_reranked_entites,
-    metrics=["ndcg", "ndcg@3", "ndcg@5", "ndcg@10", 
-             "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
-)
+# q2text_results = evaluate_reranker_dataset(
+#     all_ground_truth_ids=supporting_text_ids,
+#     all_reranked_ids=q2text_reranked_entites,
+#     metrics=["ndcg", "ndcg@3", "ndcg@5", "ndcg@10", 
+#              "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
+# )
 
 q2img_results = evaluate_reranker_dataset(
     all_ground_truth_ids=supporting_image_ids,
@@ -201,10 +239,8 @@ q2img_results = evaluate_reranker_dataset(
             "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
 )
 
-
-
-with open(os.path.join(output_dir, "q2text_results.json"), "w") as f:
-    json.dump(q2text_results, f, indent=4)
+# with open(os.path.join(output_dir, "q2text_results.json"), "w") as f:
+#     json.dump(q2text_results, f, indent=4)
 
 with open(os.path.join(output_dir, "q2img_results.json"), "w") as f:
     json.dump(q2img_results, f, indent=4)

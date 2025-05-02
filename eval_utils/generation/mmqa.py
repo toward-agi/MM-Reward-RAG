@@ -270,7 +270,7 @@ def _match_numbers_if_present(gold_bag: Set[str], predicted_bag: Set[str]) -> bo
     return False
 
 
-
+# 主要就是检查下这俩函数就行了；
 def list_em(predicted, gold):
     predicted_bags = _answer_to_bags(predicted)
     gold_bags = _answer_to_bags(gold)
@@ -278,7 +278,6 @@ def list_em(predicted, gold):
         return 1.0
     else:
         return 0.0
-
 
 def list_f1(predicted, gold):
     predicted_bags = _answer_to_bags(predicted)
@@ -306,6 +305,7 @@ def evaluate_predictions(predictions, gold_answers, example_types=None):
         "list_em": list_em,
         "list_f1": list_f1
     }
+    # 这里着重看下这俩list_em和list_f1的实现就可以；
     for qas_id in gold_answers:
         ref_answers = gold_answers[qas_id]
         if qas_id not in predictions:
@@ -356,7 +356,7 @@ def evaluate_prediction_file(id_to_predictions):
         # So, we will use an outer bracket here to pretend we have a list of ref answers.
         gold_answer = [str(item["answer"]) for item in example["answers"]]
         gold_answers[qid] = [gold_answer]
-        predicted_answers[qid] = id_to_predictions[qid]
+        predicted_answers[qid] = id_to_predictions[qid] # 这里就是直接用模型输出的原来的答案；
         answer_modality = set([item["modality"] for item in example["answers"]])
         assert len(answer_modality) == 1
         answer_modalities[qid] = answer_modality.pop()
@@ -407,7 +407,7 @@ def mmqa_eval(file_path):
     evaluate_prediction_file(qid_to_prediction)
 
 if __name__ == "__main__":
-    mmqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/wo_knowledge/results/mmqa/answers.jsonl")
+    mmqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/mmqa/answers.jsonl")
     # parser = argparse.ArgumentParser(description="evaluate on drop dataset")
     # parser.add_argument(
     #     "--prediction_path",

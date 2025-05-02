@@ -5,7 +5,7 @@ from PIL import Image
 from tqdm import tqdm
 
 select_n = 10
-test_reranker = "openai" # option: jina, des, mono, openai
+test_reranker = "des" # option: jina, des, mono, openai
 
 dataset = json.load(open(file_path, "r"))
 from tqdm import tqdm
@@ -24,15 +24,14 @@ from core.reranking.mono_reranker import MonoQwenVLReranker
 from core.reranking.openai_reranker import VLLMReranker
 from core.reranking.metrics import evaluate_reranker_dataset
 
-if test_reranker == "jina":
+if test_reranker == "jina": #only support single modality to single modality;
     # support multiple metrics;
     reranker = JinaReranker()
-elif test_reranker == "des":
-    # query: only support text query
+elif test_reranker == "des": # query: only support text query to image document or text document; #这个要记得resize image，要不然存储会很大；
     reranker = DseReranker()
-elif test_reranker == "mono":
+elif test_reranker == "mono":  # only support text query to image document;
     reranker = MonoQwenVLReranker()
-elif test_reranker == "openai":
+elif test_reranker == "openai": #support multimodal input and multimodal output
     reranker = VLLMReranker()
 else:
     raise ValueError("reranker not supported")
@@ -113,6 +112,39 @@ for item in tqdm(dataset, desc="Reranking"):
 
         query2text.append([total_ids[i] for i in reranked_indices])
 
+    elif test_reranker in ["mono"]:
+        print("evqa only have text document, and mono reranker only support image document, so skip this reranker")
+    
+    elif test_reranker in ["des"]:
+        # 这个就是只做text query to text document就好了；
+        q2text_reranked_indices = reranker.compute_relevance(
+            query=question,
+            docs=total_contexts,
+            doc_type="text"
+        )
+
+        q2text_reranked_entites.append([total_ids[i] for i in q2text_reranked_indices])
+
+    else:
+        raise ValueError(f"reranker {test_reranker} not supported")
+
+output_dir = f"/data/track/mm-RewardRAG/experiments/2-rerank/results/evqa/{test_reranker}"
+os.makedirs(output_dir, exist_ok=True)
+with open(os.path.join(output_dir, "gt_entities.json"), "w") as f:
+    json.dump(gt_entities, f, indent=4)
+
+if test_reranker in ["des"]:
+    q2text_results = evaluate_reranker_dataset(
+        all_ground_truth_ids=gt_entities,
+        all_reranked_ids=q2text_reranked_entites,
+        metrics=["ndcg", "ndcg@3", "ndcg@5", "ndcg@10", 
+                "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
+    )
+    with open(os.path.join(output_dir, "q2text_reranked_entities.json"), "w") as f:
+        json.dump(q2text_reranked_entites, f, indent=4)
+    with open(os.path.join(output_dir, "q2text_results.json"), "w") as f:
+        json.dump(q2text_results, f, indent=4)
+
 
 
 # q2text_results = evaluate_reranker_dataset(
@@ -129,17 +161,14 @@ for item in tqdm(dataset, desc="Reranking"):
 #              "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
 # )
 
-query2text_results = evaluate_reranker_dataset(
-    all_ground_truth_ids=gt_entities,
-    all_reranked_ids=query2text,
-    metrics=["ndcg", "ndcg@3", "ndcg@5", "ndcg@10", 
-             "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
-)
+# query2text_results = evaluate_reranker_dataset(
+#     all_ground_truth_ids=gt_entities,
+#     all_reranked_ids=query2text,
+#     metrics=["ndcg", "ndcg@3", "ndcg@5", "ndcg@10", 
+#              "map", "mrr", "p@1", "p@3", "p@5", "p@10"]
+# )
 
-output_dir = f"/data/track/mm-RewardRAG/experiments/2-rerank/results/evqa/{test_reranker}"
-os.makedirs(output_dir, exist_ok=True)
-with open(os.path.join(output_dir, "gt_entities.json"), "w") as f:
-    json.dump(gt_entities, f, indent=4)
+
 # with open(os.path.join(output_dir, "q2text_reranked_entities.json"), "w") as f:
 #     json.dump(q2text_reranked_entites, f, indent=4)
 # with open(os.path.join(output_dir, "img2img_reranked_entities.json"), "w") as f:
@@ -149,8 +178,8 @@ with open(os.path.join(output_dir, "gt_entities.json"), "w") as f:
 # with open(os.path.join(output_dir, "img2img_results.json"), "w") as f:
 #     json.dump(img2img_results, f, indent=4)
 
-with open(os.path.join(output_dir, "query2text_reranked_entities.json"), "w") as f:
-    json.dump(query2text, f, indent=4)
-with open(os.path.join(output_dir, "query2text_results.json"), "w") as f:
-    json.dump(query2text_results, f, indent=4)
+# with open(os.path.join(output_dir, "query2text_reranked_entities.json"), "w") as f:
+#     json.dump(query2text, f, indent=4)
+# with open(os.path.join(output_dir, "query2text_results.json"), "w") as f:
+#     json.dump(query2text_results, f, indent=4)
 
