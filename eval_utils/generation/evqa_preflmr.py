@@ -465,6 +465,12 @@ def parallel_evaluate(results, desc="Evaluating Results", max_workers=4):
 
 # 这里也挺好做的，针对preFLMR再重新稍微修改一下就好了；
 def evqa_eval(file_path):
+    # 这里要做的就是，根据那个｜区分问题是multi-hop的还是single-hop的；
+    # 然后就直接去做就好了；
+    # TODO: 我记得preFLMR是只有single-hop?
+    # TODO: 确定了，M2KR这里确实是只有single-hop的；len(pos) == 1;
+
+
     data = [json.loads(line) for line in open(file_path, "r")]
     question_id_to_answer = {
         # item["data_id"]: item["answer"]
@@ -500,13 +506,6 @@ def evqa_eval(file_path):
         question_id_to_answer[id]["reference_list"] = question_id_to_test_set[id][
             "reference_list"
         ]
-
-    # for id in question_id_to_test_set.keys():
-    #     if id not in question_id_to_answer:
-    #         print(f"Missing response for {id}")
-    #         continue
-    #     question_id_to_test_set[id]["response"] = question_id_to_answer[id]
-
     score_list = parallel_evaluate(
         question_id_to_answer.values(), desc="Evaluating Results", max_workers=16
     )
@@ -514,12 +513,51 @@ def evqa_eval(file_path):
     avg_score = sum(score_list) / len(score_list) if score_list else 0
 
     print(f"Average Score: {avg_score}")
+    return avg_score
 
 
 def test():
-    evqa_eval(
-        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/5/answers.jsonl"
-    )
+    paths = [
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/1/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/3/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/5/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/10/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/20/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/50/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/evqa/100/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/1/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/3/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/5/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/10/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/20/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/50/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/evqa/100/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/evqa/3/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/evqa/5/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/evqa/10/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/evqa/20/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/evqa/50/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/with_reranker/evqa/100/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/evqa/3/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/evqa/5/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/evqa/10/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/evqa/20/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/evqa/50/answers.jsonl",
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/evqa/100/answers.jsonl",
+    ]
+    import os
+    # check if the path exists
+    for path in paths:
+        if not os.path.exists(path):
+            print(f"Path {path} does not exist.")
+            return
+        
+    print("Paths exist.")
+
+    results = [
+        evqa_eval(path) for path in paths
+    ]
+    print("Results: ", results)
 
 
 if __name__ == "__main__":

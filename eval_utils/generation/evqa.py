@@ -465,6 +465,28 @@ def evqa_eval(file_path):
         for item in data
     }
     test_set = json.load(open("/data/track/mm-RewardRAG/eval_datasets/encyclopedia/test.json"))
+
+    single_hop_id_to_test_set = {
+        item["question_id"]: {
+            "question": item["question"],
+            "question_type": item["question_type"],
+            "reference_list": list(item["answer"].split("|")),
+        }
+        for item in test_set
+        if len(item["entity_id"].split("|")) == 1
+    }
+
+    multi_hop_id_to_test_set = {
+        item["question_id"]: {
+            "question": item["question"],
+            "question_type": item["question_type"],
+            "reference_list": list(item["answer"].split("|")),
+        }
+        for item in test_set
+        if len(item["entity_id"].split("|")) > 1
+    }
+
+    print(f"Single Hop: {len(single_hop_id_to_test_set)}, Multi Hop: {len(multi_hop_id_to_test_set)}, all: {len(test_set)}")
     question_id_to_test_set = {
         item["question_id"]: {
             "question": item["question"],
@@ -480,18 +502,45 @@ def evqa_eval(file_path):
             continue
         question_id_to_test_set[id]["response"] = question_id_to_answer[id]
 
-    score_list = parallel_evaluate(
-        question_id_to_test_set.values(),
-        desc="Evaluating Results",
+    for id in single_hop_id_to_test_set.keys():
+        if id not in question_id_to_answer:
+            # print(f"Missing response for {id}")
+            continue
+        single_hop_id_to_test_set[id]["response"] = question_id_to_answer[id]
+    for id in multi_hop_id_to_test_set.keys():
+        if id not in question_id_to_answer:
+            # print(f"Missing response for {id}")
+            continue
+        multi_hop_id_to_test_set[id]["response"] = question_id_to_answer[id]
+
+    single_hop_score_list = parallel_evaluate(
+        single_hop_id_to_test_set.values(),
+        desc="Evaluating single hop Results",
         max_workers=16
     )
 
-    avg_score = sum(score_list) / len(score_list) if score_list else 0
+    multi_hop_score_list = parallel_evaluate(
+        multi_hop_id_to_test_set.values(),
+        desc="Evaluating multi hop Results",
+        max_workers=16
+    )
 
-    print(f"Average Score: {avg_score}")
+    print(f"Single Hop Score: {sum(single_hop_score_list) / len(single_hop_score_list) if single_hop_score_list else 0}")
+    print(f"Multi Hop Score: {sum(multi_hop_score_list) / len(multi_hop_score_list) if multi_hop_score_list else 0}")
+    print(f"all Score: {sum(single_hop_score_list + multi_hop_score_list) / len(single_hop_score_list + multi_hop_score_list) if single_hop_score_list + multi_hop_score_list else 0}")
+
+    # score_list = parallel_evaluate(
+    #     question_id_to_test_set.values(),
+    #     desc="Evaluating Results",
+    #     max_workers=16
+    # )
+
+    # avg_score = sum(score_list) / len(score_list) if score_list else 0
+
+    # print(f"Average Score: {avg_score}")
 
 def test():
-    evqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/evqa_part/answers.jsonl")
+    evqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/evqa_whole/answers.jsonl")
 
 if __name__ == "__main__":
     test()

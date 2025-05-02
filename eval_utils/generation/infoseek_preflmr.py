@@ -436,7 +436,7 @@ def infoseek_eval(file_path):
 
 def test():
     infoseek_eval(
-        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/infoseek/5/answers.jsonl"
+        "/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/infoseek/3/answers.jsonl"
     )
 
 if __name__ == "__main__":
