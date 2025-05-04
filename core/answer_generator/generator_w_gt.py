@@ -52,6 +52,13 @@ end_block = [
     }
 ]
 
+end_block_mmqa = [
+    {
+        "type": "text",
+        "text": "Please answer the question directly, as short as possible. \n\n"
+    }
+]
+
 # 然后，根据输入的image和text，按照这个去选择block，加到messages里面就好了；
 
 prompt_templates = {
@@ -159,7 +166,8 @@ class VLLMAnswerGenerator_w_GT(BaseGenerator):
                 for text_document in query["text_documents"]:
                     prompt.append(single_text_block[0].copy())
                     prompt[-1]["text"] = prompt[-1]["text"].format(text_document=text_document)
-            prompt.append(end_block[0].copy())
+            # prompt.append(end_block[0].copy())
+            prompt.append(end_block_mmqa[0].copy())
             
         else:
             raise ValueError("Unsupported query-document type combination")

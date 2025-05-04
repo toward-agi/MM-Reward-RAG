@@ -407,7 +407,7 @@ def mmqa_eval(file_path):
     evaluate_prediction_file(qid_to_prediction)
 
 if __name__ == "__main__":
-    mmqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/mmqa/answers.jsonl")
+    mmqa_eval("/data/track/mm-RewardRAG/experiments/5-answer/w_all_hn/results/3b/mmqa/answers_with_gt.jsonl")
     # parser = argparse.ArgumentParser(description="evaluate on drop dataset")
     # parser.add_argument(
     #     "--prediction_path",

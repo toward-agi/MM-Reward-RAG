@@ -34,7 +34,7 @@ class CLIPEmbedder(MultiModalEmbedder):
         if isinstance(texts, str):
             texts = [texts]
             
-        inputs = self.processor(text=texts, return_tensors="pt", padding=True, max_length=77)
+        inputs = self.processor(text=texts, return_tensors="pt", padding=True, max_length=77, truncation=True)
         inputs = {k: v.to(self.device) for k, v in inputs.items()}
         
         with torch.no_grad():

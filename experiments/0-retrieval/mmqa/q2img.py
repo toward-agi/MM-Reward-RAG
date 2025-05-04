@@ -73,13 +73,9 @@
 import json
 import os
 from tqdm import tqdm
-import sys
-sys.path.append("/data/track/mm-RewardRAG/")
-from core.indexing.faiss_indexer import FaissIndexer
-from core.embeddings.jina_clip_v2 import JinaClipV2Embedder
 
 # Define k values and get max k
-ks = [1, 5, 10, 20, 50, 100]
+ks = [1, 3, 5, 10, 20, 50, 100]
 max_k = max(ks)
 
 # Load validation dataset (only load once)
@@ -96,6 +92,10 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Perform retrieval for max k
 if not os.path.exists(retrieved_results_file):
+    import sys
+    sys.path.append("/data/track/mm-RewardRAG/")
+    from core.indexing.faiss_indexer import FaissIndexer
+    from core.embeddings.jina_clip_v2 import JinaClipV2Embedder
     embedder = JinaClipV2Embedder()
     indexer = FaissIndexer(mode="jina-clip-v2")
     
@@ -122,6 +122,7 @@ if not os.path.exists(retrieved_results_file):
     with open(retrieved_results_file, "w") as f:
         json.dump(id_to_retrieved, f, indent=2)
 else:
+    print(f"Loading retrieved results from {retrieved_results_file}")
     id_to_retrieved = json.load(open(retrieved_results_file, "r"))
 
 # Evaluate recall for each k

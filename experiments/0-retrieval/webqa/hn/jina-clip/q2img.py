@@ -123,7 +123,7 @@ def calculate_recall_at_k(id_to_retrieved, valid_dataset, k_values=[1, 3, 5]):
     return avg_recalls
 
 # 定义k值
-k_values = [1, 3, 5]
+k_values = [1, 3, 5, 10, 20]
 
 # 计算并打印结果
 recall_results = calculate_recall_at_k(id_to_retrieved, valid_dataset, k_values)

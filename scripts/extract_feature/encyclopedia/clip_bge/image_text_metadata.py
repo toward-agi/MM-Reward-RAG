@@ -1,0 +1,334 @@
+import sys
+sys.path.append("/data/track/mm-RewardRAG/")
+# from core.embeddings.bge_text_embedding import BGETextEmbedder
+from core.embeddings.clip_embedder import CLIPEmbedder
+
+import json
+import os
+from PIL import Image
+from tqdm import tqdm
+import numpy as np
+
+# text_embedder = BGETextEmbedder()
+text_embedder = CLIPEmbedder()
+"""
+{'entity_id': 'entity_0',
+ 'image_reference_descriptions': [''],
+ 'image_section_indices': [0],
+ 'image_urls': ['https://upload.wikimedia.org/wikipedia/commons/0/09/Jennifer_Provencher_cropped.jpg'],
+ 'section_texts': ['Jennifer F. Provencher (born 22 October 1979) is a '
+                   'Canadian conservation biologist. She is an early-career '
+                   'researcher and a spokesperson for the awareness of plastic '
+                   'contaminants in marine wildlife, pollution and climate '
+                   'change. Many of her work focus on the impact of human '
+                   'activities on the health of Arctic seabirds and marine '
+                   'ecosystems.',
+                   'Provencher received her B.Sc. in Marine Biology and her '
+                   'B.Ed. in Senior Sciences and Biology from the University '
+                   'of British Columbia. She then received a M.Sc. from the '
+                   'University of Victoria for her work on seabirds as '
+                   'indicators of change in the eastern Canadian Arctic. Her '
+                   'Ph.D. in Biology (Environmental and Chemical Toxicology) '
+                   'at Carleton University focused on parasites and mercury as '
+                   'possible drivers of avian health and reproduction.\n'
+                   'She received a W. Garfield Weston Post-doctoral Fellowship '
+                   'in 2016 and a Liber Ero Post-doctoral Fellowship in 2018 '
+                   'to work in Northern Research at Acadia University.',
+                   '',
+                   'After graduating with a Bachelor’s degree in Marine '
+                   'Biology and Education in 2004, Provencher taught and '
+                   'assisted in research projects at the Bamfield Marine '
+                   'Sciences Centre on Vancouver Island, Canada as a teacher '
+                   'and a scientific diver. In 2008, she decided to return to '
+                   'school to pursue a M.Sc. at the University of Victoria.',
+                   'In 2010, Provencher worked with the Association of Polar '
+                   'Early Career Scientists (APECS) in association with the '
+                   'International Arctic Science Committee (IASC) and the '
+                   'Scientific Committee on Antarctic Research (SCAR) to lead '
+                   'the education and outreach assessment of activities '
+                   'conducted during the 2007-2009 International Polar Year. '
+                   'In the following years, she once again returned to '
+                   'graduate school as she undertook a Ph.D. at Carleton '
+                   'University, and she remained engaged as a member of the '
+                   'APECS executive committee and guest poster.\n'
+                   'Provencher has acted as committee chair or organizer for '
+                   'several international conferences, including the 2012 '
+                   'Inuit Studies Conference APECS workshop, Washington DC, '
+                   'USA; the 2013 ArcticNet Annual Science Meeting, Halifax, '
+                   'Canada and the 2018 Arctic Biodiversity Congress, '
+                   'Helsinki, Finland.\n'
+                   'Between 2014 and 2019, Provencher gave over two dozen '
+                   'invited presentations all around the world on various '
+                   'topics related to contaminants or northern studies, among '
+                   'others. Some of the organizations that invited her '
+                   'included the American Academy for the Advancement of '
+                   'Science (AAAS) and the Canada Science and Technology '
+                   'Museums Corporation. In 2019, she was among the scientists '
+                   'invited to speak in a joint Canada-Monaco-France event on '
+                   'plastic pollution in the environment, namely at Maison Des '
+                   'Oceans, Paris, and the Oceanographic Museum of Monaco, '
+                   'Monaco. That same year, she was called upon to testify in '
+                   'front of the Canadian Senate Committee on the Arctic and '
+                   'speak at the Belfer School for Science and International '
+                   'Affairs at Harvard University. Some of her other invited '
+                   'speeches were at the 2012 University of the Arctic '
+                   'Communications Workshop, Tromsø, Norway. She has been '
+                   'nominated to represent the Arctic Monitoring and '
+                   'Assessment Programme (AMAP) at planning group for the '
+                   'April 2020 International Symposium on Plastics in the '
+                   'Arctic and Sub‐Arctic Region, Reykjavik, Iceland.',
+                   'Since 2018, Provencher is Head of the Wildlife Health Unit '
+                   'at the Canadian Wildlife Service (Environment and Climate '
+                   'Change Canada), and her work focuses on the effect of '
+                   'diseases, parasites and contaminants on the conservation '
+                   'of wildlife. As of 2019, she is an adjunct researcher at '
+                   'three Canadian universities: Carleton University, Ottawa, '
+                   'Ontario; Acadia University, Wolfville, Nova Scotia; and '
+                   "Memorial University of Newfoundland, St. John's, "
+                   'Newfoundland, Canada.',
+                   'Part of the Circumpolar Arctic Flora and Fauna (CAFF) '
+                   'working group, under the Arctic Council, Provencher was '
+                   'coordinator for the Arctic Migratory Bird Initiative '
+                   '(AMBI). She worked with member and observer states to '
+                   'coordinate and implement conservation efforts for breeding '
+                   'birds throughout international flyways. She established a '
+                   'task force focused on the illegal killing of migratory '
+                   'waterbirds in the East Asian Australasian Flyway. This '
+                   'task force currently works to identify major sources of '
+                   'mortality in birds in the East Asian Australasian Flyway, '
+                   'and cooperate with local organizations and national '
+                   'governments to minimize the negative effects on bird '
+                   'populations. At the 2017 Conference of the Parties in '
+                   'Manilla, Philippines, she also co-lead the development of '
+                   'the initiative into a more comprehensive task force for '
+                   'all birds under the Convention for Migratory Species '
+                   '(CMS). She worked with communicators to inform and engage '
+                   'policy makers with research and science.\n'
+                   'Provencher collaborated on a research program to develop a '
+                   'Canadian ingested plastic research framework used to '
+                   'monitor plastic ingestion in seabirds and investigate '
+                   'questions related to the impact of plastic pollution on '
+                   'marine wildlife. She further co-developed and co-lead '
+                   'related workshops such as the Learning about Ringed Seal '
+                   'Health from Contaminants Science and Inuit '
+                   'Qaujimajatuqangit to further inform Inuit communities '
+                   'about contaminants while meshing with Inuit Knowledge and '
+                   'science. The ongoing community-based science communication '
+                   'program is now co-lead by the Government of Nunatsiavut.\n'
+                   'Aside from her numerous peer-reviewed publications as a '
+                   'researcher, Provencher is an author for several book '
+                   'chapters and gray literature articles, some of which were '
+                   'about the challenges of women and early career researchers '
+                   'in the science community.',
+                   'Provencher has received numerous awards as a researcher '
+                   'and educator. The following are selected awards.\n'
+                   '2018: Liber Ero Post-doctoral Fellowship\n'
+                   '2018: NSERC Post-doctoral Fellowship\n'
+                   '2016, 2017: W. Garfield Weston Post-Doctoral Fellowship in '
+                   'Northern Research\n'
+                   '2014: Jennifer Robinson Memorial Award, Arctic Institute '
+                   'of North America\n'
+                   '2014, 2015, 2016:\xa0Bonnycastle Fellowship in Wetland and '
+                   'Waterfowl Biology, Ducks Unlimited Canada\n'
+                   '2013: Lorraine Allison Memorial Award, Arctic Institute of '
+                   'North America\n'
+                   '2013: W. Garfield Weston Award for Northern Research (PhD)',
+                   'Provencher has presence in various radio, television and '
+                   'interviews with local, national and international outlets. '
+                   "This includes Newsweek, Maclean's, CBC, and The Guardian. "
+                   'The following are selected media and outreach activities.\n'
+                   'In 2011, her work on plastic assessment in northern marine '
+                   'birds, “Plenty of plastics in Canada’s Arctic birds” was '
+                   'written by Margaret Munro, science writer and journalist.\n'
+                   'In 2012, the Aboriginal Affairs and Northern development '
+                   'Canada (AANDC) produced a video featuring Provencher’s '
+                   'work with Inuit to study Eider Ducks. Provencher was also '
+                   'featured in Duck’s Unlimited’s magazine, The Conservator, '
+                   'for this Fellowship winning work. In 2015, the Smithsonian '
+                   'magazine featured Provencher in an article highlighting '
+                   'how seabirds act as vectors of marine contaminants dumped '
+                   'back on land.\n'
+                   'She was then interviewed in 2017 for CBC reports on the '
+                   'billions of plastic particles brought into Arctic waters '
+                   'through the ocean ‘conveyor belt’.\n'
+                   'In 2018, Provencher and the minister of Environment and '
+                   'Climate Change, Catherine McKenna, visited Nova Scotia, as '
+                   'they discussed plastic pollution and its threat to '
+                   'seabirds and the Atlantic coast. The minister later '
+                   'expressed her pride to have worked with such a dedicated '
+                   "public servant as Provencher, mentioning that Provencher's "
+                   'talk about work-life balance was an important message.\n'
+                   'That same year, she was part of a CBC radio coverage about '
+                   'a UK ban of plastic straw and other single use items and '
+                   'what could be done in Canada, titled "\'We need to rethink '
+                   "the entire plastics industry': Why banning plastic straw "
+                   'isn\'t enough."\n'
+                   'In 2019, she was featured in a Maclean\'s article "Is That '
+                   'My Plastic Bag in the Mariana Trench?" and was one of '
+                   'three guest plastic researchers part of a live panel '
+                   'discussion about the plastics in the oceans at the 2019 '
+                   'Advancement of Science meeting, Washington, D.C.',
+                   '"Reports and Newsletters – ACUNS/AUCEN". Retrieved '
+                   '2019-12-30.\n'
+                   '"Meet The Fellows". Liber Ero Fellowship Program. '
+                   'Retrieved 2019-12-30.\n'
+                   '"Acadia University - Dr. Jennifer Provencher wins '
+                   'prestigious Liber Ero Post-Doctoral Award". Education News '
+                   'Canada. Retrieved 2019-12-30.\n'
+                   '"The Benefits of Long Term Data". Ocean News - A '
+                   'Newsletter from the Public Education Program of the '
+                   'Bamfield Marine Sciences Centre. 2007.\n'
+                   'Government of Canada, Public Services and Procurement '
+                   'Canada. "Information archivée dans le Web" (PDF). '
+                   'publications.gc.ca. Retrieved 2019-12-30.\n'
+                   '"Association of Polar Early Career Scientists - IPY '
+                   'Education and Outreach Lessons Project Assistent [sic] '
+                   'hired". www.apecs.is. Retrieved 2019-12-30.\n'
+                   '"Polar Research, Education, Outreach and Communication '
+                   'during the Fourth IPY" (PDF). International Arctic Science '
+                   'Committee. 2011.\n'
+                   '"Jennifer Provencher: Seabirds in High Arctic ingesting '
+                   'more plastic". carleton.ca. Retrieved 2019-12-30.\n'
+                   '"New APECS director eager to begin shaping the future of '
+                   'polar research". Arctic Council. 2012. Retrieved '
+                   '2019-12-30.\n'
+                   'Borealis, Science (2014-03-19). "Polar Week 3: Arctic '
+                   'seabirds, canaries of global change". ScienceBorealis.ca '
+                   'Blog. Retrieved 2019-12-30.\n'
+                   '"APECS continues to Shape the Future of Polar Social '
+                   'Sciences Research" (PDF). Northern Notes - International '
+                   'Arctic Social Sciences Association. 2012.\n'
+                   '"ArcticNet - 2013 Annual Scientific Meeting" (PDF). '
+                   'ArcticNet Meetings. 2013.\n'
+                   '"Program 2018 - Arctic biodiversity, Conservation of '
+                   'Arctic Flora and Fauna (CAFF)". www.arcticbiodiversity.is. '
+                   'Retrieved 2019-12-30.\n'
+                   '"2018 ArcticNet Annual Scientific Program" (PDF). '
+                   'ArcticNet Meetings. 2018.\n'
+                   '"Scientists track DNA of seabirds killed in Nunavut turbot '
+                   'fishery". Nunatsiaq News. 2018.\n'
+                   '"DC – 2019 AAAS Meeting, Plastics in the Oceans: Sources, '
+                   'Sinks and Solutions". Journeys of Dr. G. 2019-04-02. '
+                   'Retrieved 2019-12-30.\n'
+                   '"Curiosity on Stage: Evening Edition - The Frontiers of '
+                   'Ocean Exploration and Marine Conservation | Ingenium". '
+                   'ingeniumcanada.org. Retrieved 2019-12-30.\n'
+                   'Celton, Valérie. "Réseau-Cétacés – Conférence " '
+                   'Microplastiques, Méga dégâts ", le mardi 26 février 2019 à '
+                   'la Maison des Océans (Paris)". Réseau-Cétacés (in French). '
+                   'Retrieved 2019-12-30.\n'
+                   'Canada, Senate of (2017-12-07). "Senate of Canada - '
+                   'Special Senate Committee on the Arctic". Senate of Canada. '
+                   'Retrieved 2019-12-30.\n'
+                   '"Proceedings of the Special Senate Committee on the '
+                   'Arctic" (PDF). Senate of Canada. 2019.\n'
+                   '"The Wilson Center & Icelandic Chairmanship of the Arctic '
+                   'Council Workshop on Policy & Action on Plastic in the '
+                   'Arctic Ocean" (PDF). Harvard Kennedy School - Belfer '
+                   'Centre. 2019.\n'
+                   '"Final Program: UArctic Communications Workshop: 25 '
+                   'January, 2012". News. Retrieved 2019-12-30.\n'
+                   '"Microplastics and Litter Work Plan" (PDF). Arctic '
+                   'Observing Networks. 2019.\n'
+                   '"Jennifer Provencher | Head of the Wildlife Health Unit". '
+                   'Seat of your pants. Retrieved 2019-12-30.\n'
+                   '"Jennifer Provencher". carleton.ca. Retrieved 2019-12-30.\n'
+                   '"PhD Assistantship: Memorial University – Pacific Seabird '
+                   'Group". Retrieved 2019-12-30.\n'
+                   '"CAFF - Plastics and Seabirds". www.caff.is. Retrieved '
+                   '2019-12-30.\n'
+                   '"Arctic Migratory Birds Initiative; Mid-Term Evaluation" '
+                   '(PDF). Arctic Council. 2017.\n'
+                   '"Arctic policy must embrace Indigenous knowledge and '
+                   'Arctic science". Policy Options. Retrieved 2019-12-30.\n'
+                   '"CSPC 2013: Jennifer Provencher". Canadian Science Policy '
+                   'Centre. 2014-01-09. Retrieved 2019-12-30.\n'
+                   '"Agreement on the Conservation of Albatrosses and Petrels '
+                   '- The World Seabird Union forms a committee for seabirds '
+                   'and plastic pollution". acap.aq. Retrieved 2019-12-30.\n'
+                   '"Learning about ringed seal health from contaminants '
+                   'science and Inuit knowledge" (PDF). Arctic Institute of '
+                   "North America's publications server. 2016.\n"
+                   '"Evaluating Contaminants Learning: the experience of the '
+                   "Nunavut Arctic College Environmental Technology Program's "
+                   'wildlife, contaminants and health workshop". UArctic - '
+                   'University of the Arctic. Retrieved 2019-12-30.\n'
+                   '"Mercury and marine birds in Arctic". carleton.ca. '
+                   'Retrieved 2019-12-30.\n'
+                   '"Communications, capacity and outreach". Government of '
+                   'Canada. 2018.\n'
+                   '"J F Provencher - Google Scholar Citations". '
+                   'scholar.google.ca. Retrieved 2019-12-30.\n'
+                   '"Jennifer Provencher". Research Gate.\n'
+                   '"How Work-Family Justice Can Bring Balance to Scientist '
+                   'Moms". Scientific American. 2019.\n'
+                   '"NSERC Postgraduate Scholarships-Doctoral and Postdoctoral '
+                   'Fellowships - 2018 Competition Results" (PDF). Natural '
+                   'Sciences and Engineering Research Council of Canada.\n'
+                   '"Arctic Institute of North America - Annual Report 2014 '
+                   'and 2015" (PDF).\n'
+                   '"Toxic Traces". Institute for Wetland and Waterfowl '
+                   'Research.\n'
+                   '"Final annual report 2013". ISSUU.\n'
+                   '"Grad Students Win Prestigious Northern Awards".\n'
+                   'Munro, Margaret (2012-07-04). "Plenty of plastics in '
+                   'Canada\'s Arctic birds". Margaret Munro. Retrieved '
+                   '2019-12-30.\n'
+                   'Jennifer Provencher: On Working with Inuit to Study Eider '
+                   'Ducks, retrieved 2019-12-30\n'
+                   'Kruse, Mitch (2015). "Warm warnings". Conservator | The '
+                   'Magazine of Ducks Unlimited Canada.\n'
+                   'Learn, Joshua (2015). "Seabirds Are Dumping '
+                   'Pollution-Laden Poop Back on Land". Smithsonian Magazine. '
+                   'Retrieved 2019-12-30.\n'
+                   'Wright, Laura (2017). "Billions of plastic pollutants '
+                   'being dragged into Arctic waters". CBC.\n'
+                   'Minister McKenna with Wildlife Scientist, Jennifer '
+                   'Provencher, retrieved 2019-12-30\n'
+                   'McKenna 🇨🇦, Catherine (2018-06-12). "Thanks @jenni_pro! '
+                   'Proud to work with dedicated public servants like you '
+                   'working hard to serve Canadians". Twitter. Retrieved '
+                   '2019-12-30.\n'
+                   'Chung, Emily (2018). "\'We need to rethink the entire '
+                   "plastics industry': Why banning plastic straws isn't "
+                   'enough". CBC.\n'
+                   '"Is that my plastic bag in the Mariana Trench?". Macleans. '
+                   'Retrieved 2019-12-30.\n'
+                   '"#517 - Life in Plastic, Not Fantastic: Science for the '
+                   'People". Science for the People. 2019. Retrieved '
+                   '2019-12-30.',
+                   'Jennifer Provencher on Twitter\n'
+                   'Jennifer Provencher on Instagram'],
+ 'section_titles': ['Jennifer Provencher',
+                    'Education',
+                    'Work',
+                    'Before 2010: Career foundation',
+                    '2010-2018: Early career stage',
+                    '2018-present: Career advancement',
+                    'Significant contributions',
+                    'Awards and recognition',
+                    'Media and outreach',
+                    'References',
+                    'External links'],
+ 'title': 'Jennifer Provencher',
+ 'url': 'http://jenniferprovencher.com/'}
+"""
+
+input_data_file = "/data/dataset/mm_RewardRAG/encyclopedic/wiki.json"
+text_feature_dir = "/data/dataset/mm_RewardRAG/kb/encyclopedia/clip-large/meta_features"
+
+text_data = json.load(open(input_data_file, "r"))
+
+# Embed text
+batch_size = 1024
+
+os.makedirs(text_feature_dir, exist_ok=True)
+
+for i in tqdm(range(0, len(text_data), batch_size)):
+    batch = text_data[i:i + batch_size]
+    texts = [item["title"] + " ".join(item["section_titles"]) for item in batch]
+    image_features = text_embedder.embed_text(texts)
+
+    batch_file = os.path.join(text_feature_dir, f"batch_{i//batch_size}.npy")
+    np.save(batch_file, image_features)
+    # the feature has already been normalized

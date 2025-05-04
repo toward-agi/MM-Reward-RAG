@@ -484,7 +484,7 @@ def eval_webqa(results_file_path, experimental_name):
     os.remove(random_path)
 
 def test():
-    eval_webqa("/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/webqa/answers.jsonl","qwen25_w_gt")
+    eval_webqa("/data/track/mm-RewardRAG/experiments/5-answer/w_all_hn/results/3b/webqa/answers_with_gt.jsonl","qwen25_w_gt_prompt_version_0503_with_all_hn")
 
 if __name__ == "__main__":
     test()

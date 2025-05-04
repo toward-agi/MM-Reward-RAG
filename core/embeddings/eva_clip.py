@@ -49,7 +49,7 @@ class EVAEmbedder(MultiModalEmbedder):
         # Tokenize texts
         input_ids = self.tokenizer(texts, return_tensors="pt", padding=True, max_length=77, truncation=True).input_ids.to(self.device)
         # 这里是就截取前77个就好了；
-        print(f"input_ids: {input_ids.shape}")
+        # print(f"input_ids: {input_ids.shape}")
         
         with torch.no_grad(), torch.cuda.amp.autocast():
             text_features = self.model.encode_text(input_ids)

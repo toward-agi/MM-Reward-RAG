@@ -27,7 +27,7 @@ with open(VAL_PATH, 'r') as f:
     val_data = json.load(f)
 
 # Define k values for evaluation
-ks = [1, 5, 10, 20, 50, 100]
+ks = [1, 3, 5, 10, 20, 50, 100]
 
 # Check if retriever index already exists
 if os.path.exists(INDEX_PATH):

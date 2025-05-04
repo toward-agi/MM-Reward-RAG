@@ -74,13 +74,9 @@ import json
 import os
 from tqdm import tqdm
 import sys
-sys.path.append("/data/track/mm-RewardRAG/")
-from core.indexing.faiss_indexer import FaissIndexer
-# from core.embeddings.jina_clip_v2 import JinaClipV2Embedder
-from core.embeddings.bge_text_embedding import BGETextEmbedder
 
 # Define k values and get max k
-ks = [1, 5, 10, 20, 50, 100]
+ks = [1, 3, 5, 10, 20, 50, 100]
 max_k = max(ks)
 
 # Load validation dataset (only load once)
@@ -97,6 +93,10 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Perform retrieval for max k
 if not os.path.exists(retrieved_results_file):
+    sys.path.append("/data/track/mm-RewardRAG/")
+    from core.indexing.faiss_indexer import FaissIndexer
+    # from core.embeddings.jina_clip_v2 import JinaClipV2Embedder
+    from core.embeddings.bge_text_embedding import BGETextEmbedder
     # embedder = JinaClipV2Embedder()
     embedder = BGETextEmbedder()
     # indexer = FaissIndexer(mode="jina-clip-v2")

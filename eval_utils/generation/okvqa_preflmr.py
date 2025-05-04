@@ -55,7 +55,7 @@ def eval_okvqa(responses_path: str):
     print(f"Average accuracy: {avg_acc}")
 
 def test():
-    eval_okvqa("/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker/okvqa/100/answers.jsonl")
+    eval_okvqa("/data/track/mm-RewardRAG/experiments/5-answer/preflmr/results/3b/with_reranker_7b/okvqa/3/answers.jsonl")
 
 if __name__ == "__main__":
     test()

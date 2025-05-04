@@ -99,11 +99,6 @@
 import json
 import os
 from tqdm import tqdm
-import sys
-sys.path.append("/data/track/mm-RewardRAG/")
-from core.indexing.faiss_indexer import FaissIndexer
-# from core.embeddings.jina_clip_v2 import JinaClipV2Embedder
-from core.embeddings.bge_text_embedding import BGETextEmbedder
 
 # Load validation dataset (only load once outside the loop)
 valid_dataset = {}
@@ -113,7 +108,7 @@ with open("/data/track/mm-RewardRAG/eval_datasets/multimodal_qa/multimodalqa/dat
         valid_dataset[item['qid']] = item
 
 # Define the k values to evaluate
-ks = [1, 5, 10, 20, 50, 100]
+ks = [1, 3, 5, 10, 20, 50, 100]
 max_k = max(ks)  # Get the maximum k value
 
 # Set up output directory
@@ -123,6 +118,12 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Perform retrieval only once with the maximum k value
 if not os.path.exists(retrieved_results_file):
+    import sys
+    sys.path.append("/data/track/mm-RewardRAG/")
+    from core.indexing.faiss_indexer import FaissIndexer
+    # from core.embeddings.jina_clip_v2 import JinaClipV2Embedder
+    from core.embeddings.bge_text_embedding import BGETextEmbedder
+
     embedder = BGETextEmbedder()
     indexer = FaissIndexer(mode="bge")
     

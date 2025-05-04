@@ -1,7 +1,8 @@
 # from core.embeddings.clip_embedder import CLIPEmbedder
 import sys
 sys.path.append("/data/track/mm-RewardRAG/")
-from core.embeddings.bge_text_embedding import BGETextEmbedder
+# from core.embeddings.bge_text_embedding import BGETextEmbedder
+from core.embeddings.clip_embedder import CLIPEmbedder
 
 import json
 import os
@@ -9,7 +10,7 @@ from PIL import Image
 from tqdm import tqdm
 import numpy as np
 
-text_embedder = BGETextEmbedder()
+text_embedder = CLIPEmbedder()
 """
 {
         "wikidata_id": "Q16221564",
@@ -22,7 +23,7 @@ text_embedder = BGETextEmbedder()
 """
 
 input_data_file = "/data/dataset/mm_RewardRAG/InfoSeek/text_kb.json"
-text_feature_dir = "/data/dataset/mm_RewardRAG/InfoSeek/bge/textual_summary_features"
+text_feature_dir = "/data/dataset/mm_RewardRAG/InfoSeek/clip-large/summary_features"
 
 text_data = json.load(open(input_data_file, "r"))
 
