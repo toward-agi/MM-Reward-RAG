@@ -132,3 +132,5 @@ models/
 results/
 textual_index_gpu/
 visual_index_gpu/
+
+*.pkl
