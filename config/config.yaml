@@ -213,10 +213,27 @@ generators:
   
   vllm_answer_generator:
     type: "openai"
-    # url: "http://localhost:12346/v1"
-    url: "http://localhost:17777/v1"
+    url: "http://localhost:12346/v1"
+    # url: "http://localhost:17777/v1"
     api_key: "EMPTY"
     model: "Qwen/Qwen2.5-VL-7B-Instruct"
+    batch_size: 64
+    prompt_file: "prompts/baseline_lvlm.yaml"
+    generation_config:
+      max_tokens: 1024
+      temperature: 0.0
+      top_p: 1.0
+      presence_penalty: 0.0
+      frequency_penalty: 0.0
+      response_format: { "type": "text" }
+      seed: 42
+      stream: false
+
+  vllm_answer_checker:
+    type: "openai"
+    url: "http://localhost:12777/v1"
+    api_key: "EMPTY"
+    model: "Qwen/Qwen2.5-7B-Instruct"
     batch_size: 64
     prompt_file: "prompts/baseline_lvlm.yaml"
     generation_config:

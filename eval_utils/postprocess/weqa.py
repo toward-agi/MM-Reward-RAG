@@ -1,6 +1,6 @@
 import json
 
-prediction_file = "/data/track/mm-RewardRAG/experiments/5-answer/w_all_hn/results/3b/webqa/answers.jsonl"
+prediction_file = "/data/track/mm-RewardRAG/experiments/5-answer/w_gt/results/webqa/answers.jsonl"
 prediction_data = [
     json.loads(line) for line in open(prediction_file, "r")
 ]
@@ -22,7 +22,7 @@ triples = [
 import sys
 sys.path.append("/data/track/mm-RewardRAG/")
 from core.answer_checker.base_checker import AnswerChecker
-checker = AnswerChecker()
+checker = AnswerChecker(generator_name="vllm_answer_generator")
 
 results = checker.generate_answer(triples)
 
